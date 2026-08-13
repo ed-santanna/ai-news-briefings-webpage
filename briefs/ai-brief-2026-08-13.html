@@ -76,10 +76,32 @@
     h1{font-size:26px;}
   }
 
+  .sticky-nav{
+    position:sticky;
+    top:0;
+    z-index:20;
+    background:var(--parchment);
+    padding-top:14px;
+    padding-bottom:10px;
+    border-bottom:1px solid var(--rule);
+    margin-bottom:22px;
+  }
+  .home-link{
+    font-family:"Courier New",monospace;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:0.04em;
+    color:var(--ink);
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    gap:4px;
+    margin-bottom:10px;
+  }
+  .home-link:hover{color:var(--clay);}
   .tabbar{
     display:flex;
     gap:8px;
-    margin-bottom:28px;
   }
   .tab-btn{
     font-family:inherit;
@@ -403,9 +425,12 @@
     <div class="date">13 August 2026</div>
   </header>
 
-  <div class="tabbar">
-    <button class="tab-btn active" data-tab="summary" onclick="showTab('summary')">Visual Summary</button>
-    <button class="tab-btn" data-tab="briefing" onclick="showTab('briefing')">Full Briefing</button>
+  <div class="sticky-nav">
+    <a class="home-link" href="https://ed-santanna.github.io/ai-news-briefings-webpage/">← AI Daily Briefs</a>
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="summary" onclick="showTab('summary')">Visual Summary</button>
+      <button class="tab-btn" data-tab="briefing" onclick="showTab('briefing')">Full Briefing</button>
+    </div>
   </div>
 
   <!-- ================= TAB 1: VISUAL SUMMARY ================= -->
