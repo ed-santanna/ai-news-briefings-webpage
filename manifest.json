@@ -1,0 +1,14 @@
+{
+  "briefs": [
+    {
+      "date": "2026-08-13",
+      "url": "briefs/ai-brief-2026-08-13.html",
+      "teaser": "AI competition is shifting from model launches to who controls deployment, as ChatGPT passes a billion weekly users, Anthropic lines up a landmark IPO, and a security breach exposes thousands of firms running AI in production."
+    },
+    {
+      "date": "2026-08-12",
+      "url": "briefs/ai-brief-2026-08-12.html",
+      "teaser": "AI enters its production phase this week: enterprises are running it live, investors are pouring in record sums, and regulators have started enforcing their first binding rules."
+    }
+  ]
+}
