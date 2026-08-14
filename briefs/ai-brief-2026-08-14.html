@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily AI Brief &mdash; 14 August 2026</title>
+<style>
+  :root{
+    --ink:#333333;        /* text and dark surfaces */
+    --coral:#DB6C51;      /* primary brand surface */
+    --coral-deep:#C25B41; /* coral pressed/darker step */
+    --blue:#3789FF;       /* interactive: hover, focus, selection */
+    --grey:#828282;       /* secondary text */
+    --bg:#F1F2F4;         /* page ground */
+    --card:#FFFFFF;
+    --rule:#E3E5E9;
+    --hover:#EAECF0;
+    --shadow:12px 30px rgba(51,51,51,0.13);
+  }
+  /*
+    Category colour system — FIXED mapping, always use the same colour for
+    the same category so a reader learns the code once. Used as a solid
+    surface on the summary cards and the briefing section headers.
+  */
+  .cat-usecases   {--cat:#2F7A6B;} /* Enterprise Use Cases */
+  .cat-tools      {--cat:#3B5FA0;} /* Enterprise AI Tools */
+  .cat-consulting {--cat:#7C4FA6;} /* Consulting News */
+  .cat-tech       {--cat:#B4603A;} /* AI Tech */
+  .cat-investment {--cat:#9A7620;} /* AI Investment */
+  .cat-others     {--cat:#A24B5E;} /* Others */
+  :root{--maxw:1280px;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    margin:0;
+    padding:0;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+
+  /* ---------- global site header (identical on every page) ---------- */
+  .site-header{
+    position:sticky;
+    top:0;
+    z-index:60;
+    background:var(--card);
+    border-bottom:1px solid var(--rule);
+  }
+  .site-header-inner{
+    width:100%;
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:0 40px;
+    height:56px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+  }
+  .wordmark{
+    font-weight:800;
+    font-size:15px;
+    letter-spacing:-0.015em;
+    text-decoration:none;
+    white-space:nowrap;
+  }
+  .wordmark-brand{color:var(--ink);}
+  .wordmark-sep{color:var(--grey);}
+  .wordmark-title{color:var(--coral);}
+  .wordmark:hover .wordmark-brand{color:var(--coral);}
+  .site-nav{display:flex;align-items:center;gap:4px;}
+  .site-nav-link{
+    font-family:inherit;
+    font-size:13px;
+    font-weight:600;
+    color:var(--grey);
+    background:transparent;
+    border:none;
+    border-radius:8px;
+    padding:8px 12px;
+    text-decoration:none;
+    cursor:pointer;
+    white-space:nowrap;
+  }
+  .site-nav-link:hover{background:var(--hover);color:var(--ink);}
+  .site-nav-link:focus-visible{outline:2px solid var(--blue);outline-offset:1px;}
+  .caret{font-size:10px;}
+  .dropdown{position:relative;}
+  .dropdown-menu{
+    position:absolute;
+    right:0;
+    top:calc(100% + 8px);
+    min-width:240px;
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-radius:12px;
+    box-shadow:0 var(--shadow);
+    padding:6px;
+    display:none;
+  }
+  .dropdown-menu.open{display:block;}
+  .dropdown-item{
+    display:block;
+    padding:10px 12px;
+    border-radius:8px;
+    font-size:13.5px;
+    color:var(--ink);
+    text-decoration:none;
+  }
+  .dropdown-item:hover{background:var(--hover);}
+  .dropdown-item.current{color:var(--coral);font-weight:700;}
+  .dropdown-sep{height:1px;background:var(--rule);margin:6px 4px;}
+  .dropdown-all{font-size:12px;color:var(--grey);font-weight:600;}
+
+  /* ---------- full-bleed hero band ---------- */
+  .hero{
+    background:var(--coral);
+    color:#fff;
+  }
+  .hero-inner{
+    width:100%;
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:34px 40px 38px;
+  }
+  .pill{
+    display:inline-block;
+    border:1.5px solid rgba(255,255,255,0.55);
+    border-radius:999px;
+    padding:6px 16px;
+    font-size:11.5px;
+    font-weight:700;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+  }
+  .hero-row{
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap:24px;
+    margin-top:18px;
+  }
+  .hero h1{
+    font-size:clamp(30px,4.2vw,46px);
+    font-weight:800;
+    letter-spacing:-0.028em;
+    line-height:1.02;
+  }
+  .hero-meta{text-align:right;flex:0 0 auto;}
+  .hero-date{font-size:16px;font-weight:700;}
+  .hero-sub{font-size:13px;opacity:.85;margin-top:3px;}
+
+  /* ---------- shared page column ---------- */
+  .page{
+    width:100%;
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:34px 40px 48px;
+  }
+  footer{
+    width:100%;
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:18px 40px 40px;
+    font-size:11.5px;
+    color:var(--grey);
+    display:flex;
+    justify-content:space-between;
+    gap:12px;
+  }
+
+  @media (max-width:760px){
+    .site-header-inner{padding:0 18px;height:52px;}
+    .wordmark{font-size:14px;}
+    /* full name does not fit a phone header beside the nav */
+    .wordmark-brand,.wordmark-sep{display:none;}
+    .site-nav-link{padding:8px 9px;font-size:12.5px;}
+    .hero-inner{padding:24px 18px 26px;}
+    .hero-row{flex-direction:column;align-items:flex-start;gap:10px;}
+    .hero-meta{text-align:left;}
+    .page{padding:24px 18px 32px;}
+    footer{padding:16px 18px 32px;flex-direction:column;gap:6px;}
+  }
+
+  /* ---------- sticky tab bar, sits under the site header ---------- */
+  .tabstrip{
+    position:sticky;
+    top:56px;
+    z-index:40;
+    background:var(--card);
+    border-bottom:1px solid var(--rule);
+  }
+  .tabstrip-inner{
+    width:100%;
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:0 40px;
+    display:flex;
+    gap:26px;
+  }
+  .tab-btn{
+    font-family:inherit;
+    font-size:14px;
+    font-weight:700;
+    color:var(--grey);
+    background:none;
+    border:none;
+    border-bottom:3px solid transparent;
+    padding:15px 0 12px;
+    cursor:pointer;
+    white-space:nowrap;
+  }
+  .tab-btn:hover{color:var(--ink);}
+  .tab-btn:focus-visible{outline:2px solid var(--blue);outline-offset:2px;}
+  .tab-btn.active{color:var(--ink);border-bottom-color:var(--coral);}
+  .tab-panel{display:none;}
+  .tab-panel.active{display:block;animation:fade .22s ease;}
+  @keyframes fade{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+  @media (prefers-reduced-motion:reduce){
+    .tab-panel.active{animation:none;}
+    *{transition:none !important;}
+  }
+
+  /* ---------- summary: category cards ---------- */
+  .cat-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+  }
+  .cat-card{
+    background:var(--card);
+    border-radius:14px;
+    overflow:hidden;
+    cursor:pointer;
+    border:1px solid var(--rule);
+    transition:transform .15s ease,box-shadow .15s ease;
+    display:flex;
+    flex-direction:column;
+  }
+  .cat-card:hover{transform:translateY(-3px);box-shadow:0 var(--shadow);}
+  .cat-card:focus-visible{outline:3px solid var(--blue);outline-offset:2px;}
+  .cat-card-bar{
+    background:var(--cat);
+    color:#fff;
+    padding:11px 18px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
+  }
+  .cat-name{
+    font-size:11.5px;
+    font-weight:800;
+    letter-spacing:0.09em;
+    text-transform:uppercase;
+  }
+  .cat-go{font-size:11.5px;font-weight:700;opacity:.85;}
+  .cat-card-body{padding:20px 18px 18px;display:flex;flex-direction:column;flex:1;}
+  .cat-stat{
+    font-size:40px;
+    font-weight:800;
+    letter-spacing:-0.03em;
+    line-height:1;
+    color:var(--ink);
+  }
+  .cat-stat-label{
+    font-size:12px;
+    color:var(--grey);
+    margin:8px 0 14px;
+    line-height:1.4;
+  }
+  .cat-desc{
+    font-size:13.5px;
+    line-height:1.5;
+    padding-top:14px;
+    border-top:1px solid var(--rule);
+    margin-top:auto;
+  }
+
+  /* ---------- summary: closing split panel ---------- */
+  .takeaway{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:0;
+    margin-top:24px;
+    border-radius:14px;
+    overflow:hidden;
+  }
+  .takeaway-lead{background:var(--coral);color:#fff;padding:26px 28px;}
+  .takeaway-why{background:var(--ink);color:#fff;padding:26px 28px;}
+  .takeaway-label{
+    display:block;
+    font-size:10.5px;
+    font-weight:800;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    opacity:.8;
+    margin-bottom:12px;
+  }
+  .takeaway p{font-size:16px;line-height:1.5;font-weight:500;}
+  .takeaway-lead p{font-weight:600;}
+
+  /* ---------- full briefing ---------- */
+  .controls{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    align-items:center;
+    margin-bottom:20px;
+  }
+  .search-box{
+    font-family:inherit;
+    font-size:16px;
+    border:1.5px solid var(--rule);
+    border-radius:10px;
+    padding:9px 13px;
+    width:240px;
+    max-width:100%;
+    color:var(--ink);
+    background:var(--card);
+  }
+  .search-box:focus{outline:none;border-color:var(--blue);}
+  .filter-chip{
+    font-family:inherit;
+    font-size:12px;
+    font-weight:700;
+    color:var(--grey);
+    background:var(--card);
+    border:1.5px solid var(--rule);
+    border-radius:999px;
+    padding:8px 14px 8px 12px;
+    cursor:pointer;
+    transition:all .15s ease;
+    display:inline-flex;
+    align-items:center;
+  }
+  .filter-chip[data-cat]:not([data-cat="all"])::before{
+    content:"";
+    display:inline-block;
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:var(--cat,var(--grey));
+    margin-right:8px;
+  }
+  .filter-chip:hover{border-color:var(--cat,var(--blue));color:var(--ink);}
+  .filter-chip.active{
+    background:var(--cat,var(--ink));
+    border-color:var(--cat,var(--ink));
+    color:#fff;
+  }
+  .filter-chip.active::before{background:#fff;}
+  .no-results{display:none;font-size:14px;color:var(--grey);padding:20px 0;}
+
+  .category{
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-radius:14px;
+    margin-bottom:14px;
+    overflow:hidden;
+  }
+  .category summary{
+    cursor:pointer;
+    list-style:none;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:14px 20px;
+    background:var(--cat);
+    color:#fff;
+  }
+  .category summary::-webkit-details-marker{display:none;}
+  .category summary:focus-visible{outline:3px solid var(--blue);outline-offset:-3px;}
+  .category-heading{display:flex;align-items:baseline;gap:12px;}
+  .category-title{font-weight:800;font-size:14px;letter-spacing:0.06em;text-transform:uppercase;}
+  .category-count{font-size:11.5px;font-weight:700;opacity:.85;}
+  .chevron{font-size:15px;transition:transform .15s ease;}
+  .category[open] .chevron{transform:rotate(90deg);}
+  .category-stories{padding:4px 20px 16px;}
+  .story{padding:16px 0;border-top:1px solid var(--rule);}
+  .story:first-child{border-top:none;}
+  .story-headline{font-weight:700;font-size:16px;line-height:1.3;margin-bottom:6px;}
+  .story-summary{
+    font-size:14px;
+    line-height:1.6;
+    color:#4A4A4A;
+    margin-bottom:9px;
+    max-width:80ch;
+  }
+  .meta{display:flex;align-items:center;gap:10px;font-size:11.5px;color:var(--grey);}
+  .source{text-transform:uppercase;letter-spacing:0.06em;font-weight:700;}
+  .meta a{color:var(--blue);text-decoration:none;font-weight:600;}
+  .meta a:hover{text-decoration:underline;}
+
+  @media (max-width:1080px){
+    .cat-grid{grid-template-columns:repeat(2,1fr);}
+  }
+  @media (max-width:760px){
+    .tabstrip{top:52px;}
+    .tabstrip-inner{padding:0 18px;gap:18px;}
+    .cat-grid{grid-template-columns:1fr;}
+    .takeaway{grid-template-columns:1fr;}
+    .search-box{width:100%;}
+  }
+</style>
+</head>
+<body data-brief="2026-08-14">
+
+  <!--
+    GLOBAL SITE HEADER — identical on every page, do not restyle per brief.
+    data-root is the path back to the site root: "../" on brief pages.
+    The dropdown below is baked in with today only; the live page replaces
+    it from manifest.json on load, so do not hand-fill earlier dates.
+  -->
+  <div class="site-header" data-root="../">
+    <div class="site-header-inner">
+      <a class="wordmark" href="../index.html"><span class="wordmark-brand">Chief T.E.C.H. Translator</span><span class="wordmark-sep"> - </span><span class="wordmark-title">AI Daily Briefs</span></a>
+      <nav class="site-nav">
+        <a class="site-nav-link" id="navLatest" href="../briefs/ai-brief-2026-08-14.html">Latest</a>
+        <div class="dropdown">
+          <button class="site-nav-link" id="archiveToggle" aria-expanded="false" aria-haspopup="true">Archive <span class="caret">&#9662;</span></button>
+          <div class="dropdown-menu" id="archiveMenu" role="menu">
+            <a class="dropdown-item current" href="../briefs/ai-brief-2026-08-14.html">14 August 2026</a>
+            <div class="dropdown-sep"></div>
+            <a class="dropdown-item dropdown-all" href="../index.html">View all briefs</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="hero-inner">
+      <span class="pill">Daily AI Brief</span>
+      <div class="hero-row">
+        <h1>Today in AI</h1>
+        <div class="hero-meta">
+          <div class="hero-date">14 August 2026</div>
+          <div class="hero-sub">16 stories &middot; 6 categories</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tabstrip">
+    <div class="tabstrip-inner">
+      <button class="tab-btn active" data-tab="summary" onclick="showTab('summary')">Visual Summary</button>
+      <button class="tab-btn" data-tab="briefing" onclick="showTab('briefing')">Full Briefing</button>
+    </div>
+  </div>
+
+  <div class="page">
+
+    <section id="tab-summary" class="tab-panel active">
+
+      <!--
+        CATEGORY CARDS — one per category with at least one story, in the
+        fixed order below, skipping any with none. Colour class per
+        category (never reassign):
+          Enterprise Use Cases -> cat-usecases
+          Enterprise AI Tools  -> cat-tools
+          Consulting News      -> cat-consulting
+          AI Tech              -> cat-tech
+          AI Investment        -> cat-investment
+          Others               -> cat-others
+        cat-stat must be a real sourced figure; if no clean number exists
+        use a truthful count. cat-stat-label gives it context in <=12 words.
+        cat-desc is one sentence, <=15 words. The name in goToCategory()
+        must match the chip and <details> data-cat exactly.
+        The card below is a worked example; repeat for each category.
+      -->
+      <div class="cat-grid">
+        <div class="cat-card cat-usecases" role="button" tabindex="0"
+             onclick="goToCategory('Enterprise Use Cases')"
+             onkeypress="if(event.key==='Enter')goToCategory('Enterprise Use Cases')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Enterprise Use Cases</span>
+            <span class="cat-go">3 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">450+</div>
+            <div class="cat-stat-label">AI use cases now running daily in production at JPMorgan Chase</div>
+            <p class="cat-desc">Large enterprises are moving AI from pilots into everyday core operations.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-tools" role="button" tabindex="0"
+             onclick="goToCategory('Enterprise AI Tools')"
+             onkeypress="if(event.key==='Enter')goToCategory('Enterprise AI Tools')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Enterprise AI Tools</span>
+            <span class="cat-go">3 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">70%</div>
+            <div class="cat-stat-label">Cut in Agentforce response times after Salesforce's latest agent upgrade</div>
+            <p class="cat-desc">Vendors are turning AI agents into distinct, separately billed products.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-consulting" role="button" tabindex="0"
+             onclick="goToCategory('Consulting News')"
+             onkeypress="if(event.key==='Enter')goToCategory('Consulting News')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Consulting News</span>
+            <span class="cat-go">2 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">276,000</div>
+            <div class="cat-stat-label">KPMG staff getting Microsoft's AI agent platform firm-wide</div>
+            <p class="cat-desc">Big Four firms are converting AI investment into workforce-wide change.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-tech" role="button" tabindex="0"
+             onclick="goToCategory('AI Tech')"
+             onkeypress="if(event.key==='Enter')goToCategory('AI Tech')">
+          <div class="cat-card-bar">
+            <span class="cat-name">AI Tech</span>
+            <span class="cat-go">2 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">1B</div>
+            <div class="cat-stat-label">Monthly users of Google's Gemini app, its fastest-growing product ever</div>
+            <p class="cat-desc">Frontier AI capability and consumer scale are both advancing quickly.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-investment" role="button" tabindex="0"
+             onclick="goToCategory('AI Investment')"
+             onkeypress="if(event.key==='Enter')goToCategory('AI Investment')">
+          <div class="cat-card-bar">
+            <span class="cat-name">AI Investment</span>
+            <span class="cat-go">2 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">$965B</div>
+            <div class="cat-stat-label">Anthropic's valuation just before its confidential IPO filing</div>
+            <p class="cat-desc">AI valuations are heading for their biggest public market test yet.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-others" role="button" tabindex="0"
+             onclick="goToCategory('Others')"
+             onkeypress="if(event.key==='Enter')goToCategory('Others')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Others</span>
+            <span class="cat-go">4 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">205K</div>
+            <div class="cat-stat-label">US workers hit by AI-linked layoffs so far in 2026</div>
+            <p class="cat-desc">Regulation, security and job losses are now moving as fast as the technology.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Closing split panel. HEADLINE is the single sentence that sums up
+           the day; WHY_MATTERS is its business implication. -->
+      <div class="takeaway">
+        <div class="takeaway-lead">
+          <span class="takeaway-label">The story today</span>
+          <p>This week showed AI's two sides at once: record valuations and user growth on one hand, a record security breach and mounting job losses on the other.</p>
+        </div>
+        <div class="takeaway-why">
+          <span class="takeaway-label">Why this matters</span>
+          <p>Leaders should treat AI spend, AI security and AI workforce planning as one connected decision, because on current form progress in one area is arriving alongside real exposure in another.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="tab-briefing" class="tab-panel">
+      <div class="controls">
+        <input type="text" class="search-box" id="storySearch" placeholder="Search stories&hellip;" oninput="filterStories()">
+        <button class="filter-chip active" data-cat="all" onclick="setFilter('all')">All</button>
+        <button class="filter-chip cat-usecases" data-cat="Enterprise Use Cases" onclick="setFilter('Enterprise Use Cases')">Enterprise Use Cases</button>
+        <button class="filter-chip cat-tools" data-cat="Enterprise AI Tools" onclick="setFilter('Enterprise AI Tools')">Enterprise AI Tools</button>
+        <button class="filter-chip cat-consulting" data-cat="Consulting News" onclick="setFilter('Consulting News')">Consulting News</button>
+        <button class="filter-chip cat-tech" data-cat="AI Tech" onclick="setFilter('AI Tech')">AI Tech</button>
+        <button class="filter-chip cat-investment" data-cat="AI Investment" onclick="setFilter('AI Investment')">AI Investment</button>
+        <button class="filter-chip cat-others" data-cat="Others" onclick="setFilter('Others')">Others</button>
+      </div>
+      <div class="no-results" id="noResults">No stories match that search.</div>
+
+      <!-- One <details> per category, same fixed order. Do NOT add the
+           "open" attribute: sections start collapsed and expand on click. -->
+      <details class="category cat-usecases" data-cat="Enterprise Use Cases">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Enterprise Use Cases</span>
+            <span class="category-count">3 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story">
+            <div class="story-headline">JPMorgan runs 450 AI agents in daily production</div>
+            <div class="story-summary">The bank's AI platform now handles tasks such as drafting investment banking presentations in around 30 seconds, work that used to take analysts hours. It shows a major enterprise moving AI well past pilots and into core daily operations.</div>
+            <div class="meta">
+              <span class="source">Tearsheet</span>
+              <span>&middot;</span>
+              <a href="https://tearsheet.co/artificial-intelligence/jpmorgan-chases-gen-ai-implementation-450-use-cases-and-lessons-learned/">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story">
+            <div class="story-headline">Amazon's Zoox starts charging for robotaxi rides</div>
+            <div class="story-summary">Zoox began collecting fares for its driverless, steering-wheel-free robotaxi in Las Vegas after becoming the first company to win a commercial safety exemption from US regulators. It marks a genuine commercial milestone for autonomous transport, not just another trial.</div>
+            <div class="meta">
+              <span class="source">TechCrunch</span>
+              <span>&middot;</span>
+              <a href="https://techcrunch.com/2026/08/05/zoox-to-start-charging-for-robotaxi-rides-in-las-vegas/">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story">
+            <div class="story-headline">Walmart cuts freight costs with an AI routing tool</div>
+            <div class="story-summary">A new AI-powered programme lets suppliers combine part-loads into full truckloads automatically, lowering shipping costs and getting stock onto shelves faster. It is a reminder that some of the biggest AI paybacks are showing up in unglamorous back-office logistics.</div>
+            <div class="meta">
+              <span class="source">Walmart Corporate</span>
+              <span>&middot;</span>
+              <a href="https://corporate.walmart.com/news/2026/05/26/walmart-enhances-supply-chain-to-bring-customers-what-they-need-when-they-need-it">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-tools" data-cat="Enterprise AI Tools">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Enterprise AI Tools</span>
+            <span class="category-count">3 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story">
+            <div class="story-headline">Microsoft merges Copilot into one paid super-app</div>
+            <div class="story-summary">Microsoft is folding its consumer and business Copilot products, including GitHub Copilot, into a single app and charging extra for always-on agents that work in the background. It signals AI assistants moving from a bundled feature to a distinct, billable product line.</div>
+            <div class="meta">
+              <span class="source">Tech Times</span>
+              <span>&middot;</span>
+              <a href="https://www.techtimes.com/articles/319706/20260704/microsoft-copilot-merges-one-app-august-feature-cuts-reveal-paid-adoption-crisis.htm">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story">
+            <div class="story-headline">Salesforce lets AI agents work as a team</div>
+            <div class="story-summary">Salesforce's latest Agentforce release lets multiple AI agents coordinate on a single customer request instead of working in isolation, while cutting response times by 70%. It pushes enterprise AI further from single chatbots towards coordinated digital workforces.</div>
+            <div class="meta">
+              <span class="source">Salesforce Newsroom</span>
+              <span>&middot;</span>
+              <a href="https://www.salesforce.com/news/stories/summer-2026-product-release-announcement/">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story">
+            <div class="story-headline">Software vendors start billing by the AI action</div>
+            <div class="story-summary">ServiceNow, SAP and Workday are moving towards charging customers per AI agent task completed, rather than a flat licence fee. Buyers should expect AI features to show up as a new, usage-based cost line rather than something bundled for free.</div>
+            <div class="meta">
+              <span class="source">PYMNTS</span>
+              <span>&middot;</span>
+              <a href="https://www.pymnts.com/artificial-intelligence-2/2026/servicenow-sap-and-workday-make-ai-agents-pay-to-play/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-consulting" data-cat="Consulting News">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Consulting News</span>
+            <span class="category-count">2 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story">
+            <div class="story-headline">Accenture cuts 11,000 jobs in an AI overhaul</div>
+            <div class="story-summary">Accenture is laying off more than 11,000 staff who could not be retrained for AI-led work, even as it invests heavily in AI skills across the rest of its workforce. It is one of the clearest signs yet that AI is reshaping consulting headcount, not just consulting output.</div>
+            <div class="meta">
+              <span class="source">CX Today</span>
+              <span>&middot;</span>
+              <a href="https://www.cxtoday.com/contact-center/accenture-lays-off-11000-staff-as-part-of-ai-reskilling-strategy/">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story">
+            <div class="story-headline">KPMG rolls out AI agents to all 276,000 staff</div>
+            <div class="story-summary">KPMG is deploying Microsoft's Agent 365 and Copilot across its entire global workforce, aiming to make AI agents a standard part of everyday work rather than a specialist tool. The scale shows how quickly Big Four firms are trying to turn AI spending into everyday use.</div>
+            <div class="meta">
+              <span class="source">Tech Times</span>
+              <span>&middot;</span>
+              <a href="https://www.techtimes.com/articles/318146/20260610/kpmg-deploys-microsoft-agent-365-govern-ai-agents-across-its-global-firms.htm">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-tech" data-cat="AI Tech">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">AI Tech</span>
+            <span class="category-count">2 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story">
+            <div class="story-headline">Gemini app passes a billion monthly users</div>
+            <div class="story-summary">Google said its Gemini app has crossed 1 billion monthly active users, becoming its fastest-growing product ever and closing the gap with ChatGPT. It confirms Google as a genuine second major consumer AI platform, not just a fast follower.</div>
+            <div class="meta">
+              <span class="source">TechCrunch</span>
+              <span>&middot;</span>
+              <a href="https://techcrunch.com/2026/08/11/googles-gemini-app-surges-to-one-billion-users/">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story">
+            <div class="story-headline">OpenAI's next model solves ten old maths problems</div>
+            <div class="story-summary">An unreleased OpenAI model called Astra produced machine-checked proofs for ten long-unsolved mathematics problems, at a compute cost of roughly $2,000. Independently verifiable proofs answer a major criticism of AI-generated research and hint at where model capability is heading next.</div>
+            <div class="meta">
+              <span class="source">Forbes</span>
+              <span>&middot;</span>
+              <a href="https://www.forbes.com/sites/jonmarkman/2026/08/03/openais-astra-solved-10-decades-old-math-problems-for-just-2000/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-investment" data-cat="AI Investment">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">AI Investment</span>
+            <span class="category-count">2 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story">
+            <div class="story-headline">Anthropic files confidentially for a stock listing</div>
+            <div class="story-summary">Anthropic has confidentially submitted paperwork to US regulators for a possible initial public offering, days after a funding round valued it at $965 billion. A listing would be one of the largest tech IPOs on record and a major test of whether private AI valuations hold up under public scrutiny.</div>
+            <div class="meta">
+              <span class="source">CNBC</span>
+              <span>&middot;</span>
+              <a href="https://www.cnbc.com/2026/06/01/anthropic-ipo-s1-prospectus.html">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story">
+            <div class="story-headline">AI deals push billion-dollar takeovers to a record</div>
+            <div class="story-summary">Twenty-four companies were acquired for $1 billion or more in the second quarter, worth $113 billion combined, the highest quarterly total on record and driven mostly by AI-native targets. It shows large incumbents increasingly buying AI capability rather than building it from scratch.</div>
+            <div class="meta">
+              <span class="source">Crunchbase News</span>
+              <span>&middot;</span>
+              <a href="https://news.crunchbase.com/venture/global-startup-exits-ipo-ma-soar-ai-q2-h1-2026/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-others" data-cat="Others">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Others</span>
+            <span class="category-count">4 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story">
+            <div class="story-headline">EU begins enforcing its AI Act on high-risk systems</div>
+            <div class="story-summary">The next phase of the EU's AI Act took effect, moving Europe's flagship AI law from a compliance deadline into active enforcement for high-risk systems. Firms operating in Europe now face real penalties, not just guidance, if their AI systems fall short.</div>
+            <div class="meta">
+              <span class="source">Al Jazeera</span>
+              <span>&middot;</span>
+              <a href="https://www.aljazeera.com/news/2026/8/6/what-came-into-force-with-the-eus-ai-act-this-week-and-what-didnt">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story">
+            <div class="story-headline">Supply-chain breach hits 2,500 firms using AI tools</div>
+            <div class="story-summary">A flaw in the widely used LiteLLM framework let attackers potentially access cloud credentials and AI system keys at more than 2,500 organisations, described as the largest AI infrastructure breach of the year so far. It is a reminder that AI's supply chain is now a serious security exposure of its own.</div>
+            <div class="meta">
+              <span class="source">CX Today</span>
+              <span>&middot;</span>
+              <a href="https://www.cxtoday.com/security-privacy-compliance/supply-chain-attack-exposes-2500-companies-in-largest-ai-infrastructure-breach-of-2026-so-far/">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story">
+            <div class="story-headline">China forces Meta to unwind its Manus AI deal</div>
+            <div class="story-summary">AI agent startup Manus is returning to independent ownership after Chinese authorities ordered Meta to unwind its $2 billion-plus acquisition over national security concerns. It highlights how geopolitics, not just economics, is now shaping who is allowed to own leading AI companies.</div>
+            <div class="meta">
+              <span class="source">CNBC</span>
+              <span>&middot;</span>
+              <a href="https://www.cnbc.com/2026/08/11/manus-china-meta-acquisition.html">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story">
+            <div class="story-headline">AI-linked layoffs already match all of last year</div>
+            <div class="story-summary">AI-attributed job cuts in the US have reached around 205,000 workers so far in 2026, already matching the full-year total for 2025 in under eight months. Roles in customer service, data operations and back-office finance are being hit hardest, which is where leaders should expect the sharpest workforce planning pressure.</div>
+            <div class="meta">
+              <span class="source">Outsource Accelerator</span>
+              <span>&middot;</span>
+              <a href="https://news.outsourceaccelerator.com/ai-layoffs-205000/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+    </section>
+
+  </div>
+
+  <footer>
+    <span>Compiled automatically from web search using Claude</span>
+    <span>Created by Ed Sant&#8217;Anna</span>
+  </footer>
+
+<script>
+  function showTab(name){
+    document.querySelectorAll('.tab-panel').forEach(function(p){p.classList.remove('active');});
+    document.querySelectorAll('.tab-btn').forEach(function(b){b.classList.remove('active');});
+    document.getElementById('tab-'+name).classList.add('active');
+    document.querySelector('.tab-btn[data-tab="'+name+'"]').classList.add('active');
+  }
+  var activeFilter = 'all';
+  function setFilter(cat){
+    activeFilter = cat;
+    document.querySelectorAll('.filter-chip').forEach(function(c){
+      c.classList.toggle('active', c.dataset.cat === cat);
+    });
+    applyFilters();
+  }
+  function filterStories(){ applyFilters(); }
+  function applyFilters(){
+    var q = document.getElementById('storySearch').value.trim().toLowerCase();
+    var forceOpen = (q !== '') || (activeFilter !== 'all');
+    var anyVisible = false;
+    document.querySelectorAll('.category').forEach(function(cat){
+      var catMatches = activeFilter === 'all' || cat.dataset.cat === activeFilter;
+      var visible = 0;
+      cat.querySelectorAll('.story').forEach(function(story){
+        var show = catMatches && (q === '' || story.textContent.toLowerCase().indexOf(q) !== -1);
+        story.style.display = show ? '' : 'none';
+        if(show) visible++;
+      });
+      cat.style.display = visible ? '' : 'none';
+      if(visible){ anyVisible = true; if(forceOpen) cat.open = true; }
+    });
+    document.getElementById('noResults').style.display = anyVisible ? 'none' : 'block';
+  }
+  function goToCategory(cat){
+    showTab('briefing');
+    document.getElementById('storySearch').value = '';
+    setFilter(cat);
+    var el = document.querySelector('.category[data-cat="'+cat+'"]');
+    if(el){ el.open = true; el.scrollIntoView({behavior:'smooth', block:'start'}); }
+  }
+</script>
+
+<script>
+(function(){
+  var header = document.querySelector('.site-header');
+  if(!header) return;
+  var root = header.getAttribute('data-root') || '';
+  var menu = document.getElementById('archiveMenu');
+  var toggle = document.getElementById('archiveToggle');
+  var latest = document.getElementById('navLatest');
+  var current = document.body.getAttribute('data-brief') || '';
+  var latestCard = document.getElementById('latestCard');
+  var archiveList = document.getElementById('archiveList');
+
+  function formatDate(iso){
+    var months = ['January','February','March','April','May','June','July',
+                  'August','September','October','November','December'];
+    var p = iso.split('-');
+    if(p.length !== 3) return iso;
+    return parseInt(p[2],10) + ' ' + months[parseInt(p[1],10)-1] + ' ' + p[0];
+  }
+  function esc(s){
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;')
+                    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+  function renderHeader(briefs){
+    if(latest) latest.href = root + briefs[0].url;
+    var html = briefs.slice(0,8).map(function(b){
+      var cls = 'dropdown-item' + (b.date === current ? ' current' : '');
+      return '<a class="'+cls+'" href="'+esc(root+b.url)+'">'+formatDate(b.date)+'</a>';
+    }).join('');
+    html += '<div class="dropdown-sep"></div><a class="dropdown-item dropdown-all" href="'
+          + esc(root+'index.html') + '">View all briefs</a>';
+    if(menu) menu.innerHTML = html;
+  }
+  function renderIndex(briefs){
+    if(!latestCard || !archiveList) return;
+    var top = briefs[0];
+    latestCard.href = root + top.url;
+    latestCard.innerHTML =
+      '<span class="latest-label">Latest &middot; ' + formatDate(top.date) + '</span>' +
+      '<p class="latest-teaser">' + esc(top.teaser) + '</p>' +
+      '<span class="latest-cta">Read the brief &rarr;</span>';
+    var rest = briefs.slice(1);
+    if(!rest.length){
+      archiveList.innerHTML = '<p class="archive-empty">No earlier briefs yet.</p>';
+      return;
+    }
+    archiveList.innerHTML = rest.map(function(b){
+      return '<a class="archive-item" href="'+esc(root+b.url)+'">'
+           + '<span class="archive-date">'+formatDate(b.date)+'</span>'
+           + '<span class="archive-teaser">'+esc(b.teaser)+'</span></a>';
+    }).join('');
+  }
+  if(window.fetch){
+    fetch(root + 'manifest.json', {cache:'no-cache'})
+      .then(function(r){ return r.ok ? r.json() : null; })
+      .then(function(d){
+        if(d && d.briefs && d.briefs.length){ renderHeader(d.briefs); renderIndex(d.briefs); }
+      })
+      .catch(function(){ /* keep the baked-in fallback */ });
+  }
+  function closeMenu(){
+    if(!menu) return;
+    menu.classList.remove('open');
+    if(toggle) toggle.setAttribute('aria-expanded','false');
+  }
+  if(toggle && menu){
+    toggle.addEventListener('click', function(e){
+      e.stopPropagation();
+      var open = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    document.addEventListener('click', function(e){
+      if(!menu.contains(e.target) && e.target !== toggle) closeMenu();
+    });
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape') closeMenu();
+    });
+  }
+})();
+</script>
+
+</body>
+</html>

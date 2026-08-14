@@ -1,6 +1,11 @@
 {
   "briefs": [
     {
+      "date": "2026-08-14",
+      "url": "briefs/ai-brief-2026-08-14.html",
+      "teaser": "This week showed AI's two sides at once: record valuations and user growth on one hand, a record security breach and mounting job losses on the other."
+    },
+    {
       "date": "2026-08-13",
       "url": "briefs/ai-brief-2026-08-13.html",
       "teaser": "AI competition is shifting from model launches to who controls deployment, as ChatGPT passes a billion weekly users, Anthropic lines up a landmark IPO, and a security breach exposes thousands of firms running AI in production."
