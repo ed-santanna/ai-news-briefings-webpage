@@ -392,6 +392,9 @@
   }
   .meta{display:flex;align-items:center;gap:10px;font-size:11.5px;color:var(--grey);}
   .source{text-transform:uppercase;letter-spacing:0.06em;font-weight:700;}
+  /* Rendered from data-published by script, so the visible date and the
+     checked date are the same value and cannot drift apart. */
+  .story-date{white-space:nowrap;}
   .meta a{color:var(--blue);text-decoration:none;font-weight:600;}
   .meta a:hover{text-decoration:underline;}
 
@@ -439,7 +442,7 @@
         <h1>Today in AI</h1>
         <div class="hero-meta">
           <div class="hero-date">14 August 2026</div>
-          <div class="hero-sub">16 stories &middot; 6 categories</div>
+          <div class="hero-sub">14 stories &middot; 6 categories</div>
         </div>
       </div>
     </div>
@@ -478,12 +481,12 @@
              onkeypress="if(event.key==='Enter')goToCategory('Enterprise Use Cases')">
           <div class="cat-card-bar">
             <span class="cat-name">Enterprise Use Cases</span>
-            <span class="cat-go">3 &rarr;</span>
+            <span class="cat-go">2 &rarr;</span>
           </div>
           <div class="cat-card-body">
-            <div class="cat-stat">450+</div>
-            <div class="cat-stat-label">AI use cases now running daily in production at JPMorgan Chase</div>
-            <p class="cat-desc">Large enterprises are moving AI from pilots into everyday core operations.</p>
+            <div class="cat-stat">100%</div>
+            <div class="cat-stat-label">of Delta SkyMiles members now have AI concierge access</div>
+            <p class="cat-desc">Delta and a hospital group both scaled AI into everyday operations this week.</p>
           </div>
         </div>
         <div class="cat-card cat-tools" role="button" tabindex="0"
@@ -491,12 +494,12 @@
              onkeypress="if(event.key==='Enter')goToCategory('Enterprise AI Tools')">
           <div class="cat-card-bar">
             <span class="cat-name">Enterprise AI Tools</span>
-            <span class="cat-go">3 &rarr;</span>
+            <span class="cat-go">2 &rarr;</span>
           </div>
           <div class="cat-card-body">
-            <div class="cat-stat">70%</div>
-            <div class="cat-stat-label">Cut in Agentforce response times after Salesforce's latest agent upgrade</div>
-            <p class="cat-desc">Vendors are turning AI agents into distinct, separately billed products.</p>
+            <div class="cat-stat">2</div>
+            <div class="cat-stat-label">new platforms launched to govern and deploy enterprise AI</div>
+            <p class="cat-desc">New tools launched to govern AI agents and help enterprises move pilots into production.</p>
           </div>
         </div>
         <div class="cat-card cat-consulting" role="button" tabindex="0"
@@ -504,12 +507,12 @@
              onkeypress="if(event.key==='Enter')goToCategory('Consulting News')">
           <div class="cat-card-bar">
             <span class="cat-name">Consulting News</span>
-            <span class="cat-go">2 &rarr;</span>
+            <span class="cat-go">1 &rarr;</span>
           </div>
           <div class="cat-card-body">
-            <div class="cat-stat">276,000</div>
-            <div class="cat-stat-label">KPMG staff getting Microsoft's AI agent platform firm-wide</div>
-            <p class="cat-desc">Big Four firms are converting AI investment into workforce-wide change.</p>
+            <div class="cat-stat">1</div>
+            <div class="cat-stat-label">major consulting tie-up: IBM adds OpenAI's models</div>
+            <p class="cat-desc">IBM is building a dedicated consulting practice around OpenAI's models for enterprise clients.</p>
           </div>
         </div>
         <div class="cat-card cat-tech" role="button" tabindex="0"
@@ -517,12 +520,12 @@
              onkeypress="if(event.key==='Enter')goToCategory('AI Tech')">
           <div class="cat-card-bar">
             <span class="cat-name">AI Tech</span>
-            <span class="cat-go">2 &rarr;</span>
+            <span class="cat-go">3 &rarr;</span>
           </div>
           <div class="cat-card-body">
-            <div class="cat-stat">1B</div>
-            <div class="cat-stat-label">Monthly users of Google's Gemini app, its fastest-growing product ever</div>
-            <p class="cat-desc">Frontier AI capability and consumer scale are both advancing quickly.</p>
+            <div class="cat-stat">10,000</div>
+            <div class="cat-stat-label">GPUs in India's largest AI computing cluster</div>
+            <p class="cat-desc">Meta open-sourced a model built for a single computer while India built its biggest AI cluster yet.</p>
           </div>
         </div>
         <div class="cat-card cat-investment" role="button" tabindex="0"
@@ -530,12 +533,12 @@
              onkeypress="if(event.key==='Enter')goToCategory('AI Investment')">
           <div class="cat-card-bar">
             <span class="cat-name">AI Investment</span>
-            <span class="cat-go">2 &rarr;</span>
+            <span class="cat-go">4 &rarr;</span>
           </div>
           <div class="cat-card-body">
-            <div class="cat-stat">$965B</div>
-            <div class="cat-stat-label">Anthropic's valuation just before its confidential IPO filing</div>
-            <p class="cat-desc">AI valuations are heading for their biggest public market test yet.</p>
+            <div class="cat-stat">$500bn</div>
+            <div class="cat-stat-label">mobilised by Nvidia's new Wall Street financing alliance</div>
+            <p class="cat-desc">Nvidia, Anthropic and a data centre operator all lined up unprecedented sums this week.</p>
           </div>
         </div>
         <div class="cat-card cat-others" role="button" tabindex="0"
@@ -543,12 +546,12 @@
              onkeypress="if(event.key==='Enter')goToCategory('Others')">
           <div class="cat-card-bar">
             <span class="cat-name">Others</span>
-            <span class="cat-go">4 &rarr;</span>
+            <span class="cat-go">2 &rarr;</span>
           </div>
           <div class="cat-card-body">
-            <div class="cat-stat">205K</div>
-            <div class="cat-stat-label">US workers hit by AI-linked layoffs so far in 2026</div>
-            <p class="cat-desc">Regulation, security and job losses are now moving as fast as the technology.</p>
+            <div class="cat-stat">49%</div>
+            <div class="cat-stat-label">of executives who cut back AI agent rollouts on cost</div>
+            <p class="cat-desc">OpenAI's leadership churn continued as a survey found many firms pulling back on AI agents.</p>
           </div>
         </div>
       </div>
@@ -558,11 +561,11 @@
       <div class="takeaway">
         <div class="takeaway-lead">
           <span class="takeaway-label">The story today</span>
-          <p>This week showed AI's two sides at once: record valuations and user growth on one hand, a record security breach and mounting job losses on the other.</p>
+          <p>This week's AI story was capital: Nvidia lined up $500 billion in financing, Anthropic alone signed over $15 billion in deals, while a KPMG survey found half of firms are already pulling back on AI agents over cost.</p>
         </div>
         <div class="takeaway-why">
           <span class="takeaway-label">Why this matters</span>
-          <p>Leaders should treat AI spend, AI security and AI workforce planning as one connected decision, because on current form progress in one area is arriving alongside real exposure in another.</p>
+          <p>Separate the infrastructure boom from the adoption reality. The money flowing into AI's plumbing is real and enormous, but that does not guarantee agent deployments are paying for themselves, so budget AI projects on their own merits rather than on the industry's momentum.</p>
         </div>
       </div>
     </section>
@@ -571,6 +574,7 @@
       <div class="controls">
         <input type="text" class="search-box" id="storySearch" placeholder="Search stories&hellip;" oninput="filterStories()">
         <button class="filter-chip active" data-cat="all" onclick="setFilter('all')">All</button>
+        <!-- one chip per category present, same order and colour class -->
         <button class="filter-chip cat-usecases" data-cat="Enterprise Use Cases" onclick="setFilter('Enterprise Use Cases')">Enterprise Use Cases</button>
         <button class="filter-chip cat-tools" data-cat="Enterprise AI Tools" onclick="setFilter('Enterprise AI Tools')">Enterprise AI Tools</button>
         <button class="filter-chip cat-consulting" data-cat="Consulting News" onclick="setFilter('Consulting News')">Consulting News</button>
@@ -581,41 +585,36 @@
       <div class="no-results" id="noResults">No stories match that search.</div>
 
       <!-- One <details> per category, same fixed order. Do NOT add the
-           "open" attribute: sections start collapsed and expand on click. -->
+           "open" attribute: sections start collapsed and expand on click.
+           Every .story carries data-published="YYYY-MM-DD", the date the
+           SOURCE published the article, not today's date. The checker fails
+           the run if it is missing, unparseable, in the future, or older
+           than the freshness window. -->
       <details class="category cat-usecases" data-cat="Enterprise Use Cases">
         <summary>
           <div class="category-heading">
             <span class="category-title">Enterprise Use Cases</span>
-            <span class="category-count">3 stories</span>
+            <span class="category-count">2 stories</span>
           </div>
           <span class="chevron">&rsaquo;</span>
         </summary>
         <div class="category-stories">
-          <div class="story">
-            <div class="story-headline">JPMorgan runs 450 AI agents in daily production</div>
-            <div class="story-summary">The bank's AI platform now handles tasks such as drafting investment banking presentations in around 30 seconds, work that used to take analysts hours. It shows a major enterprise moving AI well past pilots and into core daily operations.</div>
+          <div class="story" data-published="2026-08-11">
+            <div class="story-headline">Delta gives every flyer its AI travel assistant</div>
+            <div class="story-summary">Delta has switched on its Concierge AI assistant for all SkyMiles members, letting them handle rebooking, cancellations and bag tracking without calling an agent. For a service business built on staff hours, automating routine support at this scale is the kind of AI use case that shows up in the cost line, not just the press release.</div>
             <div class="meta">
-              <span class="source">Tearsheet</span>
+              <span class="source">AirlineGeeks</span>
               <span>&middot;</span>
-              <a href="https://tearsheet.co/artificial-intelligence/jpmorgan-chases-gen-ai-implementation-450-use-cases-and-lessons-learned/">Read more &rarr;</a>
+              <a href="https://airlinegeeks.com/2026/08/11/delta-expands-access-to-ai-assistant/">Read more &rarr;</a>
             </div>
           </div>
-          <div class="story">
-            <div class="story-headline">Amazon's Zoox starts charging for robotaxi rides</div>
-            <div class="story-summary">Zoox began collecting fares for its driverless, steering-wheel-free robotaxi in Las Vegas after becoming the first company to win a commercial safety exemption from US regulators. It marks a genuine commercial milestone for autonomous transport, not just another trial.</div>
+          <div class="story" data-published="2026-08-11">
+            <div class="story-headline">Hospital group wires AI into patient care</div>
+            <div class="story-summary">LCMC Health is rolling out generative AI across patient care, administration and billing for its 15,000 staff, working with health AI specialist Qualified Health. It is a sign hospital systems are moving past pilot projects and into wiring AI directly into how care gets delivered and paid for.</div>
             <div class="meta">
-              <span class="source">TechCrunch</span>
+              <span class="source">PR Newswire</span>
               <span>&middot;</span>
-              <a href="https://techcrunch.com/2026/08/05/zoox-to-start-charging-for-robotaxi-rides-in-las-vegas/">Read more &rarr;</a>
-            </div>
-          </div>
-          <div class="story">
-            <div class="story-headline">Walmart cuts freight costs with an AI routing tool</div>
-            <div class="story-summary">A new AI-powered programme lets suppliers combine part-loads into full truckloads automatically, lowering shipping costs and getting stock onto shelves faster. It is a reminder that some of the biggest AI paybacks are showing up in unglamorous back-office logistics.</div>
-            <div class="meta">
-              <span class="source">Walmart Corporate</span>
-              <span>&middot;</span>
-              <a href="https://corporate.walmart.com/news/2026/05/26/walmart-enhances-supply-chain-to-bring-customers-what-they-need-when-they-need-it">Read more &rarr;</a>
+              <a href="https://www.prnewswire.com/news-releases/lcmc-health-announces-strategic-ai-partnership-with-qualified-health-to-enhance-patient-care-and-safety-302848687.html">Read more &rarr;</a>
             </div>
           </div>
         </div>
@@ -625,36 +624,27 @@
         <summary>
           <div class="category-heading">
             <span class="category-title">Enterprise AI Tools</span>
-            <span class="category-count">3 stories</span>
+            <span class="category-count">2 stories</span>
           </div>
           <span class="chevron">&rsaquo;</span>
         </summary>
         <div class="category-stories">
-          <div class="story">
-            <div class="story-headline">Microsoft merges Copilot into one paid super-app</div>
-            <div class="story-summary">Microsoft is folding its consumer and business Copilot products, including GitHub Copilot, into a single app and charging extra for always-on agents that work in the background. It signals AI assistants moving from a bundled feature to a distinct, billable product line.</div>
+          <div class="story" data-published="2026-08-10">
+            <div class="story-headline">New platform aims to rein in runaway AI agents</div>
+            <div class="story-summary">Start-up AI/R launched AI/Cockpit One, a single dashboard for governing cost, security and access across a company's AI tools and agents, including ones built on rival platforms. As firms run more agents in production, the pitch is control rather than more capability.</div>
             <div class="meta">
-              <span class="source">Tech Times</span>
+              <span class="source">GlobeNewswire</span>
               <span>&middot;</span>
-              <a href="https://www.techtimes.com/articles/319706/20260704/microsoft-copilot-merges-one-app-august-feature-cuts-reveal-paid-adoption-crisis.htm">Read more &rarr;</a>
+              <a href="https://www.globenewswire.com/news-release/2026/08/10/3342167/0/en/ai-r-launches-unified-platform-for-enterprise-ai-governance.html">Read more &rarr;</a>
             </div>
           </div>
-          <div class="story">
-            <div class="story-headline">Salesforce lets AI agents work as a team</div>
-            <div class="story-summary">Salesforce's latest Agentforce release lets multiple AI agents coordinate on a single customer request instead of working in isolation, while cutting response times by 70%. It pushes enterprise AI further from single chatbots towards coordinated digital workforces.</div>
+          <div class="story" data-published="2026-08-10">
+            <div class="story-headline">Anthropic recruits a partner to get AI into production</div>
+            <div class="story-summary">Anthropic named delivery firm Zaelab as a partner to help large organisations turn Claude pilots into working systems rather than stalling at proof of concept. It reflects a wider shift in enterprise AI, where the bottleneck is no longer picking a model but integrating it.</div>
             <div class="meta">
-              <span class="source">Salesforce Newsroom</span>
+              <span class="source">PR Newswire</span>
               <span>&middot;</span>
-              <a href="https://www.salesforce.com/news/stories/summer-2026-product-release-announcement/">Read more &rarr;</a>
-            </div>
-          </div>
-          <div class="story">
-            <div class="story-headline">Software vendors start billing by the AI action</div>
-            <div class="story-summary">ServiceNow, SAP and Workday are moving towards charging customers per AI agent task completed, rather than a flat licence fee. Buyers should expect AI features to show up as a new, usage-based cost line rather than something bundled for free.</div>
-            <div class="meta">
-              <span class="source">PYMNTS</span>
-              <span>&middot;</span>
-              <a href="https://www.pymnts.com/artificial-intelligence-2/2026/servicenow-sap-and-workday-make-ai-agents-pay-to-play/">Read more &rarr;</a>
+              <a href="https://www.prnewswire.com/news-releases/anthropic-finds-enterprise-delivery-partner-in-zaelab-302846546.html">Read more &rarr;</a>
             </div>
           </div>
         </div>
@@ -664,27 +654,18 @@
         <summary>
           <div class="category-heading">
             <span class="category-title">Consulting News</span>
-            <span class="category-count">2 stories</span>
+            <span class="category-count">1 story</span>
           </div>
           <span class="chevron">&rsaquo;</span>
         </summary>
         <div class="category-stories">
-          <div class="story">
-            <div class="story-headline">Accenture cuts 11,000 jobs in an AI overhaul</div>
-            <div class="story-summary">Accenture is laying off more than 11,000 staff who could not be retrained for AI-led work, even as it invests heavily in AI skills across the rest of its workforce. It is one of the clearest signs yet that AI is reshaping consulting headcount, not just consulting output.</div>
+          <div class="story" data-published="2026-08-13">
+            <div class="story-headline">IBM builds a dedicated OpenAI consulting practice</div>
+            <div class="story-summary">IBM is folding OpenAI's models into its consulting arm and training thousands of staff to sell and deploy them, alongside a joint push on AI-related cybersecurity. It is a rare case of a services giant partnering deeply with a model maker rather than building everything in-house.</div>
             <div class="meta">
-              <span class="source">CX Today</span>
+              <span class="source">IBM Newsroom</span>
               <span>&middot;</span>
-              <a href="https://www.cxtoday.com/contact-center/accenture-lays-off-11000-staff-as-part-of-ai-reskilling-strategy/">Read more &rarr;</a>
-            </div>
-          </div>
-          <div class="story">
-            <div class="story-headline">KPMG rolls out AI agents to all 276,000 staff</div>
-            <div class="story-summary">KPMG is deploying Microsoft's Agent 365 and Copilot across its entire global workforce, aiming to make AI agents a standard part of everyday work rather than a specialist tool. The scale shows how quickly Big Four firms are trying to turn AI spending into everyday use.</div>
-            <div class="meta">
-              <span class="source">Tech Times</span>
-              <span>&middot;</span>
-              <a href="https://www.techtimes.com/articles/318146/20260610/kpmg-deploys-microsoft-agent-365-govern-ai-agents-across-its-global-firms.htm">Read more &rarr;</a>
+              <a href="https://newsroom.ibm.com/2026-08-13-ibm-partners-with-openai-to-accelerate-secure-ai-deployment-for-enterprises-across-core-operations">Read more &rarr;</a>
             </div>
           </div>
         </div>
@@ -694,27 +675,36 @@
         <summary>
           <div class="category-heading">
             <span class="category-title">AI Tech</span>
-            <span class="category-count">2 stories</span>
+            <span class="category-count">3 stories</span>
           </div>
           <span class="chevron">&rsaquo;</span>
         </summary>
         <div class="category-stories">
-          <div class="story">
-            <div class="story-headline">Gemini app passes a billion monthly users</div>
-            <div class="story-summary">Google said its Gemini app has crossed 1 billion monthly active users, becoming its fastest-growing product ever and closing the gap with ChatGPT. It confirms Google as a genuine second major consumer AI platform, not just a fast follower.</div>
+          <div class="story" data-published="2026-08-10">
+            <div class="story-headline">Meta gives away a model built to run on one computer</div>
+            <div class="story-summary">Meta released Muse Glimmer, a 30 billion parameter model compact enough to run on a single high-end laptop, free for anyone to use or modify. Cheap, capable, local models like this weaken the case for always renting AI capacity from the cloud.</div>
             <div class="meta">
-              <span class="source">TechCrunch</span>
+              <span class="source">SiliconANGLE</span>
               <span>&middot;</span>
-              <a href="https://techcrunch.com/2026/08/11/googles-gemini-app-surges-to-one-billion-users/">Read more &rarr;</a>
+              <a href="https://siliconangle.com/2026/08/10/meta-releases-open-source-muse-glimmer-model-30b-parameters/">Read more &rarr;</a>
             </div>
           </div>
-          <div class="story">
-            <div class="story-headline">OpenAI's next model solves ten old maths problems</div>
-            <div class="story-summary">An unreleased OpenAI model called Astra produced machine-checked proofs for ten long-unsolved mathematics problems, at a compute cost of roughly $2,000. Independently verifiable proofs answer a major criticism of AI-generated research and hint at where model capability is heading next.</div>
+          <div class="story" data-published="2026-08-11">
+            <div class="story-headline">Anthropic starts fingerprinting everything Claude writes</div>
+            <div class="story-summary">Anthropic will invisibly watermark all text its Claude models generate, a mark that survives copying and pasting into other documents. It is a direct response to new European rules on labelling AI content, and a preview of the scrutiny other model makers will likely face too.</div>
             <div class="meta">
-              <span class="source">Forbes</span>
+              <span class="source">Tech Times</span>
               <span>&middot;</span>
-              <a href="https://www.forbes.com/sites/jonmarkman/2026/08/03/openais-astra-solved-10-decades-old-math-problems-for-just-2000/">Read more &rarr;</a>
+              <a href="https://www.techtimes.com/articles/323873/20260811/claude-now-watermarks-text-everywhere-mark-proves-processing-not-authorship.htm">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-08-13">
+            <div class="story-headline">India builds its biggest AI computing cluster yet</div>
+            <div class="story-summary">Engineering group L&amp;T is building a 10,000-GPU computing cluster in Chennai for AI cloud firm Together AI, India's largest single AI infrastructure project to date. It underlines how the compute race is now as much a construction and power story as a software one.</div>
+            <div class="meta">
+              <span class="source">Tech Times</span>
+              <span>&middot;</span>
+              <a href="https://www.techtimes.com/articles/324334/20260813/lt-deploys-indias-first-10000-gpu-unified-ai-cluster-together-ai-chennai.htm">Read more &rarr;</a>
             </div>
           </div>
         </div>
@@ -724,27 +714,45 @@
         <summary>
           <div class="category-heading">
             <span class="category-title">AI Investment</span>
-            <span class="category-count">2 stories</span>
+            <span class="category-count">4 stories</span>
           </div>
           <span class="chevron">&rsaquo;</span>
         </summary>
         <div class="category-stories">
-          <div class="story">
-            <div class="story-headline">Anthropic files confidentially for a stock listing</div>
-            <div class="story-summary">Anthropic has confidentially submitted paperwork to US regulators for a possible initial public offering, days after a funding round valued it at $965 billion. A listing would be one of the largest tech IPOs on record and a major test of whether private AI valuations hold up under public scrutiny.</div>
+          <div class="story" data-published="2026-08-10">
+            <div class="story-headline">Nvidia lines up $500bn from Wall Street to fund AI buildout</div>
+            <div class="story-summary">Nvidia struck agreements with six of the world's largest asset managers, including Goldman Sachs, BlackRock and KKR, to mobilise over $500 billion for data centres and other AI infrastructure. It lets outside investors fund the buildout while keeping the debt off Nvidia's own books.</div>
             <div class="meta">
               <span class="source">CNBC</span>
               <span>&middot;</span>
-              <a href="https://www.cnbc.com/2026/06/01/anthropic-ipo-s1-prospectus.html">Read more &rarr;</a>
+              <a href="https://www.cnbc.com/2026/08/10/nvidia-wall-street-asset-managers-500-billion-ai-push.html">Read more &rarr;</a>
             </div>
           </div>
-          <div class="story">
-            <div class="story-headline">AI deals push billion-dollar takeovers to a record</div>
-            <div class="story-summary">Twenty-four companies were acquired for $1 billion or more in the second quarter, worth $113 billion combined, the highest quarterly total on record and driven mostly by AI-native targets. It shows large incumbents increasingly buying AI capability rather than building it from scratch.</div>
+          <div class="story" data-published="2026-08-13">
+            <div class="story-headline">Anthropic in talks for its biggest acquisition yet</div>
+            <div class="story-summary">Anthropic is negotiating to buy Israeli start-up Decart AI for about $6 billion, aiming to squeeze more efficiency out of its computing infrastructure ahead of a possible listing. It would be Anthropic's largest deal on record, and a sign AI giants are now buying their way to cheaper compute rather than just renting it.</div>
             <div class="meta">
-              <span class="source">Crunchbase News</span>
+              <span class="source">Tech Times</span>
               <span>&middot;</span>
-              <a href="https://news.crunchbase.com/venture/global-startup-exits-ipo-ma-soar-ai-q2-h1-2026/">Read more &rarr;</a>
+              <a href="https://www.techtimes.com/articles/324234/20260813/anthropic-talks-acquire-decart-6b-targeting-77-gross-margins-before-ipo.htm">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-08-13">
+            <div class="story-headline">Data centre operator weighs a record-breaking float</div>
+            <div class="story-summary">Vantage Data Centers is exploring a stock market listing or sale that could value it at around $100 billion, which would make it the largest data centre flotation on record. It is another sign investors see the physical infrastructure behind AI as the safer place to put money right now.</div>
+            <div class="meta">
+              <span class="source">The Star</span>
+              <span>&middot;</span>
+              <a href="https://www.thestar.com.my/tech/tech-news/2026/08/13/exclusive-vantage-data-centers-explores-ipo-at-100-billion-valuation-or-sale-sources-say">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-08-11">
+            <div class="story-headline">Bitcoin miner turns AI landlord in $9bn deal with Anthropic</div>
+            <div class="story-summary">Riot Platforms, previously known for bitcoin mining, signed a 20-year deal worth $9.1 billion to supply Anthropic with data centre capacity in Texas, with an option that could take the total to $16.1 billion. It shows how desperate the scramble for power and space has become, pulling in suppliers from well outside traditional cloud computing.</div>
+            <div class="meta">
+              <span class="source">CoinDesk</span>
+              <span>&middot;</span>
+              <a href="https://www.coindesk.com/business/2026/08/11/riot-platforms-surges-20-in-pre-market-trading-on-usd9-1-billion-anthropic-deal">Read more &rarr;</a>
             </div>
           </div>
         </div>
@@ -754,45 +762,27 @@
         <summary>
           <div class="category-heading">
             <span class="category-title">Others</span>
-            <span class="category-count">4 stories</span>
+            <span class="category-count">2 stories</span>
           </div>
           <span class="chevron">&rsaquo;</span>
         </summary>
         <div class="category-stories">
-          <div class="story">
-            <div class="story-headline">EU begins enforcing its AI Act on high-risk systems</div>
-            <div class="story-summary">The next phase of the EU's AI Act took effect, moving Europe's flagship AI law from a compliance deadline into active enforcement for high-risk systems. Firms operating in Europe now face real penalties, not just guidance, if their AI systems fall short.</div>
+          <div class="story" data-published="2026-08-13">
+            <div class="story-headline">OpenAI loses its third senior leader this month</div>
+            <div class="story-summary">OpenAI's chief revenue officer Denise Dresser is leaving after nine months in the job, replaced by an executive poached from cybersecurity firm Wiz, following the recent departures of its chief operating officer and its applications chief. The churn comes as OpenAI prepares for a possible public listing, a moment that usually rewards stability rather than upheaval.</div>
             <div class="meta">
-              <span class="source">Al Jazeera</span>
+              <span class="source">TechCrunch</span>
               <span>&middot;</span>
-              <a href="https://www.aljazeera.com/news/2026/8/6/what-came-into-force-with-the-eus-ai-act-this-week-and-what-didnt">Read more &rarr;</a>
+              <a href="https://techcrunch.com/2026/08/13/openai-hires-new-cro-as-executive-shake-up-continues/">Read more &rarr;</a>
             </div>
           </div>
-          <div class="story">
-            <div class="story-headline">Supply-chain breach hits 2,500 firms using AI tools</div>
-            <div class="story-summary">A flaw in the widely used LiteLLM framework let attackers potentially access cloud credentials and AI system keys at more than 2,500 organisations, described as the largest AI infrastructure breach of the year so far. It is a reminder that AI's supply chain is now a serious security exposure of its own.</div>
+          <div class="story" data-published="2026-08-09">
+            <div class="story-headline">Half of firms are pulling back on AI agents over cost</div>
+            <div class="story-summary">A KPMG survey found that 49 percent of executives have scaled back AI agent projects after usage-based pricing made the running costs outweigh the benefits. It is a useful counterweight to the investment headlines this week: adoption is real, but so is buyer's remorse once the bill arrives.</div>
             <div class="meta">
-              <span class="source">CX Today</span>
+              <span class="source">Forbes</span>
               <span>&middot;</span>
-              <a href="https://www.cxtoday.com/security-privacy-compliance/supply-chain-attack-exposes-2500-companies-in-largest-ai-infrastructure-breach-of-2026-so-far/">Read more &rarr;</a>
-            </div>
-          </div>
-          <div class="story">
-            <div class="story-headline">China forces Meta to unwind its Manus AI deal</div>
-            <div class="story-summary">AI agent startup Manus is returning to independent ownership after Chinese authorities ordered Meta to unwind its $2 billion-plus acquisition over national security concerns. It highlights how geopolitics, not just economics, is now shaping who is allowed to own leading AI companies.</div>
-            <div class="meta">
-              <span class="source">CNBC</span>
-              <span>&middot;</span>
-              <a href="https://www.cnbc.com/2026/08/11/manus-china-meta-acquisition.html">Read more &rarr;</a>
-            </div>
-          </div>
-          <div class="story">
-            <div class="story-headline">AI-linked layoffs already match all of last year</div>
-            <div class="story-summary">AI-attributed job cuts in the US have reached around 205,000 workers so far in 2026, already matching the full-year total for 2025 in under eight months. Roles in customer service, data operations and back-office finance are being hit hardest, which is where leaders should expect the sharpest workforce planning pressure.</div>
-            <div class="meta">
-              <span class="source">Outsource Accelerator</span>
-              <span>&middot;</span>
-              <a href="https://news.outsourceaccelerator.com/ai-layoffs-205000/">Read more &rarr;</a>
+              <a href="https://www.forbes.com/sites/sandycarter/2026/08/09/kpmg-says-nearly-half-of-executives-pulled-back-ai-agents-over-cost/">Read more &rarr;</a>
             </div>
           </div>
         </div>
@@ -839,6 +829,30 @@
     });
     document.getElementById('noResults').style.display = anyVisible ? 'none' : 'block';
   }
+  // Show each story's publication date in its meta line. The source of truth
+  // is data-published, the same attribute check_site.py validates, so there is
+  // no second copy of the date to fall out of step. Stories without a valid
+  // one simply show no date, which is what older briefs do.
+  (function(){
+    var months = ['Jan','Feb','Mar','Apr','May','Jun',
+                  'Jul','Aug','Sep','Oct','Nov','Dec'];
+    document.querySelectorAll('.story[data-published]').forEach(function(story){
+      var parts = (story.getAttribute('data-published') || '').split('-');
+      if(parts.length !== 3) return;
+      var month = parseInt(parts[1], 10), day = parseInt(parts[2], 10);
+      if(!(month >= 1 && month <= 12) || !(day >= 1 && day <= 31)) return;
+      var source = story.querySelector('.meta .source');
+      if(!source) return;
+      var sep = document.createElement('span');
+      sep.textContent = '\u00B7';
+      var date = document.createElement('span');
+      date.className = 'story-date';
+      date.textContent = day + ' ' + months[month - 1];
+      source.insertAdjacentElement('afterend', sep);
+      sep.insertAdjacentElement('afterend', date);
+    });
+  })();
+
   function goToCategory(cat){
     showTab('briefing');
     document.getElementById('storySearch').value = '';
