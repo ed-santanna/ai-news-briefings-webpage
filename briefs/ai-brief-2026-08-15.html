@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily AI Brief &mdash; 15 August 2026</title>
+<link rel="stylesheet" href="../assets/brand.css">
+<link rel="stylesheet" href="../assets/brief.css">
+</head>
+<body data-brief="2026-08-15">
+
+  <!--
+    GLOBAL SITE HEADER — identical on every page, do not restyle per brief.
+    data-root is the path back to the site root: "../" on brief pages.
+    The dropdown below is baked in with today only; the live page replaces
+    it from manifest.json on load, so do not hand-fill earlier dates.
+  -->
+  <div class="site-header" data-root="../">
+    <div class="site-header-inner">
+      <a class="wordmark" href="../index.html"><span class="wordmark-brand">Chief T.E.C.H. Translator</span><span class="wordmark-sep"> - </span><span class="wordmark-title">AI Daily Briefs</span></a>
+      <nav class="site-nav">
+        <a class="site-nav-link" id="navLatest" href="../briefs/ai-brief-2026-08-15.html">Latest</a>
+        <div class="dropdown">
+          <button class="site-nav-link" id="archiveToggle" aria-expanded="false" aria-haspopup="true">Archive <span class="caret">&#9662;</span></button>
+          <div class="dropdown-menu" id="archiveMenu" role="menu">
+            <a class="dropdown-item current" href="../briefs/ai-brief-2026-08-15.html">15 August 2026</a>
+            <div class="dropdown-sep"></div>
+            <a class="dropdown-item dropdown-all" href="../index.html">View all briefs</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="hero-inner">
+      <span class="pill">Daily AI Brief</span>
+      <div class="hero-row">
+        <h1>Today in AI</h1>
+        <div class="hero-meta">
+          <div class="hero-date">15 August 2026</div>
+          <div class="hero-sub">8 stories &middot; 4 categories</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tabstrip">
+    <div class="tabstrip-inner">
+      <button class="tab-btn active" data-tab="summary" onclick="showTab('summary')">Visual Summary</button>
+      <button class="tab-btn" data-tab="briefing" onclick="showTab('briefing')">Full Briefing</button>
+    </div>
+  </div>
+
+  <div class="page">
+
+    <section id="tab-summary" class="tab-panel active">
+
+      <div class="cat-grid">
+        <div class="cat-card cat-tools" role="button" tabindex="0"
+             onclick="goToCategory('Enterprise AI Tools')"
+             onkeypress="if(event.key==='Enter')goToCategory('Enterprise AI Tools')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Enterprise AI Tools</span>
+            <span class="cat-go">1 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">1</div>
+            <div class="cat-stat-label">new business AI product launched this week</div>
+            <p class="cat-desc">One new business tool arrived this week, built to keep AI edits transparent.</p>
+          </div>
+        </div>
+
+        <div class="cat-card cat-tech" role="button" tabindex="0"
+             onclick="goToCategory('AI Tech')"
+             onkeypress="if(event.key==='Enter')goToCategory('AI Tech')">
+          <div class="cat-card-bar">
+            <span class="cat-name">AI Tech</span>
+            <span class="cat-go">2 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">1bn</div>
+            <div class="cat-stat-label">monthly users on Google's Gemini app</div>
+            <p class="cat-desc">Gemini passed a billion users while DeepSeek claimed a major benchmark jump.</p>
+          </div>
+        </div>
+
+        <div class="cat-card cat-investment" role="button" tabindex="0"
+             onclick="goToCategory('AI Investment')"
+             onkeypress="if(event.key==='Enter')goToCategory('AI Investment')">
+          <div class="cat-card-bar">
+            <span class="cat-name">AI Investment</span>
+            <span class="cat-go">3 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">$65bn</div>
+            <div class="cat-stat-label">committed across three AI deals this week</div>
+            <p class="cat-desc">Three deals moved $65bn into AI computing and tooling this week.</p>
+          </div>
+        </div>
+
+        <div class="cat-card cat-others" role="button" tabindex="0"
+             onclick="goToCategory('Others')"
+             onkeypress="if(event.key==='Enter')goToCategory('Others')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Others</span>
+            <span class="cat-go">2 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">57</div>
+            <div class="cat-stat-label">new members joined the Agentic AI Foundation this week</div>
+            <p class="cat-desc">Two new bodies moved to set shared ground rules for enterprise AI.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Closing split panel. HEADLINE is the single sentence that sums up
+           the day; WHY_MATTERS is its business implication. -->
+      <div class="takeaway">
+        <div class="takeaway-lead">
+          <span class="takeaway-label">The story today</span>
+          <p>This week's AI story was capital and control: $65bn changed hands in three deals while new standards bodies raced to keep enterprise AI in check.</p>
+        </div>
+        <div class="takeaway-why">
+          <span class="takeaway-label">Why this matters</span>
+          <p>Investment is consolidating into fewer, larger bets while new governance bodies form to manage the fallout, so the platform and standards choices made now will be harder to unwind later.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="tab-briefing" class="tab-panel">
+      <div class="controls">
+        <input type="text" class="search-box" id="storySearch" placeholder="Search stories&hellip;" oninput="filterStories()">
+        <button class="filter-chip active" data-cat="all" onclick="setFilter('all')">All</button>
+        <button class="filter-chip cat-tools" data-cat="Enterprise AI Tools" onclick="setFilter('Enterprise AI Tools')">Enterprise AI Tools</button>
+        <button class="filter-chip cat-tech" data-cat="AI Tech" onclick="setFilter('AI Tech')">AI Tech</button>
+        <button class="filter-chip cat-investment" data-cat="AI Investment" onclick="setFilter('AI Investment')">AI Investment</button>
+        <button class="filter-chip cat-others" data-cat="Others" onclick="setFilter('Others')">Others</button>
+      </div>
+      <div class="no-results" id="noResults">No stories match that search.</div>
+
+      <details class="category cat-tools" data-cat="Enterprise AI Tools">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Enterprise AI Tools</span>
+            <span class="category-count">1 story</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-11">
+            <div class="story-headline">New AI editor keeps every change reviewable</div>
+            <div class="story-summary">Startup Revise has launched a browser based document editor that drafts and revises text while keeping every AI change visible as a tracked edit. It is aimed at business users such as legal, investor relations and marketing teams who need to see exactly what an AI has altered before it ships.</div>
+            <div class="meta">
+              <span class="source">AiThority</span>
+              <span>&middot;</span>
+              <a href="https://aithority.com/machine-learning/revise-launches-ai-document-editor-with-reviewable-tracked-changes/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-tech" data-cat="AI Tech">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">AI Tech</span>
+            <span class="category-count">2 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-11">
+            <div class="story-headline">Google's Gemini app reaches a billion users</div>
+            <div class="story-summary">Google's Gemini app has crossed one billion monthly active users, growing from 400 million just over a year ago to become the fastest growing product in the company's history. It puts Gemini roughly level with ChatGPT for scale, sharpening competition between the two most used AI assistants.</div>
+            <div class="meta">
+              <span class="source">TechCrunch</span>
+              <span>&middot;</span>
+              <a href="https://techcrunch.com/2026/08/11/googles-gemini-app-surges-to-one-billion-users/">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-08-13">
+            <div class="story-headline">DeepSeek claims a big leap with new model</div>
+            <div class="story-summary">Chinese AI lab DeepSeek has released its V4 Pro model generally, claiming benchmark gains of up to fifty points on coding and security tasks that would put it close to leading Western models. Independent testers have not yet confirmed the vendor's own figures.</div>
+            <div class="meta">
+              <span class="source">Tech Times</span>
+              <span>&middot;</span>
+              <a href="https://www.techtimes.com/articles/324241/20260813/deepseek-v4-pro-0813-goes-ga-benchmark-claims-await-independent-proof.htm">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-investment" data-cat="AI Investment">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">AI Investment</span>
+            <span class="category-count">3 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-13">
+            <div class="story-headline">Databricks raises $5bn, doubling its valuation</div>
+            <div class="story-summary">Data and AI company Databricks has closed a $5bn funding round led by Coatue, Blackstone and Gulf investor MGX, taking its valuation to $190bn, up from $134bn just six months ago. The round underlines how much capital is still chasing AI infrastructure providers even as revenue growth becomes the main test.</div>
+            <div class="meta">
+              <span class="source">CNBC</span>
+              <span>&middot;</span>
+              <a href="https://www.cnbc.com/2026/08/13/databricks-funding-round-190-billion-valuation.html">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-08-14">
+            <div class="story-headline">SpaceX completes $60bn buyout of Cursor</div>
+            <div class="story-summary">SpaceX has completed its $60bn all stock acquisition of AI coding startup Cursor, folding it in as a wholly owned subsidiary to bolster Elon Musk's push into AI. Analysts expect the deal to add several billion dollars to SpaceX's revenue within two years.</div>
+            <div class="meta">
+              <span class="source">Bloomberg</span>
+              <span>&middot;</span>
+              <a href="https://www.bloomberg.com/news/articles/2026-08-14/spacex-completes-its-60-billion-cursor-acquisition">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-08-13">
+            <div class="story-headline">Skan AI raises $63m to map office work</div>
+            <div class="story-summary">Enterprise software firm Skan AI raised $63m and launched a platform that studies how employees actually work before deploying AI agents to take over the task. The company says customers have banked over $500m in measured savings, averaging 30 to 40 percent per process.</div>
+            <div class="meta">
+              <span class="source">HPCwire</span>
+              <span>&middot;</span>
+              <a href="https://www.hpcwire.com/aiwire/2026/08/13/skan-ai-raises-63m-launches-enterprise-ai-platform/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-others" data-cat="Others">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Others</span>
+            <span class="category-count">2 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-13">
+            <div class="story-headline">Alibaba, Visa and Wells Fargo back AI standards</div>
+            <div class="story-summary">The Agentic AI Foundation added 57 new members including Alibaba, Visa and Wells Fargo as top tier backers, taking its total membership to 247 organisations. The influx of major financial and technology names shows how much appetite there now is for common rules as AI agents move into daily business use.</div>
+            <div class="meta">
+              <span class="source">HPCwire</span>
+              <span>&middot;</span>
+              <a href="https://www.hpcwire.com/aiwire/2026/08/13/agentic-ai-foundation-welcomes-57-new-members-gaining-major-financial-services-players-and-apac-leaders/">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-08-11">
+            <div class="story-headline">New group of security chiefs sets AI rules</div>
+            <div class="story-summary">A group of corporate security and technology leaders has formed the AI Trust and Security Consortium, a peer governed body capped at 50 members that will write shared governance frameworks for deploying AI safely. It reflects growing pressure on boards to prove their AI use is secure and not just fast.</div>
+            <div class="meta">
+              <span class="source">PR Newswire</span>
+              <span>&middot;</span>
+              <a href="https://www.prnewswire.com/news-releases/ai-trust-and-security-consortium-aitsc-launches-to-set-peer-defined-standards-for-enterprise-ai-302847826.html">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+    </section>
+
+  </div>
+
+  <footer>
+    <span>Compiled automatically from web search using Claude</span>
+    <span>Created by Ed Sant&#8217;Anna</span>
+  </footer>
+
+<script src="../assets/brief.js" defer></script>
+<script src="../assets/site.js" defer></script>
+
+</body>
+</html>
