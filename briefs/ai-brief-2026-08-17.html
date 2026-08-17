@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily AI Brief &mdash; 17 August 2026</title>
+<link rel="stylesheet" href="../assets/brand.css">
+<link rel="stylesheet" href="../assets/brief.css">
+</head>
+<body data-brief="2026-08-17">
+
+  <!--
+    GLOBAL SITE HEADER — identical on every page, do not restyle per brief.
+    data-root is the path back to the site root: "../" on brief pages.
+    The dropdown below is baked in with today only; the live page replaces
+    it from manifest.json on load, so do not hand-fill earlier dates.
+  -->
+  <div class="site-header" data-root="../">
+    <div class="site-header-inner">
+      <a class="wordmark" href="../index.html"><span class="wordmark-brand">Chief T.E.C.H. Translator</span><span class="wordmark-sep"> - </span><span class="wordmark-title">AI Daily Briefs</span></a>
+      <nav class="site-nav">
+        <a class="site-nav-link" id="navLatest" href="../briefs/ai-brief-2026-08-17.html">Latest</a>
+        <div class="dropdown">
+          <button class="site-nav-link" id="archiveToggle" aria-expanded="false" aria-haspopup="true">Archive <span class="caret">&#9662;</span></button>
+          <div class="dropdown-menu" id="archiveMenu" role="menu">
+            <a class="dropdown-item current" href="../briefs/ai-brief-2026-08-17.html">17 August 2026</a>
+            <div class="dropdown-sep"></div>
+            <a class="dropdown-item dropdown-all" href="../index.html">View all briefs</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="hero-inner">
+      <span class="pill">Daily AI Brief</span>
+      <div class="hero-row">
+        <h1>Today in AI</h1>
+        <div class="hero-meta">
+          <div class="hero-date">17 August 2026</div>
+          <div class="hero-sub">10 stories &middot; 5 categories</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tabstrip">
+    <div class="tabstrip-inner">
+      <button class="tab-btn active" data-tab="summary" onclick="showTab('summary')">Visual Summary</button>
+      <button class="tab-btn" data-tab="briefing" onclick="showTab('briefing')">Full Briefing</button>
+    </div>
+  </div>
+
+  <div class="page">
+
+    <section id="tab-summary" class="tab-panel active">
+
+      <!--
+        CATEGORY CARDS — one per category with at least one story, in the
+        fixed order below, skipping any with none. Colour class per
+        category (never reassign):
+          Enterprise Use Cases -> cat-usecases
+          Enterprise AI Tools  -> cat-tools
+          Consulting News      -> cat-consulting
+          AI Tech              -> cat-tech
+          AI Investment        -> cat-investment
+          Others               -> cat-others
+        cat-stat must be a real sourced figure; if no clean number exists
+        use a truthful count. cat-stat-label gives it context in <=12 words.
+        cat-desc is one sentence, <=15 words. The name in goToCategory()
+        must match the chip and <details> data-cat exactly.
+        The card below is a worked example; repeat for each category.
+      -->
+      <div class="cat-grid">
+        <div class="cat-card cat-tools" role="button" tabindex="0"
+             onclick="goToCategory('Enterprise AI Tools')"
+             onkeypress="if(event.key==='Enter')goToCategory('Enterprise AI Tools')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Enterprise AI Tools</span>
+            <span class="cat-go">1 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">52%</div>
+            <div class="cat-stat-label">cut in running costs from Writer's new AI agent model</div>
+            <p class="cat-desc">A cheaper, faster agent model lands as firms grow wary of AI's bill.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-consulting" role="button" tabindex="0"
+             onclick="goToCategory('Consulting News')"
+             onkeypress="if(event.key==='Enter')goToCategory('Consulting News')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Consulting News</span>
+            <span class="cat-go">1 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">1</div>
+            <div class="cat-stat-label">new AI spending oversight role created at EY</div>
+            <p class="cat-desc">EY puts someone in charge of proving its AI investment pays off.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-tech" role="button" tabindex="0"
+             onclick="goToCategory('AI Tech')"
+             onkeypress="if(event.key==='Enter')goToCategory('AI Tech')">
+          <div class="cat-card-bar">
+            <span class="cat-name">AI Tech</span>
+            <span class="cat-go">3 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">1,100%</div>
+            <div class="cat-stat-label">maximum rise in DeepSeek's API prices this month</div>
+            <p class="cat-desc">Cheap AI gets pricier as vendors reshape how they charge business users.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-investment" role="button" tabindex="0"
+             onclick="goToCategory('AI Investment')"
+             onkeypress="if(event.key==='Enter')goToCategory('AI Investment')">
+          <div class="cat-card-bar">
+            <span class="cat-name">AI Investment</span>
+            <span class="cat-go">3 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">$500bn</div>
+            <div class="cat-stat-label">mobilised by Nvidia to help customers fund AI data centres</div>
+            <p class="cat-desc">Wall Street and AI valuations are becoming ever more tightly wound together.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-others" role="button" tabindex="0"
+             onclick="goToCategory('Others')"
+             onkeypress="if(event.key==='Enter')goToCategory('Others')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Others</span>
+            <span class="cat-go">2 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">2</div>
+            <div class="cat-stat-label">stories on AI leadership and a cross-vendor security flaw</div>
+            <p class="cat-desc">Governance and security are catching up with how fast AI has spread.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Closing split panel. HEADLINE is the single sentence that sums up
+           the day; WHY_MATTERS is its business implication. -->
+      <div class="takeaway">
+        <div class="takeaway-lead">
+          <span class="takeaway-label">The story today</span>
+          <p>AI's cost reckoning has arrived, from steep price rises and a new spending watchdog at EY to record sums flowing into the infrastructure that keeps it all running.</p>
+        </div>
+        <div class="takeaway-why">
+          <span class="takeaway-label">Why this matters</span>
+          <p>Budget AI on real, moving prices rather than launch-day discounts, and put someone in charge of proving the spend is actually worth it.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="tab-briefing" class="tab-panel">
+      <div class="controls">
+        <input type="text" class="search-box" id="storySearch" placeholder="Search stories&hellip;" oninput="filterStories()">
+        <button class="filter-chip active" data-cat="all" onclick="setFilter('all')">All</button>
+        <!-- one chip per category present, same order and colour class -->
+        <button class="filter-chip cat-tools" data-cat="Enterprise AI Tools" onclick="setFilter('Enterprise AI Tools')">Enterprise AI Tools</button>
+        <button class="filter-chip cat-consulting" data-cat="Consulting News" onclick="setFilter('Consulting News')">Consulting News</button>
+        <button class="filter-chip cat-tech" data-cat="AI Tech" onclick="setFilter('AI Tech')">AI Tech</button>
+        <button class="filter-chip cat-investment" data-cat="AI Investment" onclick="setFilter('AI Investment')">AI Investment</button>
+        <button class="filter-chip cat-others" data-cat="Others" onclick="setFilter('Others')">Others</button>
+      </div>
+      <div class="no-results" id="noResults">No stories match that search.</div>
+
+      <!-- One <details> per category, same fixed order. Do NOT add the
+           "open" attribute: sections start collapsed and expand on click.
+           Every .story carries data-published="YYYY-MM-DD", the date the
+           SOURCE published the article, not today's date. The checker fails
+           the run if it is missing, unparseable, in the future, or older
+           than the freshness window. -->
+      <details class="category cat-tools" data-cat="Enterprise AI Tools">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Enterprise AI Tools</span>
+            <span class="category-count">1 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-13">
+            <div class="story-headline">New Writer model cuts AI agent costs in half</div>
+            <div class="story-summary">Writer's new Palmyra X6 model runs its AI agents 52% cheaper and 48% faster, tackling the runaway token spending that has made many firms wary of scaling agentic AI. It undercuts big rivals on price, which could reset what businesses expect to pay for enterprise AI deployments.</div>
+            <div class="meta">
+              <span class="source">VentureBeat</span>
+              <span>&middot;</span>
+              <a href="https://venturebeat.com/orchestration/writer-says-its-new-palmyra-x6-model-cuts-ai-agent-costs-by-52-as-token-spending-surges">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-consulting" data-cat="Consulting News">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Consulting News</span>
+            <span class="category-count">1 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-10">
+            <div class="story-headline">EY appoints a watchdog for its AI spending</div>
+            <div class="story-summary">EY is creating a new "agent economics" role to check whether its investment in an AI-powered workforce is actually paying off, reporting straight to its global managing partner for business enablement. The move reflects growing pressure across the consulting industry to prove AI spend delivers value rather than just adding cost.</div>
+            <div class="meta">
+              <span class="source">Bloomberg</span>
+              <span>&middot;</span>
+              <a href="https://www.bloomberg.com/news/articles/2026-08-10/ey-launching-unit-to-keep-a-lid-on-artificial-intelligence-costs">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-tech" data-cat="AI Tech">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">AI Tech</span>
+            <span class="category-count">3 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-14">
+            <div class="story-headline">OpenAI's business customers now outspend consumers</div>
+            <div class="story-summary">OpenAI's finance chief told investors that revenue from business customers has overtaken ChatGPT consumer subscriptions, four months ahead of the company's own forecast, with annualised revenue reaching $40 billion. It is a strong signal that enterprises, not individual subscribers, are now the more important market for the leading AI labs.</div>
+            <div class="meta">
+              <span class="source">CNBC</span>
+              <span>&middot;</span>
+              <a href="https://www.cnbc.com/2026/08/14/openai-cfo-friar-tells-investors-that-enterprise-bigger-than-consumer.html">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-08-13">
+            <div class="story-headline">DeepSeek hikes its AI prices by up to 11-fold</div>
+            <div class="story-summary">DeepSeek is raising the price of its V4 models by as much as 1,100%, alongside new peak and off-peak pricing, ending an era of ultra-cheap Chinese AI. Even after the rise its rates still undercut Western rivals, but any business that built its budget around cheap Chinese models will need to think again.</div>
+            <div class="meta">
+              <span class="source">Bloomberg</span>
+              <span>&middot;</span>
+              <a href="https://www.bloomberg.com/news/articles/2026-08-13/deepseek-increases-prices-for-ai-services-by-multiple-times">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-08-15">
+            <div class="story-headline">ChatGPT starts showing adverts to European users</div>
+            <div class="story-summary">OpenAI has told free and low-cost ChatGPT users in the EU and Switzerland that adverts are coming later this month, while paid business and enterprise accounts stay ad-free. It is OpenAI's clearest move yet towards an advertising business model, and a sign that its consumer product economics are shifting.</div>
+            <div class="meta">
+              <span class="source">PPC Land</span>
+              <span>&middot;</span>
+              <a href="https://ppc.land/chatgpt-free-and-go-users-in-europe-face-ads-from-later-this-month/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-investment" data-cat="AI Investment">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">AI Investment</span>
+            <span class="category-count">3 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-10">
+            <div class="story-headline">Nvidia lines up $500bn to fund AI data centres</div>
+            <div class="story-summary">Nvidia has partnered with six of Wall Street's biggest financial firms, including Goldman Sachs, BlackRock and KKR, to mobilise over $500 billion of outside capital for AI data centres and power infrastructure. It lets customers finance AI compute they could not otherwise afford, without the debt landing on Nvidia's own balance sheet.</div>
+            <div class="meta">
+              <span class="source">Nvidia Newsroom</span>
+              <span>&middot;</span>
+              <a href="https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-08-13">
+            <div class="story-headline">Anthropic's investors now eye a $2 trillion float</div>
+            <div class="story-summary">Anthropic's backers are targeting a $2 trillion valuation for an October listing, which would make it the largest IPO in history, banking on annualised revenue reaching $100 to 120 billion by year end. The figure has climbed sharply from earlier estimates, showing how fast expectations for the Claude maker are moving.</div>
+            <div class="meta">
+              <span class="source">Forbes</span>
+              <span>&middot;</span>
+              <a href="https://www.forbes.com/sites/jonmarkman/2026/08/13/anthropic-eyes-2-trillion-in-october-ipo-a-record-breaking-debut/">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-08-14">
+            <div class="story-headline">Nvidia reveals a $21bn stake in SpaceX</div>
+            <div class="story-summary">A regulatory filing shows Nvidia held nearly $21 billion of SpaceX stock at the end of June, a legacy of its earlier investment in xAI before Elon Musk folded that lab into SpaceX. It makes SpaceX Nvidia's second-largest disclosed holding, and shows how tangled AI investment has become across a small number of firms.</div>
+            <div class="meta">
+              <span class="source">CNBC</span>
+              <span>&middot;</span>
+              <a href="https://www.cnbc.com/2026/08/14/nvidia-discloses-21-billion-stake-in-spacex-at-end-of-second-quarter.html">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-others" data-cat="Others">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Others</span>
+            <span class="category-count">2 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-13">
+            <div class="story-headline">Rackspace names its first chief AI officer</div>
+            <div class="story-summary">Rackspace has appointed Chetan Gupta, formerly of Hitachi, as its first chief AI officer to lead strategy, governance and adoption across the company and its customers. It is the latest in a wave of firms creating a dedicated AI leadership role, as the job becomes a standard fixture in the C-suite.</div>
+            <div class="meta">
+              <span class="source">GlobeNewswire</span>
+              <span>&middot;</span>
+              <a href="https://www.globenewswire.com/news-release/2026/08/13/3344483/0/en/rackspace-technology-appoints-chetan-gupta-ph-d-as-chief-ai-officer-to-advance-enterprise-and-sovereign-ai.html">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-08-11">
+            <div class="story-headline">Security flaw exposed hidden AI reasoning to attackers</div>
+            <div class="story-summary">Researchers found a flaw in how OpenAI, Anthropic and Google protected their models' internal reasoning, letting attackers replay it through weaker models to recover passwords and API keys from real user sessions. All three labs have since fixed the issue, but it is a reminder that AI security gaps can sit unnoticed for months.</div>
+            <div class="meta">
+              <span class="source">The Hacker News</span>
+              <span>&middot;</span>
+              <a href="https://thehackernews.com/2026/08/openai-anthropic-google-api-flaw-let.html">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+    </section>
+
+  </div>
+
+  <footer>
+    <span>Compiled automatically from web search using Claude</span>
+    <span>Created by Ed Sant&#8217;Anna</span>
+  </footer>
+
+<script src="../assets/brief.js" defer></script>
+<script src="../assets/site.js" defer></script>
+
+</body>
+</html>
