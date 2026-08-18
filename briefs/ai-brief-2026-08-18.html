@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily AI Brief &mdash; 18 August 2026</title>
+<link rel="stylesheet" href="../assets/brand.css">
+<link rel="stylesheet" href="../assets/brief.css">
+</head>
+<body data-brief="2026-08-18">
+
+  <!--
+    GLOBAL SITE HEADER — identical on every page, do not restyle per brief.
+    data-root is the path back to the site root: "../" on brief pages.
+    The dropdown below is baked in with today only; the live page replaces
+    it from manifest.json on load, so do not hand-fill earlier dates.
+  -->
+  <div class="site-header" data-root="../">
+    <div class="site-header-inner">
+      <a class="wordmark" href="../index.html"><span class="wordmark-brand">Chief T.E.C.H. Translator</span><span class="wordmark-sep"> - </span><span class="wordmark-title">AI Daily Briefs</span></a>
+      <nav class="site-nav">
+        <a class="site-nav-link" id="navLatest" href="../briefs/ai-brief-2026-08-18.html">Latest</a>
+        <div class="dropdown">
+          <button class="site-nav-link" id="archiveToggle" aria-expanded="false" aria-haspopup="true">Archive <span class="caret">&#9662;</span></button>
+          <div class="dropdown-menu" id="archiveMenu" role="menu">
+            <a class="dropdown-item current" href="../briefs/ai-brief-2026-08-18.html">18 August 2026</a>
+            <div class="dropdown-sep"></div>
+            <a class="dropdown-item dropdown-all" href="../index.html">View all briefs</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="hero-inner">
+      <span class="pill">Daily AI Brief</span>
+      <div class="hero-row">
+        <h1>Today in AI</h1>
+        <div class="hero-meta">
+          <div class="hero-date">18 August 2026</div>
+          <div class="hero-sub">8 stories &middot; 6 categories</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tabstrip">
+    <div class="tabstrip-inner">
+      <button class="tab-btn active" data-tab="summary" onclick="showTab('summary')">Visual Summary</button>
+      <button class="tab-btn" data-tab="briefing" onclick="showTab('briefing')">Full Briefing</button>
+    </div>
+  </div>
+
+  <div class="page">
+
+    <section id="tab-summary" class="tab-panel active">
+
+      <div class="cat-grid">
+        <div class="cat-card cat-usecases" role="button" tabindex="0"
+             onclick="goToCategory('Enterprise Use Cases')"
+             onkeypress="if(event.key==='Enter')goToCategory('Enterprise Use Cases')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Enterprise Use Cases</span>
+            <span class="cat-go">2 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">40%</div>
+            <div class="cat-stat-label">faster searches with Just Eat's new AI voice assistant</div>
+            <p class="cat-desc">Hospitals and delivery platforms pushed AI from pilot into daily operations this week.</p>
+          </div>
+        </div>
+
+        <div class="cat-card cat-tools" role="button" tabindex="0"
+             onclick="goToCategory('Enterprise AI Tools')"
+             onkeypress="if(event.key==='Enter')goToCategory('Enterprise AI Tools')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Enterprise AI Tools</span>
+            <span class="cat-go">1 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">1</div>
+            <div class="cat-stat-label">single app replacing Microsoft's separate Copilot products</div>
+            <p class="cat-desc">Microsoft began merging its consumer and business Copilot apps into one.</p>
+          </div>
+        </div>
+
+        <div class="cat-card cat-consulting" role="button" tabindex="0"
+             onclick="goToCategory('Consulting News')"
+             onkeypress="if(event.key==='Enter')goToCategory('Consulting News')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Consulting News</span>
+            <span class="cat-go">1 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">1</div>
+            <div class="cat-stat-label">new agentic AI platform launched by L&amp;T Technology Services</div>
+            <p class="cat-desc">An engineering services firm turned its own expertise into a sellable AI product.</p>
+          </div>
+        </div>
+
+        <div class="cat-card cat-tech" role="button" tabindex="0"
+             onclick="goToCategory('AI Tech')"
+             onkeypress="if(event.key==='Enter')goToCategory('AI Tech')">
+          <div class="cat-card-bar">
+            <span class="cat-name">AI Tech</span>
+            <span class="cat-go">1 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">14x</div>
+            <div class="cat-stat-label">faster responses from OpenAI's new Ultrafast mode</div>
+            <p class="cat-desc">OpenAI's new inference tier shows how much cheaper and quicker AI can get.</p>
+          </div>
+        </div>
+
+        <div class="cat-card cat-investment" role="button" tabindex="0"
+             onclick="goToCategory('AI Investment')"
+             onkeypress="if(event.key==='Enter')goToCategory('AI Investment')">
+          <div class="cat-card-bar">
+            <span class="cat-name">AI Investment</span>
+            <span class="cat-go">1 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">$11.5bn</div>
+            <div class="cat-stat-label">Anthropic's second-quarter revenue, its first profitable quarter</div>
+            <p class="cat-desc">Anthropic proved a frontier AI lab can turn a profit, not just raise funding.</p>
+          </div>
+        </div>
+
+        <div class="cat-card cat-others" role="button" tabindex="0"
+             onclick="goToCategory('Others')"
+             onkeypress="if(event.key==='Enter')goToCategory('Others')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Others</span>
+            <span class="cat-go">2 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">81%</div>
+            <div class="cat-stat-label">of young Americans distrust Palantir's chief on AI, a new poll found</div>
+            <p class="cat-desc">Google reshuffled its AI leadership as public trust in AI's leaders kept falling.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="takeaway">
+        <div class="takeaway-lead">
+          <span class="takeaway-label">The story today</span>
+          <p>Anthropic proved a frontier AI lab can turn a profit, while hospitals, delivery apps and engineering firms pushed AI further into everyday operations.</p>
+        </div>
+        <div class="takeaway-why">
+          <span class="takeaway-label">Why this matters</span>
+          <p>For a sector defined by huge losses, a profitable AI lab changes the investment story, and this week's operational rollouts show AI paying off in daily service, not just in demos.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="tab-briefing" class="tab-panel">
+      <div class="controls">
+        <input type="text" class="search-box" id="storySearch" placeholder="Search stories&hellip;" oninput="filterStories()">
+        <button class="filter-chip active" data-cat="all" onclick="setFilter('all')">All</button>
+        <button class="filter-chip cat-usecases" data-cat="Enterprise Use Cases" onclick="setFilter('Enterprise Use Cases')">Enterprise Use Cases</button>
+        <button class="filter-chip cat-tools" data-cat="Enterprise AI Tools" onclick="setFilter('Enterprise AI Tools')">Enterprise AI Tools</button>
+        <button class="filter-chip cat-consulting" data-cat="Consulting News" onclick="setFilter('Consulting News')">Consulting News</button>
+        <button class="filter-chip cat-tech" data-cat="AI Tech" onclick="setFilter('AI Tech')">AI Tech</button>
+        <button class="filter-chip cat-investment" data-cat="AI Investment" onclick="setFilter('AI Investment')">AI Investment</button>
+        <button class="filter-chip cat-others" data-cat="Others" onclick="setFilter('Others')">Others</button>
+      </div>
+      <div class="no-results" id="noResults">No stories match that search.</div>
+
+      <details class="category cat-usecases" data-cat="Enterprise Use Cases">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Enterprise Use Cases</span>
+            <span class="category-count">2 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-11">
+            <div class="story-headline">Just Eat rolls its AI voice ordering across Europe</div>
+            <div class="story-summary">Just Eat Takeaway extended its AI voice assistant beyond the UK and Germany to Poland, Spain, Austria, Italy, Belgium and Switzerland, calling itself the first delivery platform to deploy conversational AI at this scale. Customers using it find what they want 40% faster and are more likely to follow its recommendations, a clear commercial payoff from voice AI.</div>
+            <div class="meta">
+              <span class="source">RETAIL TECHNOLOGY INNOVATION HUB</span>
+              <span>&middot;</span>
+              <a href="https://retailtechinnovationhub.com/home/2026/8/11/just-eat-takeawaycom-rolls-out-ai-voice-assistant-across-europe-building-on-uk-and-germany-launches">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-08-17">
+            <div class="story-headline">Seoul hospital and telecom firm build a shared AI platform</div>
+            <div class="story-summary">KT and Seoul National University Hospital signed an agreement to build a joint medical AI platform covering diagnosis support, nursing workload and hospital administration. It shows public healthcare systems moving from isolated pilots towards shared AI infrastructure that other hospitals could later adopt.</div>
+            <div class="meta">
+              <span class="source">TECH TIMES</span>
+              <span>&middot;</span>
+              <a href="https://www.techtimes.com/articles/324677/20260817/south-korea-hospital-ai-gets-platform-fix-kt-snuh-sign-infrastructure-mou.htm">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-tools" data-cat="Enterprise AI Tools">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Enterprise AI Tools</span>
+            <span class="category-count">1 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-13">
+            <div class="story-headline">Microsoft starts merging its Copilot apps into one</div>
+            <div class="story-summary">Microsoft has begun combining its consumer and business Copilot apps into a single product, the first step towards a unified "super app" to compete with ChatGPT, Gemini and Claude. Enterprise data and security controls stay separate even as the interface consolidates, a sign Microsoft sees one AI front door as the next battleground.</div>
+            <div class="meta">
+              <span class="source">FORTUNE</span>
+              <span>&middot;</span>
+              <a href="https://fortune.com/2026/08/13/microsoft-begins-merge-consumer-and-enterprise-copilot-ai-apps/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-consulting" data-cat="Consulting News">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Consulting News</span>
+            <span class="category-count">1 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-11">
+            <div class="story-headline">Engineering services firm launches its own agentic AI platform</div>
+            <div class="story-summary">L&amp;T Technology Services launched AgenticIQ, a platform that turns its engineering expertise into reusable AI agents for manufacturing and industrial clients. It is a sign that service firms are packaging their own know-how into sellable AI products rather than only advising on other vendors' tools.</div>
+            <div class="meta">
+              <span class="source">BUSINESS WIRE</span>
+              <span>&middot;</span>
+              <a href="https://markets.financialcontent.com/wral/article/bizwire-2026-8-11-l-and-t-technology-services-launches-agenticiq-an-end-to-end-agentic-ai-platform-for-engineering-manufacturing-and-customer-experience">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-tech" data-cat="AI Tech">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">AI Tech</span>
+            <span class="category-count">1 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-14">
+            <div class="story-headline">OpenAI's new mode runs its model 14 times faster</div>
+            <div class="story-summary">OpenAI launched an "Ultrafast" tier of its GPT-5.6 Sol model, built on Cerebras chips, that responds up to 14 times faster than the standard version at the same accuracy. Faster, cheaper inference matters wherever response speed shapes the customer experience, from support chat to live trading tools.</div>
+            <div class="meta">
+              <span class="source">AIWIRE</span>
+              <span>&middot;</span>
+              <a href="https://www.hpcwire.com/aiwire/2026/08/14/cerebras-powers-openais-gpt-5-6-sol-ultrafast-mode/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-investment" data-cat="AI Investment">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">AI Investment</span>
+            <span class="category-count">1 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-15">
+            <div class="story-headline">Anthropic posts its first quarterly profit</div>
+            <div class="story-summary">Anthropic's revenue more than doubled quarter on quarter to over $11.5 billion, delivering its first positive operating income ahead of a planned stock market listing. It is the clearest sign yet that a frontier AI lab can run profitably rather than relying on ever-larger funding rounds.</div>
+            <div class="meta">
+              <span class="source">CNBC</span>
+              <span>&middot;</span>
+              <a href="https://www.cnbc.com/2026/08/15/anthropic-revenue-jumps-to-over-11point5-billion-in-q2-report.html">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-others" data-cat="Others">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Others</span>
+            <span class="category-count">2 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-12">
+            <div class="story-headline">Google names a new day-to-day boss for DeepMind</div>
+            <div class="story-summary">Alphabet made Demis Hassabis chief scientist and put Koray Kavukcuoglu in charge of DeepMind's daily operations, including Gemini development. The reshuffle points to Google sharpening its focus on shipping models faster as competition with OpenAI and Anthropic intensifies.</div>
+            <div class="meta">
+              <span class="source">CNBC</span>
+              <span>&middot;</span>
+              <a href="https://www.cnbc.com/2026/08/12/google-deepmind-koray-kavukcuoglu.html">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-08-13">
+            <div class="story-headline">Young Americans say they distrust AI's leaders</div>
+            <div class="story-summary">A CNBC poll of Americans aged 18 to 34 found most do not trust prominent AI executives, including 81% who distrust Palantir's Alex Karp, to act responsibly. Nearly half fear AI will hurt their careers, a trust gap that businesses adopting AI will need to manage with staff and customers alike.</div>
+            <div class="meta">
+              <span class="source">FORBES</span>
+              <span>&middot;</span>
+              <a href="https://www.forbes.com/sites/zacharyfolk/2026/08/13/young-americans-dont-trust-billionaire-ai-leaders-new-poll-finds/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+    </section>
+
+  </div>
+
+  <footer>
+    <span>Compiled automatically from web search using Claude</span>
+    <span>Created by Ed Sant&#8217;Anna</span>
+  </footer>
+
+<script src="../assets/brief.js" defer></script>
+<script src="../assets/site.js" defer></script>
+
+</body>
+</html>
