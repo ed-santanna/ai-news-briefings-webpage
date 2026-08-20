@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily AI Brief &mdash; 20 August 2026</title>
+<link rel="stylesheet" href="../assets/brand.css">
+<link rel="stylesheet" href="../assets/brief.css">
+</head>
+<body data-brief="2026-08-20">
+
+  <!--
+    GLOBAL SITE HEADER — identical on every page, do not restyle per brief.
+    data-root is the path back to the site root: "../" on brief pages.
+    The dropdown below is baked in with today only; the live page replaces
+    it from manifest.json on load, so do not hand-fill earlier dates.
+  -->
+  <div class="site-header" data-root="../">
+    <div class="site-header-inner">
+      <a class="wordmark" href="../index.html"><span class="wordmark-brand">Chief T.E.C.H. Translator</span><span class="wordmark-sep"> - </span><span class="wordmark-title">AI Daily Briefs</span></a>
+      <nav class="site-nav">
+        <a class="site-nav-link" id="navLatest" href="../briefs/ai-brief-2026-08-20.html">Latest</a>
+        <div class="dropdown">
+          <button class="site-nav-link" id="archiveToggle" aria-expanded="false" aria-haspopup="true">Archive <span class="caret">&#9662;</span></button>
+          <div class="dropdown-menu" id="archiveMenu" role="menu">
+            <a class="dropdown-item current" href="../briefs/ai-brief-2026-08-20.html">20 August 2026</a>
+            <div class="dropdown-sep"></div>
+            <a class="dropdown-item dropdown-all" href="../index.html">View all briefs</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="hero-inner">
+      <span class="pill">Daily AI Brief</span>
+      <div class="hero-row">
+        <h1>Today in AI</h1>
+        <div class="hero-meta">
+          <div class="hero-date">20 August 2026</div>
+          <div class="hero-sub">9 stories &middot; 4 categories</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tabstrip">
+    <div class="tabstrip-inner">
+      <button class="tab-btn active" data-tab="summary" onclick="showTab('summary')">Visual Summary</button>
+      <button class="tab-btn" data-tab="briefing" onclick="showTab('briefing')">Full Briefing</button>
+    </div>
+  </div>
+
+  <div class="page">
+
+    <section id="tab-summary" class="tab-panel active">
+
+      <!--
+        CATEGORY CARDS — one per category with at least one story, in the
+        fixed order below, skipping any with none. Colour class per
+        category (never reassign):
+          Enterprise Use Cases -> cat-usecases
+          Enterprise AI Tools  -> cat-tools
+          Consulting News      -> cat-consulting
+          AI Tech              -> cat-tech
+          AI Investment        -> cat-investment
+          Others               -> cat-others
+        cat-stat must be a real sourced figure; if no clean number exists
+        use a truthful count. cat-stat-label gives it context in <=12 words.
+        cat-desc is one sentence, <=15 words. The name in goToCategory()
+        must match the chip and <details> data-cat exactly.
+        The card below is a worked example; repeat for each category.
+      -->
+      <div class="cat-grid">
+        <div class="cat-card cat-tools" role="button" tabindex="0"
+             onclick="goToCategory('Enterprise AI Tools')"
+             onkeypress="if(event.key==='Enter')goToCategory('Enterprise AI Tools')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Enterprise AI Tools</span>
+            <span class="cat-go">3 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">3</div>
+            <div class="cat-stat-label">new admin and building tools shipped for Workspace and Claude</div>
+            <p class="cat-desc">Google and Anthropic gave business customers more ways to manage and build with AI.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-tech" role="button" tabindex="0"
+             onclick="goToCategory('AI Tech')"
+             onkeypress="if(event.key==='Enter')goToCategory('AI Tech')">
+          <div class="cat-card-bar">
+            <span class="cat-name">AI Tech</span>
+            <span class="cat-go">2 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">42-min</div>
+            <div class="cat-stat-label">length of the outage that knocked out Claude's web apps</div>
+            <p class="cat-desc">A privacy push from OpenAI and an Anthropic outage put AI reliability in the spotlight.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-investment" role="button" tabindex="0"
+             onclick="goToCategory('AI Investment')"
+             onkeypress="if(event.key==='Enter')goToCategory('AI Investment')">
+          <div class="cat-card-bar">
+            <span class="cat-name">AI Investment</span>
+            <span class="cat-go">1 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">$20bn</div>
+            <div class="cat-stat-label">prospective valuation of Mercor as Nvidia weighs a stake</div>
+            <p class="cat-desc">Nvidia is in talks to fund a data supplier at double its valuation from ten months ago.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-others" role="button" tabindex="0"
+             onclick="goToCategory('Others')"
+             onkeypress="if(event.key==='Enter')goToCategory('Others')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Others</span>
+            <span class="cat-go">3 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">3</div>
+            <div class="cat-stat-label">policy, security and research moves aimed at reining AI in</div>
+            <p class="cat-desc">Regulators, researchers and hackers all had AI infrastructure in their sights this week.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Closing split panel. HEADLINE is the single sentence that sums up
+           the day; WHY_MATTERS is its business implication. -->
+      <div class="takeaway">
+        <div class="takeaway-lead">
+          <span class="takeaway-label">The story today</span>
+          <p>This week's AI news was about control: Google, Anthropic and OpenAI all rolled out new admin, building and privacy tools for business customers, while a Pennsylvania order and a critical security flaw both aimed to rein in AI's downsides.</p>
+        </div>
+        <div class="takeaway-why">
+          <span class="takeaway-label">Why this matters</span>
+          <p>As AI moves deeper into everyday business systems, buyers are getting more levers to govern it, but this week's outage and vulnerability disclosures are a reminder that the infrastructure underneath still needs active management, not blind trust.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="tab-briefing" class="tab-panel">
+      <div class="controls">
+        <input type="text" class="search-box" id="storySearch" placeholder="Search stories&hellip;" oninput="filterStories()">
+        <button class="filter-chip active" data-cat="all" onclick="setFilter('all')">All</button>
+        <!-- one chip per category present, same order and colour class -->
+        <button class="filter-chip cat-tools" data-cat="Enterprise AI Tools" onclick="setFilter('Enterprise AI Tools')">Enterprise AI Tools</button>
+        <button class="filter-chip cat-tech" data-cat="AI Tech" onclick="setFilter('AI Tech')">AI Tech</button>
+        <button class="filter-chip cat-investment" data-cat="AI Investment" onclick="setFilter('AI Investment')">AI Investment</button>
+        <button class="filter-chip cat-others" data-cat="Others" onclick="setFilter('Others')">Others</button>
+      </div>
+      <div class="no-results" id="noResults">No stories match that search.</div>
+
+      <!-- One <details> per category, same fixed order. Do NOT add the
+           "open" attribute: sections start collapsed and expand on click.
+           Every .story carries data-published="YYYY-MM-DD", the date the
+           SOURCE published the article, not today's date. The checker fails
+           the run if it is missing, unparseable, in the future, or older
+           than the freshness window. -->
+      <details class="category cat-tools" data-cat="Enterprise AI Tools">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Enterprise AI Tools</span>
+            <span class="category-count">3 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-18">
+            <div class="story-headline">Google adds AI help inside Workspace admin console</div>
+            <div class="story-summary">Google has begun rolling out Gemini-powered guidance inside the Workspace Admin Console, summarising help articles and walking administrators through settings from a sidepanel. It should cut the time IT teams spend on routine troubleshooting and configuration.</div>
+            <div class="meta">
+              <span class="source">Google Workspace Updates</span>
+              <span>&middot;</span>
+              <a href="https://workspaceupdates.googleblog.com/2026/08/use-gemini-to-help-manage-google-Workspace-for-your-organization.html">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-08-14">
+            <div class="story-headline">Google turns spreadsheets into AI-built apps</div>
+            <div class="story-summary">A new Gemini feature called Sheets canvas lets staff describe what they want in plain language and get an interactive dashboard built on their spreadsheet data, no coding required. Edits made in the new view update the underlying sheet automatically, making data easier for non-technical teams to act on.</div>
+            <div class="meta">
+              <span class="source">Google Workspace Updates</span>
+              <span>&middot;</span>
+              <a href="https://workspaceupdates.googleblog.com/2026/08/use-google-sheets-canvas-to-visualize-data.html">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-08-19">
+            <div class="story-headline">Anthropic opens up admin controls for Claude</div>
+            <div class="story-summary">Anthropic has made its account management API, file handling and packaged &ldquo;Agent Skills&rdquo; generally available to Claude Enterprise customers, alongside new controls for the AI agents businesses run themselves. It gives IT and security teams more direct oversight as they scale Claude use across their organisation.</div>
+            <div class="meta">
+              <span class="source">Anthropic</span>
+              <span>&middot;</span>
+              <a href="https://platform.claude.com/docs/en/release-notes/overview">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-tech" data-cat="AI Tech">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">AI Tech</span>
+            <span class="category-count">2 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-19">
+            <div class="story-headline">OpenAI builds a more private way to catch misuse</div>
+            <div class="story-summary">OpenAI is testing a system with early customers that can flag misuse of its models without storing their business data, aiming to match privacy guarantees its rivals already offer. For companies handling sensitive information, it could remove a barrier that has held back wider use of AI tools.</div>
+            <div class="meta">
+              <span class="source">TechCrunch</span>
+              <span>&middot;</span>
+              <a href="https://techcrunch.com/2026/08/19/openai-seeks-to-one-up-anthropic-with-new-customer-privacy-protections/">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-08-16">
+            <div class="story-headline">Anthropic's Claude went down for 42 minutes</div>
+            <div class="story-summary">A login failure knocked Claude.ai, Claude Code and Claude Cowork offline for roughly 42 minutes, while the underlying API kept running. It is a reminder that as businesses build workflows around a single AI vendor, that vendor's uptime becomes part of their own operational risk.</div>
+            <div class="meta">
+              <span class="source">BleepingComputer</span>
+              <span>&middot;</span>
+              <a href="https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-confirms-claude-is-down-in-major-outage-affecting-multiple-services/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-investment" data-cat="AI Investment">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">AI Investment</span>
+            <span class="category-count">1 story</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-19">
+            <div class="story-headline">Nvidia in talks to back $20bn Mercor round</div>
+            <div class="story-summary">Nvidia is discussing joining a funding round that would value Mercor, the data-labelling firm that helps train its open-source AI models, at $20bn, roughly double its valuation from ten months ago. It shows how central specialist data suppliers have become to the AI supply chain, and how fast their prices are rising.</div>
+            <div class="meta">
+              <span class="source">PYMNTS</span>
+              <span>&middot;</span>
+              <a href="https://www.pymnts.com/news/investment-tracker/2026/nvidia-weighs-investment-in-round-valuing-mercor-at-20-billion/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-others" data-cat="Others">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Others</span>
+            <span class="category-count">3 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-18">
+            <div class="story-headline">Pennsylvania sets toughest US rules on AI data centres</div>
+            <div class="story-summary">Governor Josh Shapiro signed an order requiring AI data centre developers in Pennsylvania to cover their own power costs, source a share of clean energy and win local approval before building, while banning non-disclosure agreements with affected communities. It signals growing state-level pushback against the AI infrastructure boom and its effect on energy bills and grids.</div>
+            <div class="meta">
+              <span class="source">Commonwealth of Pennsylvania</span>
+              <span>&middot;</span>
+              <a href="https://www.pa.gov/governor/newsroom/2026-press-releases/governor-shapiro-signs-executive-order-on-data-center-developmen">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-08-17">
+            <div class="story-headline">US agency flags actively exploited flaw in AI framework</div>
+            <div class="story-summary">CISA added a critical, actively exploited flaw in Ray, an open-source framework widely used to build and scale AI systems, to its list of known exploited vulnerabilities, giving federal agencies until 20 August to patch it. Any organisation running Ray for AI workloads faces the same remote-code-execution risk and should treat the update as urgent.</div>
+            <div class="meta">
+              <span class="source">CISA</span>
+              <span>&middot;</span>
+              <a href="https://www.cisa.gov/news-events/alerts/2026/08/17/cisa-adds-one-known-exploited-vulnerability-catalog">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-08-19">
+            <div class="story-headline">Forrester maps which service firms AI will disrupt</div>
+            <div class="story-summary">Forrester's new model scores over 200 technology and service markets on how exposed they are to AI, finding labour-intensive work like custom software development and creative services most at risk while security and governance tools stand to grow. It gives leaders a framework for judging where AI disruption is likely to hit their own supplier base first.</div>
+            <div class="meta">
+              <span class="source">HPCwire (AIwire)</span>
+              <span>&middot;</span>
+              <a href="https://www.hpcwire.com/aiwire/2026/08/19/forrester-introduces-ai-disruption-model-to-assess-ais-impact-on-technology-and-service-markets/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+    </section>
+
+  </div>
+
+  <footer>
+    <span>Compiled automatically from web search using Claude</span>
+    <span>Created by Ed Sant&#8217;Anna</span>
+  </footer>
+
+<script src="../assets/brief.js" defer></script>
+<script src="../assets/site.js" defer></script>
+
+</body>
+</html>

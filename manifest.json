@@ -1,6 +1,11 @@
 {
   "briefs": [
     {
+      "date": "2026-08-20",
+      "url": "briefs/ai-brief-2026-08-20.html",
+      "teaser": "This week's AI news was about control: Google, Anthropic and OpenAI all rolled out new admin, building and privacy tools for business customers, while a Pennsylvania order and a critical security flaw both aimed to rein in AI's downsides."
+    },
+    {
       "date": "2026-08-19",
       "url": "briefs/ai-brief-2026-08-19.html",
       "teaser": "AI dealmaking accelerated this week, with Stripe, Etched and Higgsfield all closing deals worth billions while agentic tools spread into airlines, shops and payroll."
