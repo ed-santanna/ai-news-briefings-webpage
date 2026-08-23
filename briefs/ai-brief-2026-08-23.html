@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily AI Brief &mdash; 23 August 2026</title>
+<link rel="stylesheet" href="../assets/brand.css">
+<link rel="stylesheet" href="../assets/brief.css">
+</head>
+<body data-brief="2026-08-23">
+
+  <!--
+    GLOBAL SITE HEADER — identical on every page, do not restyle per brief.
+    data-root is the path back to the site root: "../" on brief pages.
+    The dropdown below is baked in with today only; the live page replaces
+    it from manifest.json on load, so do not hand-fill earlier dates.
+  -->
+  <div class="site-header" data-root="../">
+    <div class="site-header-inner">
+      <a class="wordmark" href="../index.html"><span class="wordmark-brand">Chief T.E.C.H. Translator</span><span class="wordmark-sep"> - </span><span class="wordmark-title">AI Daily Briefs</span></a>
+      <nav class="site-nav">
+        <a class="site-nav-link" id="navLatest" href="../briefs/ai-brief-2026-08-23.html">Latest</a>
+        <div class="dropdown">
+          <button class="site-nav-link" id="archiveToggle" aria-expanded="false" aria-haspopup="true">Archive <span class="caret">&#9662;</span></button>
+          <div class="dropdown-menu" id="archiveMenu" role="menu">
+            <a class="dropdown-item current" href="../briefs/ai-brief-2026-08-23.html">23 August 2026</a>
+            <div class="dropdown-sep"></div>
+            <a class="dropdown-item dropdown-all" href="../index.html">View all briefs</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="hero-inner">
+      <span class="pill">Daily AI Brief</span>
+      <div class="hero-row">
+        <h1>Today in AI</h1>
+        <div class="hero-meta">
+          <div class="hero-date">23 August 2026</div>
+          <div class="hero-sub">8 stories &middot; 5 categories</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tabstrip">
+    <div class="tabstrip-inner">
+      <button class="tab-btn active" data-tab="summary" onclick="showTab('summary')">Visual Summary</button>
+      <button class="tab-btn" data-tab="briefing" onclick="showTab('briefing')">Full Briefing</button>
+    </div>
+  </div>
+
+  <div class="page">
+
+    <section id="tab-summary" class="tab-panel active">
+
+      <!--
+        CATEGORY CARDS — one per category with at least one story, in the
+        fixed order below, skipping any with none. Colour class per
+        category (never reassign):
+          Enterprise Use Cases -> cat-usecases
+          Enterprise AI Tools  -> cat-tools
+          Consulting News      -> cat-consulting
+          AI Tech              -> cat-tech
+          AI Investment        -> cat-investment
+          Others               -> cat-others
+        cat-stat must be a real sourced figure; if no clean number exists
+        use a truthful count. cat-stat-label gives it context in <=12 words.
+        cat-desc is one sentence, <=15 words. The name in goToCategory()
+        must match the chip and <details> data-cat exactly.
+        The card below is a worked example; repeat for each category.
+      -->
+      <div class="cat-grid">
+        <div class="cat-card cat-tools" role="button" tabindex="0"
+             onclick="goToCategory('Enterprise AI Tools')"
+             onkeypress="if(event.key==='Enter')goToCategory('Enterprise AI Tools')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Enterprise AI Tools</span>
+            <span class="cat-go">2 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">2</div>
+            <div class="cat-stat-label">new AI agent platforms launched this week</div>
+            <p class="cat-desc">Two new AI agent platforms shipped this week, one for telecoms buying, one for coding.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-consulting" role="button" tabindex="0"
+             onclick="goToCategory('Consulting News')"
+             onkeypress="if(event.key==='Enter')goToCategory('Consulting News')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Consulting News</span>
+            <span class="cat-go">1 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">7</div>
+            <div class="cat-stat-label">major consulting firms cutting AI-displaced roles</div>
+            <p class="cat-desc">AI is now the stated reason strategy and Big Four firms are cutting staff.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-tech" role="button" tabindex="0"
+             onclick="goToCategory('AI Tech')"
+             onkeypress="if(event.key==='Enter')goToCategory('AI Tech')">
+          <div class="cat-card-bar">
+            <span class="cat-name">AI Tech</span>
+            <span class="cat-go">1 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">82.1%</div>
+            <div class="cat-stat-label">Qwen-UI-Agent's score on the MobileWorld benchmark</div>
+            <p class="cat-desc">Alibaba's new model claims to operate any screen the way a person would.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-investment" role="button" tabindex="0"
+             onclick="goToCategory('AI Investment')"
+             onkeypress="if(event.key==='Enter')goToCategory('AI Investment')">
+          <div class="cat-card-bar">
+            <span class="cat-name">AI Investment</span>
+            <span class="cat-go">3 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">460%</div>
+            <div class="cat-stat-label">Unitree's share price gain on its Shanghai debut</div>
+            <p class="cat-desc">Investors are pouring money into AI's physical side: robots, chips and space.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-others" role="button" tabindex="0"
+             onclick="goToCategory('Others')"
+             onkeypress="if(event.key==='Enter')goToCategory('Others')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Others</span>
+            <span class="cat-go">1 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">8</div>
+            <div class="cat-stat-label">months between discovery and patch of the Copilot flaw</div>
+            <p class="cat-desc">A Microsoft Copilot flaw exposed how much trust AI assistants now hold.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Closing split panel. HEADLINE is the single sentence that sums up
+           the day; WHY_MATTERS is its business implication. -->
+      <div class="takeaway">
+        <div class="takeaway-lead">
+          <span class="takeaway-label">The story today</span>
+          <p>Money is following AI off the screen and into robots, chips and orbital data centres, while security and staffing questions catch up with the software side.</p>
+        </div>
+        <div class="takeaway-why">
+          <span class="takeaway-label">Why this matters</span>
+          <p>Expect AI's costs and risks to broaden beyond software licences to capital-intensive infrastructure bets, workforce restructuring in professional services and the security of AI assistants that already touch company data.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="tab-briefing" class="tab-panel">
+      <div class="controls">
+        <input type="text" class="search-box" id="storySearch" placeholder="Search stories&hellip;" oninput="filterStories()">
+        <button class="filter-chip active" data-cat="all" onclick="setFilter('all')">All</button>
+        <button class="filter-chip cat-tools" data-cat="Enterprise AI Tools" onclick="setFilter('Enterprise AI Tools')">Enterprise AI Tools</button>
+        <button class="filter-chip cat-consulting" data-cat="Consulting News" onclick="setFilter('Consulting News')">Consulting News</button>
+        <button class="filter-chip cat-tech" data-cat="AI Tech" onclick="setFilter('AI Tech')">AI Tech</button>
+        <button class="filter-chip cat-investment" data-cat="AI Investment" onclick="setFilter('AI Investment')">AI Investment</button>
+        <button class="filter-chip cat-others" data-cat="Others" onclick="setFilter('Others')">Others</button>
+      </div>
+      <div class="no-results" id="noResults">No stories match that search.</div>
+
+      <!-- One <details> per category, same fixed order. Do NOT add the
+           "open" attribute: sections start collapsed and expand on click.
+           Every .story carries data-published="YYYY-MM-DD", the date the
+           SOURCE published the article, not today's date. The checker fails
+           the run if it is missing, unparseable, in the future, or older
+           than the freshness window. -->
+      <details class="category cat-tools" data-cat="Enterprise AI Tools">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Enterprise AI Tools</span>
+            <span class="category-count">2 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-18">
+            <div class="story-headline">Lightyear launches AI agents for telecom buying</div>
+            <div class="story-summary">Lightyear has launched what it calls the first agentic AI platform for enterprise telecom, with agents that shop carrier quotes up to 50 per cent faster and flag problems during network installs. The agents are barred from signing contracts or emailing providers without a person's sign-off, an example of giving AI real work but hard limits.</div>
+            <div class="meta">
+              <span class="source">PR Newswire</span>
+              <span>&middot;</span>
+              <a href="https://www.prnewswire.com/news-releases/lightyear-launches-the-first-agentic-platform-for-enterprise-telecom-302853304.html">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-08-21">
+            <div class="story-headline">xAI's coding agent widens beyond Mac</div>
+            <div class="story-summary">Grok Bot, xAI's AI agent that gets its own cloud computer to work through multi-step jobs unsupervised, has expanded from a Mac-only test to Windows and Linux and is now bundled into Cursor's business plans. It is another sign that always-on coding agents are becoming standard kit for software teams rather than a novelty.</div>
+            <div class="meta">
+              <span class="source">9to5Mac</span>
+              <span>&middot;</span>
+              <a href="https://9to5mac.com/2026/08/21/grok-bot-is-an-all-new-iphone-and-mac-app-from-spacexai-and-cursor/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-consulting" data-cat="Consulting News">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Consulting News</span>
+            <span class="category-count">1 story</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-21">
+            <div class="story-headline">Consulting firms cut roles AI now does</div>
+            <div class="story-summary">McKinsey, Bain, BCG, Deloitte, KPMG, Accenture and PwC have all cut headcount or slowed hiring this year, concentrated in the junior research and back-office work that generative AI now does faster. Forbes reports this is a structural change in how consulting gets staffed, not a normal downturn.</div>
+            <div class="meta">
+              <span class="source">Forbes</span>
+              <span>&middot;</span>
+              <a href="https://www.forbes.com/sites/jemmagreen/2026/08/21/wall-street-is-repricing-companies-on-ai-headlines-not-ai-results/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-tech" data-cat="AI Tech">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">AI Tech</span>
+            <span class="category-count">1 story</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-20">
+            <div class="story-headline">Alibaba's new AI can operate any screen</div>
+            <div class="story-summary">Alibaba has released Qwen-UI-Agent, an open model that sees and operates phone, desktop and web interfaces directly rather than needing a custom integration built for each one, and says it beats GPT-5.6 and Claude Opus 4.8 on real-device navigation tests. It points towards AI agents that can use existing enterprise software as a person would, without anyone building an API for them first.</div>
+            <div class="meta">
+              <span class="source">Pandaily</span>
+              <span>&middot;</span>
+              <a href="https://pandaily.com/alibaba-qwen-ui-agent-gui-agent-foundation-model-screen-control-aug2026">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-investment" data-cat="AI Investment">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">AI Investment</span>
+            <span class="category-count">3 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-19">
+            <div class="story-headline">Robot maker's shares soar on stock debut</div>
+            <div class="story-summary">Unitree, the Chinese humanoid robot maker known for its backflipping machines, raised $904 million in its Shanghai listing and saw shares close up 460 per cent on debut day. It is the first mainland-listed humanoid robotics firm and a sign of how hot investor appetite for physical AI has become.</div>
+            <div class="meta">
+              <span class="source">CNBC</span>
+              <span>&middot;</span>
+              <a href="https://www.cnbc.com/2026/08/19/china-backflipping-robot-maker-unitree-jumps-shanghai-ipo.html">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-08-21">
+            <div class="story-headline">Space data centre startup raises $250m</div>
+            <div class="story-summary">Starcloud, which is building data centres designed to orbit the earth on solar power, raised a $250 million extension at a $2.3 billion valuation, with Nvidia and Cisco among the new backers. It is a bet that AI's power and cooling demands will eventually outgrow what can be built on the ground.</div>
+            <div class="meta">
+              <span class="source">TechCrunch</span>
+              <span>&middot;</span>
+              <a href="https://techcrunch.com/2026/08/21/starcloud-raises-200-million-for-orbital-data-centers-as-launch-options-dry-up/">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-08-19">
+            <div class="story-headline">Data-fabric startup lands its first outside funding</div>
+            <div class="story-summary">Prevalent AI, which helps AI agents and security teams query a company's scattered systems as a single knowledge graph, raised $22 million from Integrity Growth Partners, its first outside investment in nine years. It shows investors backing the unglamorous data-plumbing layer that decides whether enterprise AI projects actually work.</div>
+            <div class="meta">
+              <span class="source">GlobeNewswire</span>
+              <span>&middot;</span>
+              <a href="https://www.globenewswire.com/news-release/2026/08/19/3347565/0/en/prevalent-ai-raises-growth-investment-as-demand-for-ai-powered-trusted-enterprise-context-accelerates.html">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-others" data-cat="Others">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Others</span>
+            <span class="category-count">1 story</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-18">
+            <div class="story-headline">Microsoft patches Copilot flaw that leaked data</div>
+            <div class="story-summary">A flaw in Microsoft's Copilot Personal let a single malicious link silently pull data from a user's connected Gmail, Drive and Calendar accounts, discovered by researchers using the assistant against itself. Microsoft has now fixed it, but the eight-month gap between discovery and patch is a reminder that AI assistants wired into email and files are a new kind of attack surface for businesses to police.</div>
+            <div class="meta">
+              <span class="source">The Hacker News</span>
+              <span>&middot;</span>
+              <a href="https://thehackernews.com/2026/08/microsoft-copilot-personal-flaws-could.html">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+    </section>
+
+  </div>
+
+  <footer>
+    <span>Compiled automatically from web search using Claude</span>
+    <span>Created by Ed Sant&#8217;Anna</span>
+  </footer>
+
+<script src="../assets/brief.js" defer></script>
+<script src="../assets/site.js" defer></script>
+
+</body>
+</html>
