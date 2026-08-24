@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily AI Brief &mdash; 24 August 2026</title>
+<link rel="stylesheet" href="../assets/brand.css">
+<link rel="stylesheet" href="../assets/brief.css">
+</head>
+<body data-brief="2026-08-24">
+
+  <!--
+    GLOBAL SITE HEADER — identical on every page, do not restyle per brief.
+    data-root is the path back to the site root: "../" on brief pages.
+    The dropdown below is baked in with today only; the live page replaces
+    it from manifest.json on load, so do not hand-fill earlier dates.
+  -->
+  <div class="site-header" data-root="../">
+    <div class="site-header-inner">
+      <a class="wordmark" href="../index.html"><span class="wordmark-brand">Chief T.E.C.H. Translator</span><span class="wordmark-sep"> - </span><span class="wordmark-title">AI Daily Briefs</span></a>
+      <nav class="site-nav">
+        <a class="site-nav-link" id="navLatest" href="../briefs/ai-brief-2026-08-24.html">Latest</a>
+        <div class="dropdown">
+          <button class="site-nav-link" id="archiveToggle" aria-expanded="false" aria-haspopup="true">Archive <span class="caret">&#9662;</span></button>
+          <div class="dropdown-menu" id="archiveMenu" role="menu">
+            <a class="dropdown-item current" href="../briefs/ai-brief-2026-08-24.html">24 August 2026</a>
+            <div class="dropdown-sep"></div>
+            <a class="dropdown-item dropdown-all" href="../index.html">View all briefs</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="hero-inner">
+      <span class="pill">Daily AI Brief</span>
+      <div class="hero-row">
+        <h1>Today in AI</h1>
+        <div class="hero-meta">
+          <div class="hero-date">24 August 2026</div>
+          <div class="hero-sub">9 stories &middot; 6 categories</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tabstrip">
+    <div class="tabstrip-inner">
+      <button class="tab-btn active" data-tab="summary" onclick="showTab('summary')">Visual Summary</button>
+      <button class="tab-btn" data-tab="briefing" onclick="showTab('briefing')">Full Briefing</button>
+    </div>
+  </div>
+
+  <div class="page">
+
+    <section id="tab-summary" class="tab-panel active">
+
+      <!--
+        CATEGORY CARDS — one per category with at least one story, in the
+        fixed order below, skipping any with none. Colour class per
+        category (never reassign):
+          Enterprise Use Cases -> cat-usecases
+          Enterprise AI Tools  -> cat-tools
+          Consulting News      -> cat-consulting
+          AI Tech              -> cat-tech
+          AI Investment        -> cat-investment
+          Others               -> cat-others
+        cat-stat must be a real sourced figure; if no clean number exists
+        use a truthful count. cat-stat-label gives it context in <=12 words.
+        cat-desc is one sentence, <=15 words. The name in goToCategory()
+        must match the chip and <details> data-cat exactly.
+        The card below is a worked example; repeat for each category.
+      -->
+      <div class="cat-grid">
+        <div class="cat-card cat-usecases" role="button" tabindex="0"
+             onclick="goToCategory('Enterprise Use Cases')"
+             onkeypress="if(event.key==='Enter')goToCategory('Enterprise Use Cases')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Enterprise Use Cases</span>
+            <span class="cat-go">1 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">&pound;8.5m</div>
+            <div class="cat-stat-label">Annual savings expected from AI call triage</div>
+            <p class="cat-desc">Public sector AI moved from pilot to a live, cost-saving national rollout this week.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-tools" role="button" tabindex="0"
+             onclick="goToCategory('Enterprise AI Tools')"
+             onkeypress="if(event.key==='Enter')goToCategory('Enterprise AI Tools')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Enterprise AI Tools</span>
+            <span class="cat-go">2 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">25%</div>
+            <div class="cat-stat-label">Token efficiency gain from automatic model routing</div>
+            <p class="cat-desc">Vendors are shipping tools that make AI cheaper and easier to govern at scale.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-consulting" role="button" tabindex="0"
+             onclick="goToCategory('Consulting News')"
+             onkeypress="if(event.key==='Enter')goToCategory('Consulting News')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Consulting News</span>
+            <span class="cat-go">1 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">100+</div>
+            <div class="cat-stat-label">Staff at Ode after its Casper Studios deal</div>
+            <p class="cat-desc">Anthropic's services arm keeps buying its way into hands-on enterprise delivery work.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-tech" role="button" tabindex="0"
+             onclick="goToCategory('AI Tech')"
+             onkeypress="if(event.key==='Enter')goToCategory('AI Tech')">
+          <div class="cat-card-bar">
+            <span class="cat-name">AI Tech</span>
+            <span class="cat-go">2 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">5x</div>
+            <div class="cat-stat-label">Growth in Micro1's revenue run rate in 8 months</div>
+            <p class="cat-desc">Model prices keep falling as the infrastructure behind them keeps scaling up.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-investment" role="button" tabindex="0"
+             onclick="goToCategory('AI Investment')"
+             onkeypress="if(event.key==='Enter')goToCategory('AI Investment')">
+          <div class="cat-card-bar">
+            <span class="cat-name">AI Investment</span>
+            <span class="cat-go">2 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">$3.5bn</div>
+            <div class="cat-stat-label">Groq's valuation after its latest funding round</div>
+            <p class="cat-desc">Chip funding keeps flowing even as some valuations come back down to earth.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-others" role="button" tabindex="0"
+             onclick="goToCategory('Others')"
+             onkeypress="if(event.key==='Enter')goToCategory('Others')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Others</span>
+            <span class="cat-go">1 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">3 sectors</div>
+            <div class="cat-stat-label">Michigan industries citing AI in recent job cuts</div>
+            <p class="cat-desc">Layoffs increasingly get blamed on AI, but the real causes are rarely so simple.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Closing split panel. HEADLINE is the single sentence that sums up
+           the day; WHY_MATTERS is its business implication. -->
+      <div class="takeaway">
+        <div class="takeaway-lead">
+          <span class="takeaway-label">The story today</span>
+          <p>This week's AI news was about economics rather than breakthroughs, with falling model prices, a consolidating AI services market and shifting chip valuations.</p>
+        </div>
+        <div class="takeaway-why">
+          <span class="takeaway-label">Why this matters</span>
+          <p>AI capability is getting cheaper and more commoditised, so the real competitive advantage is shifting to whoever can implement it well inside a business, not whoever built the model.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="tab-briefing" class="tab-panel">
+      <div class="controls">
+        <input type="text" class="search-box" id="storySearch" placeholder="Search stories&hellip;" oninput="filterStories()">
+        <button class="filter-chip active" data-cat="all" onclick="setFilter('all')">All</button>
+        <!-- one chip per category present, same order and colour class -->
+        <button class="filter-chip cat-usecases" data-cat="Enterprise Use Cases" onclick="setFilter('Enterprise Use Cases')">Enterprise Use Cases</button>
+        <button class="filter-chip cat-tools" data-cat="Enterprise AI Tools" onclick="setFilter('Enterprise AI Tools')">Enterprise AI Tools</button>
+        <button class="filter-chip cat-consulting" data-cat="Consulting News" onclick="setFilter('Consulting News')">Consulting News</button>
+        <button class="filter-chip cat-tech" data-cat="AI Tech" onclick="setFilter('AI Tech')">AI Tech</button>
+        <button class="filter-chip cat-investment" data-cat="AI Investment" onclick="setFilter('AI Investment')">AI Investment</button>
+        <button class="filter-chip cat-others" data-cat="Others" onclick="setFilter('Others')">Others</button>
+      </div>
+      <div class="no-results" id="noResults">No stories match that search.</div>
+
+      <!-- One <details> per category, same fixed order. Do NOT add the
+           "open" attribute: sections start collapsed and expand on click.
+           Every .story carries data-published="YYYY-MM-DD", the date the
+           SOURCE published the article, not today's date. The checker fails
+           the run if it is missing, unparseable, in the future, or older
+           than the freshness window. -->
+      <details class="category cat-usecases" data-cat="Enterprise Use Cases">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Enterprise Use Cases</span>
+            <span class="category-count">1 story</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-18">
+            <div class="story-headline">AI now screens England's non-emergency police calls</div>
+            <div class="story-summary">England's police forces have started using AI to filter the 101 non-emergency line, automatically redirecting misdirected callers and screening out nuisance calls before a human answers. The Home Office expects the system to save around &pound;8.5 million a year in call-handling costs.</div>
+            <div class="meta">
+              <span class="source">ITV News</span>
+              <span>&middot;</span>
+              <a href="https://www.itv.com/news/calendar/2026-08-18/police-forces-to-use-ai-on-101-service-to-screen-ridiculous-calls">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-tools" data-cat="Enterprise AI Tools">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Enterprise AI Tools</span>
+            <span class="category-count">2 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-21">
+            <div class="story-headline">Google bundles its AI coding agent into work tools</div>
+            <div class="story-summary">Google has folded its Antigravity AI coding agent into its standard business subscriptions, so companies get agentic coding tools without buying a separate licence. Administrators can track spending, security and usage from one console, and early adopters such as AirAsia already generate over half their production code this way.</div>
+            <div class="meta">
+              <span class="source">The Register</span>
+              <span>&middot;</span>
+              <a href="https://www.theregister.com/ai-and-ml/2026/08/21/google-tethers-antigravity-to-enterprise-controls-amid-ai-shakeup/5290730">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-08-18">
+            <div class="story-headline">Snowflake tool picks the cheapest AI model automatically</div>
+            <div class="story-summary">Snowflake has added a feature to its Cortex AI Gateway that automatically routes each task to the model striking the best balance of quality and cost, rather than defaulting to the most expensive option. Early tests show teams completing the same work using up to a quarter fewer tokens.</div>
+            <div class="meta">
+              <span class="source">CIO</span>
+              <span>&middot;</span>
+              <a href="https://www.cio.com/article/4211026/snowflake-adds-dynamic-model-routing-to-cortex-ai-gateway-to-cut-enterprise-ai-costs.html">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-consulting" data-cat="Consulting News">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Consulting News</span>
+            <span class="category-count">1 story</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-21">
+            <div class="story-headline">Anthropic's services arm buys AI consultancy Casper</div>
+            <div class="story-summary">Ode, the AI implementation firm backed by Anthropic, Blackstone and Hellman &amp; Friedman, has bought consultancy Casper Studios to expand its ability to embed Claude inside client businesses. The deal reflects a wider shift in AI services away from selling model access and towards hands-on delivery work.</div>
+            <div class="meta">
+              <span class="source">Forbes</span>
+              <span>&middot;</span>
+              <a href="https://www.forbes.com/sites/ronschmelzer/2026/08/21/anthropic-backed-ode-buys-casper-as-ai-services-race-heats-up/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-tech" data-cat="AI Tech">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">AI Tech</span>
+            <span class="category-count">2 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-20">
+            <div class="story-headline">AI training data demand fuels a fivefold jump</div>
+            <div class="story-summary">Micro1, which supplies AI labs with human specialists to check and refine training data, has grown its annualised revenue fivefold in eight months to $500 million. The surge shows how much AI spending is now going into the unglamorous work of preparing and grading data rather than building models themselves.</div>
+            <div class="meta">
+              <span class="source">TechCrunch</span>
+              <span>&middot;</span>
+              <a href="https://finance.yahoo.com/technology/ai/articles/ai-data-startup-micro1-reaches-001344818.html">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-08-23">
+            <div class="story-headline">OpenAI cuts its flagship model's price again</div>
+            <div class="story-summary">OpenAI has cut API prices for its flagship GPT-5.6 Sol model by up to a third, as competition from Anthropic and Chinese AI labs intensifies. The discount runs until late November and applies to business ChatGPT plans and Codex credits as well as standard developer access.</div>
+            <div class="meta">
+              <span class="source">Winbuzzer</span>
+              <span>&middot;</span>
+              <a href="https://winbuzzer.com/2026/08/23/openai-cuts-gpt-5-6-sol-api-prices-by-up-to-33-percent-through-november-21-xcxwbn/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-investment" data-cat="AI Investment">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">AI Investment</span>
+            <span class="category-count">2 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-17">
+            <div class="story-headline">Chip startup Groq raises $350m at a lower value</div>
+            <div class="story-summary">AI inference company Groq has raised $350 million at a $3.5 billion valuation, half what it was worth a year ago, as it pivots from selling chips to running cloud infrastructure for other AI firms. The round follows Nvidia's earlier deal to licence Groq's chip technology and hire much of its engineering team.</div>
+            <div class="meta">
+              <span class="source">TechCrunch</span>
+              <span>&middot;</span>
+              <a href="https://techcrunch.com/2026/08/17/groq-raises-350m-to-fuel-its-pivot-from-ai-chips-to-neocloud/">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-08-21">
+            <div class="story-headline">Nvidia in talks to back a Korean chip rival</div>
+            <div class="story-summary">Nvidia is in early talks with South Korean chip designer Rebellions over a possible investment, partnership or acquisition, after its chief executive met the startup's founder in California. A deal would give Nvidia a stake in a rival building AI inference chips, though any tie-up would face regulatory scrutiny in both countries.</div>
+            <div class="meta">
+              <span class="source">Bloomberg</span>
+              <span>&middot;</span>
+              <a href="https://www.bloomberg.com/news/articles/2026-08-21/nvidia-in-talks-with-chip-startup-rebellions-for-potential-deal">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-others" data-cat="Others">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Others</span>
+            <span class="category-count">1 story</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-19">
+            <div class="story-headline">Companies cite AI for layoffs, but it is complicated</div>
+            <div class="story-summary">Employers across Michigan, from local broadcasters to insurance and automotive firms, are increasingly pointing to AI when explaining job cuts, but analysts say the real picture is messier, mixing automation with outsourcing and ordinary cost-cutting. It shows how AI is becoming a convenient headline reason for workforce reductions that often have several causes.</div>
+            <div class="meta">
+              <span class="source">The Detroit News</span>
+              <span>&middot;</span>
+              <a href="https://www.detroitnews.com/story/business/2026/08/19/companies-cite-ai-for-layoffs-in-michigan-but-its-not-so-simple/91010735007/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+    </section>
+
+  </div>
+
+  <footer>
+    <span>Compiled automatically from web search using Claude</span>
+    <span>Created by Ed Sant&#8217;Anna</span>
+  </footer>
+
+<script src="../assets/brief.js" defer></script>
+<script src="../assets/site.js" defer></script>
+
+</body>
+</html>
