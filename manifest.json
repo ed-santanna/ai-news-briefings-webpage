@@ -1,6 +1,11 @@
 {
   "briefs": [
     {
+      "date": "2026-08-25",
+      "url": "briefs/ai-brief-2026-08-25.html",
+      "teaser": "This week's AI news is about infrastructure and control rather than new chatbots, from shared agent standards to custom chips and government subsidies."
+    },
+    {
       "date": "2026-08-24",
       "url": "briefs/ai-brief-2026-08-24.html",
       "teaser": "This week's AI news was about economics rather than breakthroughs, with falling model prices, a consolidating AI services market and shifting chip valuations."

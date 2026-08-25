@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily AI Brief &mdash; 25 August 2026</title>
+<link rel="stylesheet" href="../assets/brand.css">
+<link rel="stylesheet" href="../assets/brief.css">
+</head>
+<body data-brief="2026-08-25">
+
+  <!--
+    GLOBAL SITE HEADER — identical on every page, do not restyle per brief.
+    data-root is the path back to the site root: "../" on brief pages.
+    The dropdown below is baked in with today only; the live page replaces
+    it from manifest.json on load, so do not hand-fill earlier dates.
+  -->
+  <div class="site-header" data-root="../">
+    <div class="site-header-inner">
+      <a class="wordmark" href="../index.html"><span class="wordmark-brand">Chief T.E.C.H. Translator</span><span class="wordmark-sep"> - </span><span class="wordmark-title">AI Daily Briefs</span></a>
+      <nav class="site-nav">
+        <a class="site-nav-link" id="navLatest" href="../briefs/ai-brief-2026-08-25.html">Latest</a>
+        <div class="dropdown">
+          <button class="site-nav-link" id="archiveToggle" aria-expanded="false" aria-haspopup="true">Archive <span class="caret">&#9662;</span></button>
+          <div class="dropdown-menu" id="archiveMenu" role="menu">
+            <a class="dropdown-item current" href="../briefs/ai-brief-2026-08-25.html">25 August 2026</a>
+            <div class="dropdown-sep"></div>
+            <a class="dropdown-item dropdown-all" href="../index.html">View all briefs</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="hero-inner">
+      <span class="pill">Daily AI Brief</span>
+      <div class="hero-row">
+        <h1>Today in AI</h1>
+        <div class="hero-meta">
+          <div class="hero-date">25 August 2026</div>
+          <div class="hero-sub">8 stories &middot; 6 categories</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tabstrip">
+    <div class="tabstrip-inner">
+      <button class="tab-btn active" data-tab="summary" onclick="showTab('summary')">Visual Summary</button>
+      <button class="tab-btn" data-tab="briefing" onclick="showTab('briefing')">Full Briefing</button>
+    </div>
+  </div>
+
+  <div class="page">
+
+    <section id="tab-summary" class="tab-panel active">
+
+      <!--
+        CATEGORY CARDS — one per category with at least one story, in the
+        fixed order below, skipping any with none. Colour class per
+        category (never reassign):
+          Enterprise Use Cases -> cat-usecases
+          Enterprise AI Tools  -> cat-tools
+          Consulting News      -> cat-consulting
+          AI Tech              -> cat-tech
+          AI Investment        -> cat-investment
+          Others               -> cat-others
+        cat-stat must be a real sourced figure; if no clean number exists
+        use a truthful count. cat-stat-label gives it context in <=12 words.
+        cat-desc is one sentence, <=15 words. The name in goToCategory()
+        must match the chip and <details> data-cat exactly.
+        The card below is a worked example; repeat for each category.
+      -->
+      <div class="cat-grid">
+        <div class="cat-card cat-usecases" role="button" tabindex="0"
+             onclick="goToCategory('Enterprise Use Cases')"
+             onkeypress="if(event.key==='Enter')goToCategory('Enterprise Use Cases')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Enterprise Use Cases</span>
+            <span class="cat-go">1 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">4,000+</div>
+            <div class="cat-stat-label">Robotaxis in Pony.ai's overseas pipeline</div>
+            <p class="cat-desc">Autonomous driving is scaling fastest through deals with existing ride-hailing networks.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-tools" role="button" tabindex="0"
+             onclick="goToCategory('Enterprise AI Tools')"
+             onkeypress="if(event.key==='Enter')goToCategory('Enterprise AI Tools')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Enterprise AI Tools</span>
+            <span class="cat-go">1 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">2</div>
+            <div class="cat-stat-label">New regions for AWS agent web search</div>
+            <p class="cat-desc">Cloud providers are tightening control over what AI agents can read online.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-consulting" role="button" tabindex="0"
+             onclick="goToCategory('Consulting News')"
+             onkeypress="if(event.key==='Enter')goToCategory('Consulting News')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Consulting News</span>
+            <span class="cat-go">1 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">$1.5bn</div>
+            <div class="cat-stat-label">Value of Porsche's AI deal with Tata Consultancy</div>
+            <p class="cat-desc">Carmakers are outsourcing AI transformation rather than building it in-house.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-tech" role="button" tabindex="0"
+             onclick="goToCategory('AI Tech')"
+             onkeypress="if(event.key==='Enter')goToCategory('AI Tech')">
+          <div class="cat-card-bar">
+            <span class="cat-name">AI Tech</span>
+            <span class="cat-go">2 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">250+</div>
+            <div class="cat-stat-label">Firms in the Agentic AI Foundation standards body</div>
+            <p class="cat-desc">Agent standards and custom AI chips are becoming the new competitive battleground.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-investment" role="button" tabindex="0"
+             onclick="goToCategory('AI Investment')"
+             onkeypress="if(event.key==='Enter')goToCategory('AI Investment')">
+          <div class="cat-card-bar">
+            <span class="cat-name">AI Investment</span>
+            <span class="cat-go">1 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">$100m</div>
+            <div class="cat-stat-label">Price paid for AI freight platform Tai Software</div>
+            <p class="cat-desc">Established software firms keep buying in AI features rather than building them.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-others" role="button" tabindex="0"
+             onclick="goToCategory('Others')"
+             onkeypress="if(event.key==='Enter')goToCategory('Others')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Others</span>
+            <span class="cat-go">2 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">20%</div>
+            <div class="cat-stat-label">Tax deduction Brazil offers certified AI developers</div>
+            <p class="cat-desc">Governments are moving to both subsidise and rein in AI at the same time.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Closing split panel. HEADLINE is the single sentence that sums up
+           the day; WHY_MATTERS is its business implication. -->
+      <div class="takeaway">
+        <div class="takeaway-lead">
+          <span class="takeaway-label">The story today</span>
+          <p>This week's AI news is about infrastructure and control rather than new chatbots, from shared agent standards to custom chips and government subsidies.</p>
+        </div>
+        <div class="takeaway-why">
+          <span class="takeaway-label">Why this matters</span>
+          <p>For executives, this points to where AI spending is really heading, less on flashy new models and more on integration, security and infrastructure. Expect a growing share of AI budgets to go on standards compliance, custom hardware and outsourced delivery rather than licensing the latest chatbot.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="tab-briefing" class="tab-panel">
+      <div class="controls">
+        <input type="text" class="search-box" id="storySearch" placeholder="Search stories&hellip;" oninput="filterStories()">
+        <button class="filter-chip active" data-cat="all" onclick="setFilter('all')">All</button>
+        <!-- one chip per category present, same order and colour class -->
+        <button class="filter-chip cat-usecases" data-cat="Enterprise Use Cases" onclick="setFilter('Enterprise Use Cases')">Enterprise Use Cases</button>
+        <button class="filter-chip cat-tools" data-cat="Enterprise AI Tools" onclick="setFilter('Enterprise AI Tools')">Enterprise AI Tools</button>
+        <button class="filter-chip cat-consulting" data-cat="Consulting News" onclick="setFilter('Consulting News')">Consulting News</button>
+        <button class="filter-chip cat-tech" data-cat="AI Tech" onclick="setFilter('AI Tech')">AI Tech</button>
+        <button class="filter-chip cat-investment" data-cat="AI Investment" onclick="setFilter('AI Investment')">AI Investment</button>
+        <button class="filter-chip cat-others" data-cat="Others" onclick="setFilter('Others')">Others</button>
+      </div>
+      <div class="no-results" id="noResults">No stories match that search.</div>
+
+      <!-- One <details> per category, same fixed order. Do NOT add the
+           "open" attribute: sections start collapsed and expand on click.
+           Every .story carries data-published="YYYY-MM-DD", the date the
+           SOURCE published the article, not today's date. The checker fails
+           the run if it is missing, unparseable, in the future, or older
+           than the freshness window. -->
+      <details class="category cat-usecases" data-cat="Enterprise Use Cases">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Enterprise Use Cases</span>
+            <span class="category-count">1 story</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-18">
+            <div class="story-headline">Chinese robotaxi firm's overseas fleet tops 4,000 cars</div>
+            <div class="story-summary">Pony.ai's international robotaxi pipeline has passed 4,000 vehicles, including a deal to run over 2,000 self-driving cars for Uber across Europe. It shows autonomous driving expanding fastest through partnerships with established ride-hailing networks rather than firms building their own customer base from scratch.</div>
+            <div class="meta">
+              <span class="source">Quartz</span>
+              <span>&middot;</span>
+              <a href="https://qz.com/pony-ai-overseas-robotaxi-pipeline-4000-vehicles-081826">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-tools" data-cat="Enterprise AI Tools">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Enterprise AI Tools</span>
+            <span class="category-count">1 story</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-20">
+            <div class="story-headline">AWS lets AI agents filter web results by date</div>
+            <div class="story-summary">Amazon has added domain and publication-date filters to its Bedrock AI agent search tool, letting businesses control exactly what their AI agents can read online, and expanded the service to Europe and Asia. It gives companies more assurance over the freshness and reliability of the information feeding their AI agents' decisions.</div>
+            <div class="meta">
+              <span class="source">AWS News Feed</span>
+              <span>&middot;</span>
+              <a href="https://aws-news.com/article/2026-08-20-web-search-in-amazon-bedrock-agentcore-adds-domain-and-published-date-filtering-expands-to-europe-and-asia-pacific">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-consulting" data-cat="Consulting News">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Consulting News</span>
+            <span class="category-count">1 story</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-24">
+            <div class="story-headline">Porsche hands its AI and consulting arm to Tata</div>
+            <div class="story-summary">Porsche has signed a five-year, $1.5 billion deal for Tata Consultancy Services to run AI across its engineering and manufacturing operations, and is selling its in-house consulting unit MHP to the Indian firm as part of the arrangement. It signals carmakers outsourcing AI transformation rather than building the expertise themselves.</div>
+            <div class="meta">
+              <span class="source">Bloomberg</span>
+              <span>&middot;</span>
+              <a href="https://www.bloomberg.com/news/articles/2026-08-24/porsche-inks-1-5-billion-ai-deal-with-india-s-tata-consultancy">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-tech" data-cat="AI Tech">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">AI Tech</span>
+            <span class="category-count">2 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-20">
+            <div class="story-headline">Google hands its AI agent standard to neutral body</div>
+            <div class="story-summary">Google has formally transferred its protocol for AI agents communicating with each other to an independent industry foundation, putting it on equal footing with Anthropic's rival standard. It signals the industry converging on shared rules for how AI agents from different vendors will work together, rather than each company building its own walled garden.</div>
+            <div class="meta">
+              <span class="source">Google Developers Blog</span>
+              <span>&middot;</span>
+              <a href="https://developers.googleblog.com/en/google-cloud-donates-a2a-to-linux-foundation/">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-08-20">
+            <div class="story-headline">Waymo builds its own chip to speed up robotaxis</div>
+            <div class="story-summary">Waymo has revealed it designs its own computer chip to run inside its self-driving cars rather than relying solely on off-the-shelf hardware, aiming to sharpen how quickly its vehicles react in traffic. It reflects a wider trend of AI companies building custom silicon to gain an edge that generic chips cannot match.</div>
+            <div class="meta">
+              <span class="source">Bloomberg</span>
+              <span>&middot;</span>
+              <a href="https://www.bloomberg.com/news/articles/2026-08-20/google-s-waymo-has-built-a-custom-chip-for-its-robotaxis">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-investment" data-cat="AI Investment">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">AI Investment</span>
+            <span class="category-count">1 story</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-24">
+            <div class="story-headline">Logistics software firm buys an AI freight platform</div>
+            <div class="story-summary">Descartes Systems has bought Tai Software, whose AI platform helps freight brokers automate quoting, carrier sourcing and billing, for around $100 million in cash. It is another example of AI point solutions being folded into larger enterprise software suites rather than staying independent.</div>
+            <div class="meta">
+              <span class="source">GlobeNewswire</span>
+              <span>&middot;</span>
+              <a href="https://www.globenewswire.com/news-release/2026/08/24/3349604/0/en/descartes-acquires-tai.html">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-others" data-cat="Others">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Others</span>
+            <span class="category-count">2 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-20">
+            <div class="story-headline">UK agency tells firms how to control AI agents</div>
+            <div class="story-summary">Britain's National Cyber Security Centre has published guidance urging organisations to sandbox their AI agents, limit their access and keep a human checking their actions, warning that autonomous systems can escalate their own privileges or behave unpredictably. It is one of the first detailed government playbooks for managing the security risks of letting AI act on its own.</div>
+            <div class="meta">
+              <span class="source">National Cyber Security Centre</span>
+              <span>&middot;</span>
+              <a href="https://www.ncsc.gov.uk/blogs/managing-the-cyber-risk-of-agentic-ai">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-08-21">
+            <div class="story-headline">Brazil moves to subsidise home-grown AI development</div>
+            <div class="story-summary">A Brazilian congressional committee has approved a bill offering tax credits and public research funding to companies that develop artificial intelligence domestically, including a 20 per cent tax deduction for certified projects. It is part of a wider pattern of governments outside the US and China trying to build sovereign AI capacity rather than depend entirely on foreign technology.</div>
+            <div class="meta">
+              <span class="source">TI Inside</span>
+              <span>&middot;</span>
+              <a href="https://tiinside.com.br/en/21/08/2026/Committee-approves-incentives-to-develop-Brazilian-industry./">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+    </section>
+
+  </div>
+
+  <footer>
+    <span>Compiled automatically from web search using Claude</span>
+    <span>Created by Ed Sant&#8217;Anna</span>
+  </footer>
+
+<script src="../assets/brief.js" defer></script>
+<script src="../assets/site.js" defer></script>
+
+</body>
+</html>
