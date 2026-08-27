@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily AI Brief &mdash; 27 August 2026</title>
+<link rel="stylesheet" href="../assets/brand.css">
+<link rel="stylesheet" href="../assets/brief.css">
+</head>
+<body data-brief="2026-08-27">
+
+  <!--
+    GLOBAL SITE HEADER — identical on every page, do not restyle per brief.
+    data-root is the path back to the site root: "../" on brief pages.
+    The dropdown below is baked in with today only; the live page replaces
+    it from manifest.json on load, so do not hand-fill earlier dates.
+  -->
+  <div class="site-header" data-root="../">
+    <div class="site-header-inner">
+      <a class="wordmark" href="../index.html"><span class="wordmark-brand">Chief T.E.C.H. Translator</span><span class="wordmark-sep"> - </span><span class="wordmark-title">AI Daily Briefs</span></a>
+      <nav class="site-nav">
+        <a class="site-nav-link" id="navLatest" href="../briefs/ai-brief-2026-08-27.html">Latest</a>
+        <div class="dropdown">
+          <button class="site-nav-link" id="archiveToggle" aria-expanded="false" aria-haspopup="true">Archive <span class="caret">&#9662;</span></button>
+          <div class="dropdown-menu" id="archiveMenu" role="menu">
+            <a class="dropdown-item current" href="../briefs/ai-brief-2026-08-27.html">27 August 2026</a>
+            <div class="dropdown-sep"></div>
+            <a class="dropdown-item dropdown-all" href="../index.html">View all briefs</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="hero-inner">
+      <span class="pill">Daily AI Brief</span>
+      <div class="hero-row">
+        <h1>Today in AI</h1>
+        <div class="hero-meta">
+          <div class="hero-date">27 August 2026</div>
+          <div class="hero-sub">10 stories &middot; 5 categories</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tabstrip">
+    <div class="tabstrip-inner">
+      <button class="tab-btn active" data-tab="summary" onclick="showTab('summary')">Visual Summary</button>
+      <button class="tab-btn" data-tab="briefing" onclick="showTab('briefing')">Full Briefing</button>
+    </div>
+  </div>
+
+  <div class="page">
+
+    <section id="tab-summary" class="tab-panel active">
+
+      <!--
+        CATEGORY CARDS — one per category with at least one story, in the
+        fixed order below, skipping any with none. Colour class per
+        category (never reassign):
+          Enterprise Use Cases -> cat-usecases
+          Enterprise AI Tools  -> cat-tools
+          Consulting News      -> cat-consulting
+          AI Tech              -> cat-tech
+          AI Investment        -> cat-investment
+          Others               -> cat-others
+        cat-stat must be a real sourced figure; if no clean number exists
+        use a truthful count. cat-stat-label gives it context in <=12 words.
+        cat-desc is one sentence, <=15 words. The name in goToCategory()
+        must match the chip and <details> data-cat exactly.
+        The card below is a worked example; repeat for each category.
+      -->
+      <div class="cat-grid">
+        <div class="cat-card cat-tools" role="button" tabindex="0"
+             onclick="goToCategory('Enterprise AI Tools')"
+             onkeypress="if(event.key==='Enter')goToCategory('Enterprise AI Tools')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Enterprise AI Tools</span>
+            <span class="cat-go">1 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">37</div>
+            <div class="cat-stat-label">prebuilt sales skills in the new Claude plugin</div>
+            <p class="cat-desc">Salesforce moved its entire CRM into Claude, not the other way round.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-consulting" role="button" tabindex="0"
+             onclick="goToCategory('Consulting News')"
+             onkeypress="if(event.key==='Enter')goToCategory('Consulting News')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Consulting News</span>
+            <span class="cat-go">1 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">1st</div>
+            <div class="cat-stat-label">dedicated Gemini AI experience centre in Bengaluru</div>
+            <p class="cat-desc">IT services firms keep turning AI advisory work into hands-on delivery space.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-tech" role="button" tabindex="0"
+             onclick="goToCategory('AI Tech')"
+             onkeypress="if(event.key==='Enter')goToCategory('AI Tech')">
+          <div class="cat-card-bar">
+            <span class="cat-name">AI Tech</span>
+            <span class="cat-go">3 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">106%</div>
+            <div class="cat-stat-label">Nvidia's year-on-year revenue growth this quarter</div>
+            <p class="cat-desc">Chips, models and earnings all pointed to no let-up in AI's technology race.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-investment" role="button" tabindex="0"
+             onclick="goToCategory('AI Investment')"
+             onkeypress="if(event.key==='Enter')goToCategory('AI Investment')">
+          <div class="cat-card-bar">
+            <span class="cat-name">AI Investment</span>
+            <span class="cat-go">3 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">3</div>
+            <div class="cat-stat-label">funding and acquisition deals in AI infrastructure</div>
+            <p class="cat-desc">Power, chips and Asian AI start-ups all drew fresh money this week.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-others" role="button" tabindex="0"
+             onclick="goToCategory('Others')"
+             onkeypress="if(event.key==='Enter')goToCategory('Others')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Others</span>
+            <span class="cat-go">2 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">94%</div>
+            <div class="cat-stat-label">of firms report no earnings boost from AI, McKinsey finds</div>
+            <p class="cat-desc">Political backlash and a stark ROI warning both question AI's payoff.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Closing split panel. HEADLINE is the single sentence that sums up
+           the day; WHY_MATTERS is its business implication. -->
+      <div class="takeaway">
+        <div class="takeaway-lead">
+          <span class="takeaway-label">The story today</span>
+          <p>Nvidia's blockbuster quarter and a wave of fresh AI investment collided this week with new evidence that most businesses are still not seeing a return.</p>
+        </div>
+        <div class="takeaway-why">
+          <span class="takeaway-label">Why this matters</span>
+          <p>For any leader signing off on AI budgets the message is clear: keep investing in infrastructure and tools, but demand a harder look at where the returns actually land.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="tab-briefing" class="tab-panel">
+      <div class="controls">
+        <input type="text" class="search-box" id="storySearch" placeholder="Search stories&hellip;" oninput="filterStories()">
+        <button class="filter-chip active" data-cat="all" onclick="setFilter('all')">All</button>
+        <!-- one chip per category present, same order and colour class -->
+        <button class="filter-chip cat-tools" data-cat="Enterprise AI Tools" onclick="setFilter('Enterprise AI Tools')">Enterprise AI Tools</button>
+        <button class="filter-chip cat-consulting" data-cat="Consulting News" onclick="setFilter('Consulting News')">Consulting News</button>
+        <button class="filter-chip cat-tech" data-cat="AI Tech" onclick="setFilter('AI Tech')">AI Tech</button>
+        <button class="filter-chip cat-investment" data-cat="AI Investment" onclick="setFilter('AI Investment')">AI Investment</button>
+        <button class="filter-chip cat-others" data-cat="Others" onclick="setFilter('Others')">Others</button>
+      </div>
+      <div class="no-results" id="noResults">No stories match that search.</div>
+
+      <!-- One <details> per category, same fixed order. Do NOT add the
+           "open" attribute: sections start collapsed and expand on click.
+           Every .story carries data-published="YYYY-MM-DD", the date the
+           SOURCE published the article, not today's date. The checker fails
+           the run if it is missing, unparseable, in the future, or older
+           than the freshness window. -->
+      <details class="category cat-tools" data-cat="Enterprise AI Tools">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Enterprise AI Tools</span>
+            <span class="category-count">1 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-26">
+            <div class="story-headline">Salesforce puts its entire CRM inside Claude</div>
+            <div class="story-summary">Salesforce and Anthropic launched Claudeforce, letting sales staff query and update live customer records, review deals and prepare for meetings directly from Claude rather than opening Salesforce itself. It signals that AI assistants, rather than traditional software screens, may become how staff actually work with core business systems.</div>
+            <div class="meta">
+              <span class="source">SALESFORCE</span>
+              <span>&middot;</span>
+              <a href="https://www.salesforce.com/news/press-releases/2026/08/26/salesforce-and-anthropic-announce-claudeforce/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-consulting" data-cat="Consulting News">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Consulting News</span>
+            <span class="category-count">1 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-22">
+            <div class="story-headline">IT services firm opens Bengaluru AI showcase</div>
+            <div class="story-summary">Econz IT Services and Google Cloud opened Bengaluru's first dedicated Gemini Enterprise Experience Centre, where client businesses can build and test AI agents for functions from HR to finance. It is part of a wider push by IT services and consulting firms to turn AI advisory work into hands-on delivery.</div>
+            <div class="meta">
+              <span class="source">BUSINESS STANDARD</span>
+              <span>&middot;</span>
+              <a href="https://www.business-standard.com/content/press-releases-ani/econz-and-google-cloud-launch-silicon-valley-s-first-dedicated-gemini-enterprise-experience-centre-126082200882_1.html">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-tech" data-cat="AI Tech">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">AI Tech</span>
+            <span class="category-count">3 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-26">
+            <div class="story-headline">OpenAI's own chip beats Nvidia on efficiency</div>
+            <div class="story-summary">OpenAI's first custom chip, developed with Broadcom, delivers more AI work per watt than Nvidia's Blackwell systems in independent benchmark tests. Cheaper, more efficient inference could make running AI services significantly less costly for every business that depends on them.</div>
+            <div class="meta">
+              <span class="source">CNBC</span>
+              <span>&middot;</span>
+              <a href="https://www.cnbc.com/2026/08/26/openai-jalapeno-ai-chip-nvidia.html">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-08-26">
+            <div class="story-headline">Nvidia's sales double again as AI spending holds</div>
+            <div class="story-summary">Nvidia's quarterly revenue rose 106 per cent year on year to $96.2 billion, beating forecasts, and it guided even higher for the next quarter. The results are the clearest signal yet that large-scale AI infrastructure spending is not slowing down.</div>
+            <div class="meta">
+              <span class="source">CNBC</span>
+              <span>&middot;</span>
+              <a href="https://www.cnbc.com/2026/08/26/nvidia-nvda-earnings-report-q2-2027-live-updates.html">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-08-26">
+            <div class="story-headline">Chinese lab releases a free rival AI model</div>
+            <div class="story-summary">Chinese AI firm Z.ai released GLM-5.3-Flash, a powerful open-weight model that is free for anyone to download and run, and which comes close to matching Anthropic's Claude Opus on coding tasks. Free, capable models widen the choice for businesses wary of relying on a single AI provider.</div>
+            <div class="meta">
+              <span class="source">MARKTECHPOST</span>
+              <span>&middot;</span>
+              <a href="https://www.marktechpost.com/2026/08/26/z-ai-releases-glm-5-3-flash-a-320b-a18b-natively-multimodal-moe-with-a-1m-token-context/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-investment" data-cat="AI Investment">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">AI Investment</span>
+            <span class="category-count">3 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-24">
+            <div class="story-headline">Chipmaker Infineon buys into AI power tech</div>
+            <div class="story-summary">Infineon agreed to acquire Indian start-up C2i Semiconductors to strengthen its power management technology for AI data centres, whose processors are increasingly hard to keep supplied with electricity. The deal shows that power delivery, not just raw compute, is becoming a competitive battleground in AI infrastructure.</div>
+            <div class="meta">
+              <span class="source">INFINEON</span>
+              <span>&middot;</span>
+              <a href="https://www.infineon.com/press-release/2026/infpr202608-129">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-08-25">
+            <div class="story-headline">Start-up raises $150m to power AI data centres</div>
+            <div class="story-summary">Emerald AI raised $150 million at a $1.05 billion valuation for software that lets AI data centres flex their power use to match grid conditions. Investors including Nvidia and Samsung are betting that managing electricity demand, not just chips, will decide who can scale AI fastest.</div>
+            <div class="meta">
+              <span class="source">SILICONANGLE</span>
+              <span>&middot;</span>
+              <a href="https://siliconangle.com/2026/08/25/data-center-power-startup-emerald-ai-raises-150m-at-1-05b-valuation/">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-08-25">
+            <div class="story-headline">Korean AI start-up Wrtn now worth $870m</div>
+            <div class="story-summary">South Korean AI platform Wrtn raised a Series C round valuing it at roughly $870 million, making it the country's first AI services start-up to pass the 1 trillion won mark. It is a sign that AI investor enthusiasm is broadening well beyond the usual US and Chinese names.</div>
+            <div class="meta">
+              <span class="source">BLOOMBERG</span>
+              <span>&middot;</span>
+              <a href="https://www.bloomberg.com/news/articles/2026-08-25/korean-ai-startup-wrtn-raises-funds-at-870-million-value-to-fund-global-growth">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-others" data-cat="Others">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Others</span>
+            <span class="category-count">2 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-20">
+            <div class="story-headline">AI data centre anger spills into politics</div>
+            <div class="story-summary">Local opposition to AI data centres, over power bills, water use and noise, is now showing up in political adverts and election campaigns across several US states. Executives planning data centre investment should expect community and political pushback to become a bigger factor in site selection and timelines.</div>
+            <div class="meta">
+              <span class="source">CNBC</span>
+              <span>&middot;</span>
+              <a href="https://www.cnbc.com/2026/08/20/ai-data-center-election-backlash.html">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-08-25">
+            <div class="story-headline">Most firms still see no profit from AI</div>
+            <div class="story-summary">A McKinsey survey of over 1,700 executives found that 94 per cent of firms have seen no measurable earnings benefit from their AI spending, even as individual staff report time savings. The gap suggests many businesses are still failing to turn personal productivity gains into results that show up on the bottom line.</div>
+            <div class="meta">
+              <span class="source">THE REGISTER</span>
+              <span>&middot;</span>
+              <a href="https://www.theregister.com/ai-and-ml/2026/08/25/mckinsey-says-enterprise-ai-is-finally-on-the-road-to-roi/5292388">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+    </section>
+
+  </div>
+
+  <footer>
+    <span>Compiled automatically from web search using Claude</span>
+    <span>Created by Ed Sant&#8217;Anna</span>
+  </footer>
+
+<script src="../assets/brief.js" defer></script>
+<script src="../assets/site.js" defer></script>
+
+</body>
+</html>
