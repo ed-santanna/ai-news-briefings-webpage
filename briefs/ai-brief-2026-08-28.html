@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily AI Brief &mdash; 28 August 2026</title>
+<link rel="stylesheet" href="../assets/brand.css">
+<link rel="stylesheet" href="../assets/brief.css">
+</head>
+<body data-brief="2026-08-28">
+
+  <!--
+    GLOBAL SITE HEADER — identical on every page, do not restyle per brief.
+    data-root is the path back to the site root: "../" on brief pages.
+    The dropdown below is baked in with today only; the live page replaces
+    it from manifest.json on load, so do not hand-fill earlier dates.
+  -->
+  <div class="site-header" data-root="../">
+    <div class="site-header-inner">
+      <a class="wordmark" href="../index.html"><span class="wordmark-brand">Chief T.E.C.H. Translator</span><span class="wordmark-sep"> - </span><span class="wordmark-title">AI Daily Briefs</span></a>
+      <nav class="site-nav">
+        <a class="site-nav-link" id="navLatest" href="../briefs/ai-brief-2026-08-28.html">Latest</a>
+        <div class="dropdown">
+          <button class="site-nav-link" id="archiveToggle" aria-expanded="false" aria-haspopup="true">Archive <span class="caret">&#9662;</span></button>
+          <div class="dropdown-menu" id="archiveMenu" role="menu">
+            <a class="dropdown-item current" href="../briefs/ai-brief-2026-08-28.html">28 August 2026</a>
+            <div class="dropdown-sep"></div>
+            <a class="dropdown-item dropdown-all" href="../index.html">View all briefs</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="hero-inner">
+      <span class="pill">Daily AI Brief</span>
+      <div class="hero-row">
+        <h1>Today in AI</h1>
+        <div class="hero-meta">
+          <div class="hero-date">28 August 2026</div>
+          <div class="hero-sub">8 stories &middot; 6 categories</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tabstrip">
+    <div class="tabstrip-inner">
+      <button class="tab-btn active" data-tab="summary" onclick="showTab('summary')">Visual Summary</button>
+      <button class="tab-btn" data-tab="briefing" onclick="showTab('briefing')">Full Briefing</button>
+    </div>
+  </div>
+
+  <div class="page">
+
+    <section id="tab-summary" class="tab-panel active">
+
+      <!--
+        CATEGORY CARDS — one per category with at least one story, in the
+        fixed order below, skipping any with none. Colour class per
+        category (never reassign):
+          Enterprise Use Cases -> cat-usecases
+          Enterprise AI Tools  -> cat-tools
+          Consulting News      -> cat-consulting
+          AI Tech              -> cat-tech
+          AI Investment        -> cat-investment
+          Others               -> cat-others
+        cat-stat must be a real sourced figure; if no clean number exists
+        use a truthful count. cat-stat-label gives it context in <=12 words.
+        cat-desc is one sentence, <=15 words. The name in goToCategory()
+        must match the chip and <details> data-cat exactly.
+        The card below is a worked example; repeat for each category.
+      -->
+      <div class="cat-grid">
+        <div class="cat-card cat-usecases" role="button" tabindex="0"
+             onclick="goToCategory('Enterprise Use Cases')"
+             onkeypress="if(event.key==='Enter')goToCategory('Enterprise Use Cases')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Enterprise Use Cases</span>
+            <span class="cat-go">1 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">50%</div>
+            <div class="cat-stat-label">Profit margin boost Delta expects from wider AI use</div>
+            <p class="cat-desc">Delta says wider AI use could lift its profit margin by half.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-tools" role="button" tabindex="0"
+             onclick="goToCategory('Enterprise AI Tools')"
+             onkeypress="if(event.key==='Enter')goToCategory('Enterprise AI Tools')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Enterprise AI Tools</span>
+            <span class="cat-go">1 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">50+</div>
+            <div class="cat-stat-label">New AI skills built into Google's banking tool</div>
+            <p class="cat-desc">Google Cloud launched an AI platform built specifically for banks and capital markets.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-consulting" role="button" tabindex="0"
+             onclick="goToCategory('Consulting News')"
+             onkeypress="if(event.key==='Enter')goToCategory('Consulting News')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Consulting News</span>
+            <span class="cat-go">1 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">10,000+</div>
+            <div class="cat-stat-label">Wipro staff being trained on agentic AI</div>
+            <p class="cat-desc">Wipro is training thousands of staff to build AI, not just advise on it.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-tech" role="button" tabindex="0"
+             onclick="goToCategory('AI Tech')"
+             onkeypress="if(event.key==='Enter')goToCategory('AI Tech')">
+          <div class="cat-card-bar">
+            <span class="cat-name">AI Tech</span>
+            <span class="cat-go">1 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">2</div>
+            <div class="cat-stat-label">Rival AI labs beaten at scientific research tasks</div>
+            <p class="cat-desc">A London start-up says its AI now beats Anthropic and OpenAI at research.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-investment" role="button" tabindex="0"
+             onclick="goToCategory('AI Investment')"
+             onkeypress="if(event.key==='Enter')goToCategory('AI Investment')">
+          <div class="cat-card-bar">
+            <span class="cat-name">AI Investment</span>
+            <span class="cat-go">3 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">$58bn</div>
+            <div class="cat-stat-label">Combined value of this week's three biggest AI deals</div>
+            <p class="cat-desc">Anthropic, Nvidia and a consumer AI start-up all signed multi-billion dollar deals this week.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-others" role="button" tabindex="0"
+             onclick="goToCategory('Others')"
+             onkeypress="if(event.key==='Enter')goToCategory('Others')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Others</span>
+            <span class="cat-go">1 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">100+</div>
+            <div class="cat-stat-label">Companies warning of a coming wave of AI attacks</div>
+            <p class="cat-desc">Over 100 tech companies warned that AI-driven cyberattacks are about to escalate.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Closing split panel. HEADLINE is the single sentence that sums up
+           the day; WHY_MATTERS is its business implication. -->
+      <div class="takeaway">
+        <div class="takeaway-lead">
+          <span class="takeaway-label">The story today</span>
+          <p>This week AI's biggest players struck multi-billion dollar deals to lock up computing power and open-source platforms, even as they warned that AI-driven cyberattacks are about to escalate.</p>
+        </div>
+        <div class="takeaway-why">
+          <span class="takeaway-label">Why this matters</span>
+          <p>The AI supply chain is consolidating fast around a handful of giants, and those same giants say every business should start preparing now for a sharp rise in AI-powered attacks.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="tab-briefing" class="tab-panel">
+      <div class="controls">
+        <input type="text" class="search-box" id="storySearch" placeholder="Search stories&hellip;" oninput="filterStories()">
+        <button class="filter-chip active" data-cat="all" onclick="setFilter('all')">All</button>
+        <!-- one chip per category present, same order and colour class -->
+        <button class="filter-chip cat-usecases" data-cat="Enterprise Use Cases" onclick="setFilter('Enterprise Use Cases')">Enterprise Use Cases</button>
+        <button class="filter-chip cat-tools" data-cat="Enterprise AI Tools" onclick="setFilter('Enterprise AI Tools')">Enterprise AI Tools</button>
+        <button class="filter-chip cat-consulting" data-cat="Consulting News" onclick="setFilter('Consulting News')">Consulting News</button>
+        <button class="filter-chip cat-tech" data-cat="AI Tech" onclick="setFilter('AI Tech')">AI Tech</button>
+        <button class="filter-chip cat-investment" data-cat="AI Investment" onclick="setFilter('AI Investment')">AI Investment</button>
+        <button class="filter-chip cat-others" data-cat="Others" onclick="setFilter('Others')">Others</button>
+      </div>
+      <div class="no-results" id="noResults">No stories match that search.</div>
+
+      <!-- One <details> per category, same fixed order. Do NOT add the
+           "open" attribute: sections start collapsed and expand on click.
+           Every .story carries data-published="YYYY-MM-DD", the date the
+           SOURCE published the article, not today's date. The checker fails
+           the run if it is missing, unparseable, in the future, or older
+           than the freshness window. -->
+      <details class="category cat-usecases" data-cat="Enterprise Use Cases">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Enterprise Use Cases</span>
+            <span class="category-count">1 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-23">
+            <div class="story-headline">Delta says AI could lift profit margins by half</div>
+            <div class="story-summary">Delta's chief executive said broader use of AI in pricing, maintenance and crew scheduling could take the airline's profit margin from 10% to 15%, adding billions of dollars in profit a year.</div>
+            <div class="meta">
+              <span class="source">WBAP</span>
+              <span>&middot;</span>
+              <a href="https://www.wbap.com/2026/08/23/deltas-ai-bet-could-add-billions-and-lift-profitability-50-ed-bastian-says/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-tools" data-cat="Enterprise AI Tools">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Enterprise AI Tools</span>
+            <span class="category-count">1 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-25">
+            <div class="story-headline">Google launches an AI tool built for banks</div>
+            <div class="story-summary">Google Cloud released a version of its Gemini Enterprise platform tailored to banking and capital markets, with Deutsche Bank and CME Group already using it for research and client onboarding work.</div>
+            <div class="meta">
+              <span class="source">PR Newswire</span>
+              <span>&middot;</span>
+              <a href="https://www.prnewswire.com/news-releases/google-cloud-launches-gemini-enterprise-for-financial-services-302859186.html">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-consulting" data-cat="Consulting News">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Consulting News</span>
+            <span class="category-count">1 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-27">
+            <div class="story-headline">Wipro widens Google Cloud deal to train staff on AI</div>
+            <div class="story-summary">Wipro expanded its partnership with Google Cloud to scale agentic AI across its business, pledging to train more than 10,000 staff as IT services firms compete to prove they can build AI tools, not just advise on them.</div>
+            <div class="meta">
+              <span class="source">Business Standard</span>
+              <span>&middot;</span>
+              <a href="https://www.business-standard.com/markets/capital-market-news/wipro-extends-partnership-with-google-cloud-126082701353_1.html">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-tech" data-cat="AI Tech">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">AI Tech</span>
+            <span class="category-count">1 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-22">
+            <div class="story-headline">Start-up's AI beats Anthropic and OpenAI at research</div>
+            <div class="story-summary">London start-up Inherent, founded by former Google DeepMind researchers, said its Faraday system outperformed leading models from Anthropic and OpenAI at replicating published scientific research, a step toward AI that can independently identify useful lines of inquiry.</div>
+            <div class="meta">
+              <span class="source">TechCrunch</span>
+              <span>&middot;</span>
+              <a href="https://techcrunch.com/2026/08/22/inherent-founded-by-deepmind-alumni-says-its-ai-teammate-just-outperformed-anthropic-and-openai-at-replicating-research/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-investment" data-cat="AI Investment">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">AI Investment</span>
+            <span class="category-count">3 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-26">
+            <div class="story-headline">Anthropic signs $45bn deal for AI computing power</div>
+            <div class="story-summary">Anthropic agreed to pay $45bn over six years to rent computing power from UK infrastructure firm Nscale's US data centre, its latest huge compute commitment as it prepares for a stock market listing.</div>
+            <div class="meta">
+              <span class="source">TechCrunch</span>
+              <span>&middot;</span>
+              <a href="https://techcrunch.com/2026/08/26/anthropic-continues-compute-gobbling-streak-in-45-billion-deal-with-nscale/">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-08-27">
+            <div class="story-headline">Nvidia agrees to buy Hugging Face for $12.9bn</div>
+            <div class="story-summary">Nvidia reportedly agreed to buy Hugging Face, the widely used hub where developers share open-source AI models, extending the chipmaker's reach from hardware into the software and models that run on it.</div>
+            <div class="meta">
+              <span class="source">CNBC</span>
+              <span>&middot;</span>
+              <a href="https://www.cnbc.com/2026/08/27/nvidia-hugging-face-acquisition.html">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-08-26">
+            <div class="story-headline">AI assistant start-up now worth $2.5bn</div>
+            <div class="story-summary">Instinct, a personal AI agent that books flights, orders groceries and manages inboxes, raised $250m and saw its valuation jump from $50m to $2.5bn in a matter of months, underlining investor appetite for consumer AI agents.</div>
+            <div class="meta">
+              <span class="source">TechCrunch</span>
+              <span>&middot;</span>
+              <a href="https://techcrunch.com/2026/08/26/viral-ai-startup-instinct-has-raised-350-million-at-a-2-5-billion-valuation/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-others" data-cat="Others">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Others</span>
+            <span class="category-count">1 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-27">
+            <div class="story-headline">Tech giants warn AI cyberattacks will soon surge</div>
+            <div class="story-summary">More than 100 companies including OpenAI, Anthropic, Google and Microsoft signed an open letter warning that AI-powered cyberattacks will become far more common, urging governments and businesses to strengthen defences for hospitals, utilities and other critical infrastructure.</div>
+            <div class="meta">
+              <span class="source">TechCrunch</span>
+              <span>&middot;</span>
+              <a href="https://techcrunch.com/2026/08/27/openai-anthropic-google-and-100-other-companies-call-for-action-to-defend-against-rogue-ai/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+    </section>
+
+  </div>
+
+  <footer>
+    <span>Compiled automatically from web search using Claude</span>
+    <span>Created by Ed Sant&#8217;Anna</span>
+  </footer>
+
+<script src="../assets/brief.js" defer></script>
+<script src="../assets/site.js" defer></script>
+
+</body>
+</html>
