@@ -1,6 +1,11 @@
 {
   "briefs": [
     {
+      "date": "2026-08-30",
+      "url": "briefs/ai-brief-2026-08-30.html",
+      "teaser": "Google split Gemini into dedicated, compliance-ready AI tools for banks and lawyers this week, even as public trust in AI keeps sliding."
+    },
+    {
       "date": "2026-08-29",
       "url": "briefs/ai-brief-2026-08-29.html",
       "teaser": "AI agents began trading investments and writing prescriptions this week, while a US court limited how far the government can pressure AI firms."

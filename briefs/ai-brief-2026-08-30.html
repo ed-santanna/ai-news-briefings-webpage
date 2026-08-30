@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily AI Brief &mdash; 30 August 2026</title>
+<link rel="stylesheet" href="../assets/brand.css">
+<link rel="stylesheet" href="../assets/brief.css">
+</head>
+<body data-brief="2026-08-30">
+
+  <!--
+    GLOBAL SITE HEADER — identical on every page, do not restyle per brief.
+    data-root is the path back to the site root: "../" on brief pages.
+    The dropdown below is baked in with today only; the live page replaces
+    it from manifest.json on load, so do not hand-fill earlier dates.
+  -->
+  <div class="site-header" data-root="../">
+    <div class="site-header-inner">
+      <a class="wordmark" href="../index.html"><span class="wordmark-brand">Chief T.E.C.H. Translator</span><span class="wordmark-sep"> - </span><span class="wordmark-title">AI Daily Briefs</span></a>
+      <nav class="site-nav">
+        <a class="site-nav-link" id="navLatest" href="../briefs/ai-brief-2026-08-30.html">Latest</a>
+        <div class="dropdown">
+          <button class="site-nav-link" id="archiveToggle" aria-expanded="false" aria-haspopup="true">Archive <span class="caret">&#9662;</span></button>
+          <div class="dropdown-menu" id="archiveMenu" role="menu">
+            <a class="dropdown-item current" href="../briefs/ai-brief-2026-08-30.html">30 August 2026</a>
+            <div class="dropdown-sep"></div>
+            <a class="dropdown-item dropdown-all" href="../index.html">View all briefs</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="hero-inner">
+      <span class="pill">Daily AI Brief</span>
+      <div class="hero-row">
+        <h1>Today in AI</h1>
+        <div class="hero-meta">
+          <div class="hero-date">30 August 2026</div>
+          <div class="hero-sub">9 stories &middot; 6 categories</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tabstrip">
+    <div class="tabstrip-inner">
+      <button class="tab-btn active" data-tab="summary" onclick="showTab('summary')">Visual Summary</button>
+      <button class="tab-btn" data-tab="briefing" onclick="showTab('briefing')">Full Briefing</button>
+    </div>
+  </div>
+
+  <div class="page">
+
+    <section id="tab-summary" class="tab-panel active">
+
+      <!--
+        CATEGORY CARDS — one per category with at least one story, in the
+        fixed order below, skipping any with none. Colour class per
+        category (never reassign):
+          Enterprise Use Cases -> cat-usecases
+          Enterprise AI Tools  -> cat-tools
+          Consulting News      -> cat-consulting
+          AI Tech              -> cat-tech
+          AI Investment        -> cat-investment
+          Others               -> cat-others
+        cat-stat must be a real sourced figure; if no clean number exists
+        use a truthful count. cat-stat-label gives it context in <=12 words.
+        cat-desc is one sentence, <=15 words. The name in goToCategory()
+        must match the chip and <details> data-cat exactly.
+        The card below is a worked example; repeat for each category.
+      -->
+      <div class="cat-grid">
+        <div class="cat-card cat-usecases" role="button" tabindex="0"
+             onclick="goToCategory('Enterprise Use Cases')"
+             onkeypress="if(event.key==='Enter')goToCategory('Enterprise Use Cases')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Enterprise Use Cases</span>
+            <span class="cat-go">1 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">2 banks</div>
+            <div class="cat-stat-label">financial institutions first testing Google's new banking AI agent</div>
+            <p class="cat-desc">Deutsche Bank and CME Group are the first to trial Google's new banking AI agent.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-tools" role="button" tabindex="0"
+             onclick="goToCategory('Enterprise AI Tools')"
+             onkeypress="if(event.key==='Enter')goToCategory('Enterprise AI Tools')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Enterprise AI Tools</span>
+            <span class="cat-go">2 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">23 tools</div>
+            <div class="cat-stat-label">AI tools X opened up for managing ad campaigns</div>
+            <p class="cat-desc">Google and X both shipped new AI tools built specifically for business users this week.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-consulting" role="button" tabindex="0"
+             onclick="goToCategory('Consulting News')"
+             onkeypress="if(event.key==='Enter')goToCategory('Consulting News')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Consulting News</span>
+            <span class="cat-go">1 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">&euro;1.25bn</div>
+            <div class="cat-stat-label">value of TCS's five-year AI deal with Porsche and MHP</div>
+            <p class="cat-desc">TCS bought Porsche's AI consulting arm and signed a five-year deal alongside it.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-tech" role="button" tabindex="0"
+             onclick="goToCategory('AI Tech')"
+             onkeypress="if(event.key==='Enter')goToCategory('AI Tech')">
+          <div class="cat-card-bar">
+            <span class="cat-name">AI Tech</span>
+            <span class="cat-go">2 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">10 partners</div>
+            <div class="cat-stat-label">hotel brands added to Google's new AI booking tool</div>
+            <p class="cat-desc">Google shipped a new transcription model and added AI hotel booking to search.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-investment" role="button" tabindex="0"
+             onclick="goToCategory('AI Investment')"
+             onkeypress="if(event.key==='Enter')goToCategory('AI Investment')">
+          <div class="cat-card-bar">
+            <span class="cat-name">AI Investment</span>
+            <span class="cat-go">2 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">$6bn</div>
+            <div class="cat-stat-label">new valuation of robotics start-up General Intuition</div>
+            <p class="cat-desc">Investors keep backing physical AI, funding a robotics start-up and a new chip cluster.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-others" role="button" tabindex="0"
+             onclick="goToCategory('Others')"
+             onkeypress="if(event.key==='Enter')goToCategory('Others')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Others</span>
+            <span class="cat-go">1 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">52%</div>
+            <div class="cat-stat-label">Americans now more concerned than excited about AI</div>
+            <p class="cat-desc">More than half of Americans are now wary rather than excited about AI.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Closing split panel. HEADLINE is the single sentence that sums up
+           the day; WHY_MATTERS is its business implication. -->
+      <div class="takeaway">
+        <div class="takeaway-lead">
+          <span class="takeaway-label">The story today</span>
+          <p>Google split Gemini into dedicated, compliance-ready AI tools for banks and lawyers this week, even as public trust in AI keeps sliding.</p>
+        </div>
+        <div class="takeaway-why">
+          <span class="takeaway-label">Why this matters</span>
+          <p>Vendors are moving from one general AI assistant to industry-specific versions built into regulated workflows, so expect your own AI tools to be procured and governed the same way. With more than half the public now wary of AI, how you talk about your own AI use matters as much as the technology itself.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="tab-briefing" class="tab-panel">
+      <div class="controls">
+        <input type="text" class="search-box" id="storySearch" placeholder="Search stories&hellip;" oninput="filterStories()">
+        <button class="filter-chip active" data-cat="all" onclick="setFilter('all')">All</button>
+        <!-- one chip per category present, same order and colour class -->
+        <button class="filter-chip cat-usecases" data-cat="Enterprise Use Cases" onclick="setFilter('Enterprise Use Cases')">Enterprise Use Cases</button>
+        <button class="filter-chip cat-tools" data-cat="Enterprise AI Tools" onclick="setFilter('Enterprise AI Tools')">Enterprise AI Tools</button>
+        <button class="filter-chip cat-consulting" data-cat="Consulting News" onclick="setFilter('Consulting News')">Consulting News</button>
+        <button class="filter-chip cat-tech" data-cat="AI Tech" onclick="setFilter('AI Tech')">AI Tech</button>
+        <button class="filter-chip cat-investment" data-cat="AI Investment" onclick="setFilter('AI Investment')">AI Investment</button>
+        <button class="filter-chip cat-others" data-cat="Others" onclick="setFilter('Others')">Others</button>
+      </div>
+      <div class="no-results" id="noResults">No stories match that search.</div>
+
+      <!-- One <details> per category, same fixed order. Do NOT add the
+           "open" attribute: sections start collapsed and expand on click.
+           Every .story carries data-published="YYYY-MM-DD", the date the
+           SOURCE published the article, not today's date. The checker fails
+           the run if it is missing, unparseable, in the future, or older
+           than the freshness window. -->
+      <details class="category cat-usecases" data-cat="Enterprise Use Cases">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Enterprise Use Cases</span>
+            <span class="category-count">1 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-25">
+            <div class="story-headline">Deutsche Bank trials Google's AI research agent</div>
+            <div class="story-summary">Deutsche Bank and CME Group are among the first to test a new Google AI tool that automates market research, KYC checks and credit risk analysis for banking teams. It signals how major banks are moving AI from chat assistants into core, auditable workflows.</div>
+            <div class="meta">
+              <span class="source">Google Cloud Blog</span>
+              <span>&middot;</span>
+              <a href="https://cloud.google.com/blog/products/ai-machine-learning/introducing-gemini-enterprise-for-financial-services">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-tools" data-cat="Enterprise AI Tools">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Enterprise AI Tools</span>
+            <span class="category-count">2 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-25">
+            <div class="story-headline">Google launches AI tools built for law firms</div>
+            <div class="story-summary">Google's new Gemini Enterprise for Legal automates contract review and regulatory checks, with Cleary Gottlieb, Freshfields and Weil among the first firms testing it. It shows AI vendors now building bespoke, compliance-ready versions of their tools for regulated professions rather than one generic assistant.</div>
+            <div class="meta">
+              <span class="source">Google Cloud Blog</span>
+              <span>&middot;</span>
+              <a href="https://cloud.google.com/blog/products/ai-machine-learning/introducing-gemini-enterprise-for-legal">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-08-24">
+            <div class="story-headline">X lets AI agents run ad campaigns</div>
+            <div class="story-summary">X has opened its advertising system to outside AI tools such as ChatGPT and Claude, letting advertisers manage and analyse campaigns through them directly. It is the latest social platform to let AI agents handle live marketing budgets, following Meta, TikTok and Pinterest.</div>
+            <div class="meta">
+              <span class="source">PPC Land</span>
+              <span>&middot;</span>
+              <a href="https://ppc.land/x-ads-mcp-gives-grok-and-claude-code-23-tools-to-run-ad-campaigns/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-consulting" data-cat="Consulting News">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Consulting News</span>
+            <span class="category-count">1 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-24">
+            <div class="story-headline">TCS buys Porsche's AI consulting arm</div>
+            <div class="story-summary">Tata Consultancy Services is buying Porsche's IT and AI consulting unit MHP for around &euro;320 million, alongside a separate five-year, &euro;1.25 billion deal to expand AI-powered engineering work for Porsche. It is a sign consultancies are buying their way into AI capability rather than only building it in-house.</div>
+            <div class="meta">
+              <span class="source">Outlook Business</span>
+              <span>&middot;</span>
+              <a href="https://www.outlookbusiness.com/corporate/tcs-to-buy-porsches-it-consulting-unit-mhp-for-320-mn">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-tech" data-cat="AI Tech">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">AI Tech</span>
+            <span class="category-count">2 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-26">
+            <div class="story-headline">Google ships a dedicated AI transcription model</div>
+            <div class="story-summary">Google's new Gemini 3.5 Transcribe model turns speech into text with speaker identification and emotion detection, available for both pre-recorded audio and live streaming. It gives businesses a cheaper, purpose-built alternative to routing transcription through a general chat model.</div>
+            <div class="meta">
+              <span class="source">Google Blog</span>
+              <span>&middot;</span>
+              <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-08-27">
+            <div class="story-headline">Google's AI Mode can now book your hotel</div>
+            <div class="story-summary">Google added flight price tracking and one-tap hotel checkout to AI Mode in Search, with ten booking partners including Marriott, Hilton and Expedia. It is another step towards AI systems that complete purchases directly rather than just recommending them.</div>
+            <div class="meta">
+              <span class="source">TechCrunch</span>
+              <span>&middot;</span>
+              <a href="https://techcrunch.com/2026/08/27/googles-ai-mode-can-now-track-flight-prices-help-book-hotels-and-more/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-investment" data-cat="AI Investment">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">AI Investment</span>
+            <span class="category-count">2 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-24">
+            <div class="story-headline">Robotics AI start-up now worth $6bn</div>
+            <div class="story-summary">General Intuition, a start-up training AI to understand and act in physical space, has raised new funding at a $6 billion valuation from Valor Equity Partners and Point72. Investors are still pouring money into physical AI and robotics even as some other funding rounds slow.</div>
+            <div class="meta">
+              <span class="source">TechCrunch</span>
+              <span>&middot;</span>
+              <a href="https://techcrunch.com/2026/08/24/valor-point72-back-general-intuition-at-6b-valuation-as-ai-startup-pushes-into-robotics/">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-08-25">
+            <div class="story-headline">Indian firm orders 9,000 Nvidia AI chips</div>
+            <div class="story-summary">AM Intelligence, backed by renewable energy group Greenko, has placed a binding order for 9,000 Nvidia chips to build one of Asia's first major AI computing clusters, in Hyderabad. The order is the opening phase of an $8 billion plan to build AI computing capacity across India, the US, Finland and Malaysia.</div>
+            <div class="meta">
+              <span class="source">Business Standard</span>
+              <span>&middot;</span>
+              <a href="https://www.business-standard.com/technology/artificial-intelligence/data-centre-firm-am-intelligence-orders-9-000-nvidia-vera-rubin-systems-126082500791_1.html">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-others" data-cat="Others">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Others</span>
+            <span class="category-count">1 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-29">
+            <div class="story-headline">Public trust in AI keeps falling</div>
+            <div class="story-summary">New Pew Research polling shows 52% of Americans are now more concerned than excited about AI in daily life, up from 37% in 2021, as opposition to AI data centres becomes a live issue in this year's midterm elections. Firms promoting their own AI use should factor in a public that is growing warier, not more comfortable.</div>
+            <div class="meta">
+              <span class="source">CNBC</span>
+              <span>&middot;</span>
+              <a href="https://www.cnbc.com/2026/08/29/tech-backlash-ai-data-centers-elections.html">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+    </section>
+
+  </div>
+
+  <footer>
+    <span>Compiled automatically from web search using Claude</span>
+    <span>Created by Ed Sant&#8217;Anna</span>
+  </footer>
+
+<script src="../assets/brief.js" defer></script>
+<script src="../assets/site.js" defer></script>
+
+</body>
+</html>
