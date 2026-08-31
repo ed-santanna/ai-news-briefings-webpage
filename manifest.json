@@ -1,6 +1,11 @@
 {
   "briefs": [
     {
+      "date": "2026-08-31",
+      "url": "briefs/ai-brief-2026-08-31.html",
+      "teaser": "AI is scaling fast across business and infrastructure, while security and public trust problems are catching up with it."
+    },
+    {
       "date": "2026-08-30",
       "url": "briefs/ai-brief-2026-08-30.html",
       "teaser": "Google split Gemini into dedicated, compliance-ready AI tools for banks and lawyers this week, even as public trust in AI keeps sliding."

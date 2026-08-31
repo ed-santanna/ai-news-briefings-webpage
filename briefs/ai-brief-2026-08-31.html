@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily AI Brief &mdash; 31 August 2026</title>
+<link rel="stylesheet" href="../assets/brand.css">
+<link rel="stylesheet" href="../assets/brief.css">
+</head>
+<body data-brief="2026-08-31">
+
+  <!--
+    GLOBAL SITE HEADER — identical on every page, do not restyle per brief.
+    data-root is the path back to the site root: "../" on brief pages.
+    The dropdown below is baked in with today only; the live page replaces
+    it from manifest.json on load, so do not hand-fill earlier dates.
+  -->
+  <div class="site-header" data-root="../">
+    <div class="site-header-inner">
+      <a class="wordmark" href="../index.html"><span class="wordmark-brand">Chief T.E.C.H. Translator</span><span class="wordmark-sep"> - </span><span class="wordmark-title">AI Daily Briefs</span></a>
+      <nav class="site-nav">
+        <a class="site-nav-link" id="navLatest" href="../briefs/ai-brief-2026-08-31.html">Latest</a>
+        <div class="dropdown">
+          <button class="site-nav-link" id="archiveToggle" aria-expanded="false" aria-haspopup="true">Archive <span class="caret">&#9662;</span></button>
+          <div class="dropdown-menu" id="archiveMenu" role="menu">
+            <a class="dropdown-item current" href="../briefs/ai-brief-2026-08-31.html">31 August 2026</a>
+            <div class="dropdown-sep"></div>
+            <a class="dropdown-item dropdown-all" href="../index.html">View all briefs</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="hero-inner">
+      <span class="pill">Daily AI Brief</span>
+      <div class="hero-row">
+        <h1>Today in AI</h1>
+        <div class="hero-meta">
+          <div class="hero-date">31 August 2026</div>
+          <div class="hero-sub">10 stories &middot; 6 categories</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tabstrip">
+    <div class="tabstrip-inner">
+      <button class="tab-btn active" data-tab="summary" onclick="showTab('summary')">Visual Summary</button>
+      <button class="tab-btn" data-tab="briefing" onclick="showTab('briefing')">Full Briefing</button>
+    </div>
+  </div>
+
+  <div class="page">
+
+    <section id="tab-summary" class="tab-panel active">
+
+      <!--
+        CATEGORY CARDS — one per category with at least one story, in the
+        fixed order below, skipping any with none. Colour class per
+        category (never reassign):
+          Enterprise Use Cases -> cat-usecases
+          Enterprise AI Tools  -> cat-tools
+          Consulting News      -> cat-consulting
+          AI Tech              -> cat-tech
+          AI Investment        -> cat-investment
+          Others               -> cat-others
+        cat-stat must be a real sourced figure; if no clean number exists
+        use a truthful count. cat-stat-label gives it context in <=12 words.
+        cat-desc is one sentence, <=15 words. The name in goToCategory()
+        must match the chip and <details> data-cat exactly.
+        The card below is a worked example; repeat for each category.
+      -->
+      <div class="cat-grid">
+        <div class="cat-card cat-usecases" role="button" tabindex="0"
+             onclick="goToCategory('Enterprise Use Cases')"
+             onkeypress="if(event.key==='Enter')goToCategory('Enterprise Use Cases')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Enterprise Use Cases</span>
+            <span class="cat-go">1 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">12bn tons</div>
+            <div class="cat-stat-label">material moved by Caterpillar's autonomous mining fleet</div>
+            <p class="cat-desc">Caterpillar is scaling AI company-wide using lessons from decades of autonomous mining.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-tools" role="button" tabindex="0"
+             onclick="goToCategory('Enterprise AI Tools')"
+             onkeypress="if(event.key==='Enter')goToCategory('Enterprise AI Tools')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Enterprise AI Tools</span>
+            <span class="cat-go">2 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">2 launches</div>
+            <div class="cat-stat-label">new enterprise AI infrastructure and model launches this week</div>
+            <p class="cat-desc">Cisco and Microsoft both widened their AI infrastructure and model marketplaces this week.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-consulting" role="button" tabindex="0"
+             onclick="goToCategory('Consulting News')"
+             onkeypress="if(event.key==='Enter')goToCategory('Consulting News')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Consulting News</span>
+            <span class="cat-go">1 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">$2.6bn</div>
+            <div class="cat-stat-label">TCS's annualised AI revenue run rate</div>
+            <p class="cat-desc">TCS's AI revenue is surging even as rivals like Wipro struggle to keep pace.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-tech" role="button" tabindex="0"
+             onclick="goToCategory('AI Tech')"
+             onkeypress="if(event.key==='Enter')goToCategory('AI Tech')">
+          <div class="cat-card-bar">
+            <span class="cat-name">AI Tech</span>
+            <span class="cat-go">1 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">10,000s</div>
+            <div class="cat-stat-label">Mac minis and studios bought by OpenAI for AI training</div>
+            <p class="cat-desc">OpenAI's hardware buying spree for AI training is straining Apple's supply chain.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-investment" role="button" tabindex="0"
+             onclick="goToCategory('AI Investment')"
+             onkeypress="if(event.key==='Enter')goToCategory('AI Investment')">
+          <div class="cat-card-bar">
+            <span class="cat-name">AI Investment</span>
+            <span class="cat-go">1 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">$7.4bn</div>
+            <div class="cat-stat-label">DeepSeek's target funding round size</div>
+            <p class="cat-desc">DeepSeek is closing in on a $7.4 billion round ahead of a planned 2027 listing.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-others" role="button" tabindex="0"
+             onclick="goToCategory('Others')"
+             onkeypress="if(event.key==='Enter')goToCategory('Others')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Others</span>
+            <span class="cat-go">4 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">75%</div>
+            <div class="cat-stat-label">of false propaganda narratives correctly debunked by chatbots</div>
+            <p class="cat-desc">Trust in AI is being tested, from stolen logins to state surveillance funding cuts.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Closing split panel. HEADLINE is the single sentence that sums up
+           the day; WHY_MATTERS is its business implication. -->
+      <div class="takeaway">
+        <div class="takeaway-lead">
+          <span class="takeaway-label">The story today</span>
+          <p>AI is scaling fast across business and infrastructure, while security and public trust problems are catching up with it.</p>
+        </div>
+        <div class="takeaway-why">
+          <span class="takeaway-label">Why this matters</span>
+          <p>Every leader betting on AI now needs an equal bet on securing it and defending its use in public, not just deploying it faster than rivals.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="tab-briefing" class="tab-panel">
+      <div class="controls">
+        <input type="text" class="search-box" id="storySearch" placeholder="Search stories&hellip;" oninput="filterStories()">
+        <button class="filter-chip active" data-cat="all" onclick="setFilter('all')">All</button>
+        <button class="filter-chip cat-usecases" data-cat="Enterprise Use Cases" onclick="setFilter('Enterprise Use Cases')">Enterprise Use Cases</button>
+        <button class="filter-chip cat-tools" data-cat="Enterprise AI Tools" onclick="setFilter('Enterprise AI Tools')">Enterprise AI Tools</button>
+        <button class="filter-chip cat-consulting" data-cat="Consulting News" onclick="setFilter('Consulting News')">Consulting News</button>
+        <button class="filter-chip cat-tech" data-cat="AI Tech" onclick="setFilter('AI Tech')">AI Tech</button>
+        <button class="filter-chip cat-investment" data-cat="AI Investment" onclick="setFilter('AI Investment')">AI Investment</button>
+        <button class="filter-chip cat-others" data-cat="Others" onclick="setFilter('Others')">Others</button>
+      </div>
+      <div class="no-results" id="noResults">No stories match that search.</div>
+
+      <!-- One <details> per category, same fixed order. Do NOT add the
+           "open" attribute: sections start collapsed and expand on click.
+           Every .story carries data-published="YYYY-MM-DD", the date the
+           SOURCE published the article, not today's date. The checker fails
+           the run if it is missing, unparseable, in the future, or older
+           than the freshness window. -->
+      <details class="category cat-usecases" data-cat="Enterprise Use Cases">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Enterprise Use Cases</span>
+            <span class="category-count">1 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-30">
+            <div class="story-headline">Caterpillar takes mining AI lessons company-wide</div>
+            <div class="story-summary">Caterpillar is applying decades of experience from autonomous mining trucks, which have hauled more than 12 billion tons of material, to a broader AI rollout across construction and other industries. It shows how proven automation in one division can de-risk AI adoption everywhere else in a large industrial business.</div>
+            <div class="meta">
+              <span class="source">TechCrunch</span>
+              <span>&middot;</span>
+              <a href="https://techcrunch.com/2026/08/30/caterpillar-is-bringing-to-ai-deployment-what-it-learned-from-automating-mining/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-tools" data-cat="Enterprise AI Tools">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Enterprise AI Tools</span>
+            <span class="category-count">2 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-25">
+            <div class="story-headline">Cisco widens AI factory deal with Nvidia</div>
+            <div class="story-summary">Cisco is expanding its Secure AI Factory partnership with Nvidia by adding Supermicro's rack-scale computing hardware, giving businesses a pre-packaged way to build large AI data centres from October. It shows infrastructure vendors bundling more of the AI stack together for buyers who would rather not assemble it themselves.</div>
+            <div class="meta">
+              <span class="source">HPCwire</span>
+              <span>&middot;</span>
+              <a href="https://www.hpcwire.com/aiwire/2026/08/25/cisco-expands-secure-ai-factory-with-nvidia-for-the-rack-scale-era/">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-08-26">
+            <div class="story-headline">Grok's newest model lands on Microsoft's platform</div>
+            <div class="story-summary">SpaceXAI's Grok 4.6 model is now available through Microsoft's Foundry platform, giving enterprise developers a governed, single place to test and deploy it alongside rival models. It gives businesses another serious model option without having to manage a separate vendor relationship.</div>
+            <div class="meta">
+              <span class="source">Microsoft Tech Community</span>
+              <span>&middot;</span>
+              <a href="https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/grok-4-6-comes-to-microsoft-foundry-models-built-for-long-horizon-reasoning-and-/4547578">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-consulting" data-cat="Consulting News">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Consulting News</span>
+            <span class="category-count">1 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-28">
+            <div class="story-headline">TCS AI revenue hits $2.6bn as Wipro stalls</div>
+            <div class="story-summary">TCS says its AI-related revenue has reached a $2.6 billion annualised run rate, while rival Wipro's profit barely moved as AI investment costs outpaced returns in the same quarter. The gap points to a widening split among IT services firms between those already selling AI at scale and those still building it.</div>
+            <div class="meta">
+              <span class="source">Eastern Herald</span>
+              <span>&middot;</span>
+              <a href="https://easternherald.com/2026/08/28/india-it-sector-q1-fy27-tcs-infosys-wipro-hcl-tech/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-tech" data-cat="AI Tech">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">AI Tech</span>
+            <span class="category-count">1 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-31">
+            <div class="story-headline">OpenAI's hardware buying spree strains Apple supply</div>
+            <div class="story-summary">OpenAI has bought tens of thousands of Mac minis and Mac Studios to train AI agents that operate computers, while Anthropic rents the same class of hardware through AWS rather than buying it outright. The buying spree has caused real shortages, pushing Apple to bring forward new chip versions ahead of schedule.</div>
+            <div class="meta">
+              <span class="source">WCCFTech</span>
+              <span>&middot;</span>
+              <a href="https://wccftech.com/openai-hoarding-tens-of-thousands-of-apple-mac-mini-and-mac-studio-devices-as-asus-and-msi-burn-through-their-entire-first-batch-of-nvidia-rtx-spark-chip-and-beg-for-more/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-investment" data-cat="AI Investment">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">AI Investment</span>
+            <span class="category-count">1 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-28">
+            <div class="story-headline">DeepSeek nears $7.4bn round at $74bn value</div>
+            <div class="story-summary">Chinese AI lab DeepSeek is close to raising $7.4 billion at a $74 billion valuation, with Tencent and battery maker CATL among the backers, ahead of a planned Shanghai listing in 2027. It underlines how much capital is still flowing to Chinese AI champions despite ongoing US export controls on chips.</div>
+            <div class="meta">
+              <span class="source">TechStartups</span>
+              <span>&middot;</span>
+              <a href="https://techstartups.com/2026/08/28/deepseek-nears-7-4-billion-funding-round-at-74-billion-valuation-ahead-of-2027-ipo/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-others" data-cat="Others">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Others</span>
+            <span class="category-count">4 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-30">
+            <div class="story-headline">Chatbots resist propaganda better than search</div>
+            <div class="story-summary">A joint NPR and NewsGuard test found that six major chatbots, including ChatGPT, Gemini and Claude, mostly debunked false narratives pushed by China, Iran and Russia rather than repeating them, correctly rebutting them roughly three-quarters of the time. It is a reassuring data point for any business worried about AI tools spreading misinformation to staff or customers.</div>
+            <div class="meta">
+              <span class="source">NPR</span>
+              <span>&middot;</span>
+              <a href="https://www.npr.org/2026/08/30/nx-s1-5876436/chatbots-search-propaganda">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-08-30">
+            <div class="story-headline">Malware is hijacking stolen Claude logins</div>
+            <div class="story-summary">Anthropic is warning that infostealer malware on users' own computers is stealing active Claude login sessions and draining their usage without permission, and is signing affected accounts out and refunding unauthorised charges. It is a reminder that AI accounts are now valuable enough to be a target for the same credential theft tools used against banking logins.</div>
+            <div class="meta">
+              <span class="source">BleepingComputer</span>
+              <span>&middot;</span>
+              <a href="https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-warns-infostealer-malware-is-hijacking-claude-sessions-to-drain-usage/">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-08-30">
+            <div class="story-headline">Robotaxi safety comes at a human cost</div>
+            <div class="story-summary">Safety filings show Waymo and Zoox test drivers suffered more than two dozen injuries in 2024 and 2025 from hard braking and sudden manoeuvres by the self-driving vehicles they were monitoring, with some sidelined for months. It is a reminder that the human labour behind autonomous AI systems carries its own risks and liabilities.</div>
+            <div class="meta">
+              <span class="source">TechCrunch</span>
+              <span>&middot;</span>
+              <a href="https://techcrunch.com/2026/08/30/techcrunch-mobility-the-hidden-human-cost-of-robotaxis/">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-08-28">
+            <div class="story-headline">Texas halts funding for AI surveillance cameras</div>
+            <div class="story-summary">Texas governor Greg Abbott has ordered state agencies to stop funding Flock's AI-powered licence plate cameras after reporting revealed at least $30 million in state grants had built a surveillance network of more than 3,200 devices. It shows political appetite turning against AI surveillance tools even in states that have generally welcomed them.</div>
+            <div class="meta">
+              <span class="source">The Texas Tribune</span>
+              <span>&middot;</span>
+              <a href="https://www.texastribune.org/2026/08/28/texas-greg-abbott-flock-cameras-order-state-money/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+    </section>
+
+  </div>
+
+  <footer>
+    <span>Compiled automatically from web search using Claude</span>
+    <span>Created by Ed Sant&#8217;Anna</span>
+  </footer>
+
+<script src="../assets/brief.js" defer></script>
+<script src="../assets/site.js" defer></script>
+
+</body>
+</html>
