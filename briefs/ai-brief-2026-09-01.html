@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily AI Brief &mdash; 1 September 2026</title>
+<link rel="stylesheet" href="../assets/brand.css">
+<link rel="stylesheet" href="../assets/brief.css">
+</head>
+<body data-brief="2026-09-01">
+
+  <!--
+    GLOBAL SITE HEADER — identical on every page, do not restyle per brief.
+    data-root is the path back to the site root: "../" on brief pages.
+    The dropdown below is baked in with today only; the live page replaces
+    it from manifest.json on load, so do not hand-fill earlier dates.
+  -->
+  <div class="site-header" data-root="../">
+    <div class="site-header-inner">
+      <a class="wordmark" href="../index.html"><span class="wordmark-brand">Chief T.E.C.H. Translator</span><span class="wordmark-sep"> - </span><span class="wordmark-title">AI Daily Briefs</span></a>
+      <nav class="site-nav">
+        <a class="site-nav-link" id="navLatest" href="../briefs/ai-brief-2026-09-01.html">Latest</a>
+        <div class="dropdown">
+          <button class="site-nav-link" id="archiveToggle" aria-expanded="false" aria-haspopup="true">Archive <span class="caret">&#9662;</span></button>
+          <div class="dropdown-menu" id="archiveMenu" role="menu">
+            <a class="dropdown-item current" href="../briefs/ai-brief-2026-09-01.html">1 September 2026</a>
+            <div class="dropdown-sep"></div>
+            <a class="dropdown-item dropdown-all" href="../index.html">View all briefs</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="hero-inner">
+      <span class="pill">Daily AI Brief</span>
+      <div class="hero-row">
+        <h1>Today in AI</h1>
+        <div class="hero-meta">
+          <div class="hero-date">1 September 2026</div>
+          <div class="hero-sub">8 stories &middot; 5 categories</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tabstrip">
+    <div class="tabstrip-inner">
+      <button class="tab-btn active" data-tab="summary" onclick="showTab('summary')">Visual Summary</button>
+      <button class="tab-btn" data-tab="briefing" onclick="showTab('briefing')">Full Briefing</button>
+    </div>
+  </div>
+
+  <div class="page">
+
+    <section id="tab-summary" class="tab-panel active">
+
+      <div class="cat-grid">
+        <div class="cat-card cat-usecases" role="button" tabindex="0"
+             onclick="goToCategory('Enterprise Use Cases')"
+             onkeypress="if(event.key==='Enter')goToCategory('Enterprise Use Cases')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Enterprise Use Cases</span>
+            <span class="cat-go">2 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">2 rollouts</div>
+            <div class="cat-stat-label">AI deployments going live this week</div>
+            <p class="cat-desc">A bank and a freight operator both put autonomous AI agents to work this week.</p>
+          </div>
+        </div>
+
+        <div class="cat-card cat-tools" role="button" tabindex="0"
+             onclick="goToCategory('Enterprise AI Tools')"
+             onkeypress="if(event.key==='Enter')goToCategory('Enterprise AI Tools')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Enterprise AI Tools</span>
+            <span class="cat-go">1 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">5 modules</div>
+            <div class="cat-stat-label">purpose-built modules in Aziron's launch</div>
+            <p class="cat-desc">A new platform lets enterprises run AI agents with built-in governance and audit trails.</p>
+          </div>
+        </div>
+
+        <div class="cat-card cat-tech" role="button" tabindex="0"
+             onclick="goToCategory('AI Tech')"
+             onkeypress="if(event.key==='Enter')goToCategory('AI Tech')">
+          <div class="cat-card-bar">
+            <span class="cat-name">AI Tech</span>
+            <span class="cat-go">2 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">50MW</div>
+            <div class="cat-stat-label">new AI compute capacity Microsoft is backing</div>
+            <p class="cat-desc">Microsoft added AI compute capacity and Alibaba released a leaner, cheaper open model.</p>
+          </div>
+        </div>
+
+        <div class="cat-card cat-investment" role="button" tabindex="0"
+             onclick="goToCategory('AI Investment')"
+             onkeypress="if(event.key==='Enter')goToCategory('AI Investment')">
+          <div class="cat-card-bar">
+            <span class="cat-name">AI Investment</span>
+            <span class="cat-go">1 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">$8.5bn</div>
+            <div class="cat-stat-label">size of a16z's expanded growth fund</div>
+            <p class="cat-desc">A leading venture firm expanded its funds as AI investment keeps accelerating.</p>
+          </div>
+        </div>
+
+        <div class="cat-card cat-others" role="button" tabindex="0"
+             onclick="goToCategory('Others')"
+             onkeypress="if(event.key==='Enter')goToCategory('Others')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Others</span>
+            <span class="cat-go">2 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">$150,000</div>
+            <div class="cat-stat-label">maximum damages sought per song in the Anthropic suit</div>
+            <p class="cat-desc">Music publishers sued Anthropic and OpenAI cut a rival's access to its models.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Closing split panel. HEADLINE is the single sentence that sums up
+           the day; WHY_MATTERS is its business implication. -->
+      <div class="takeaway">
+        <div class="takeaway-lead">
+          <span class="takeaway-label">The story today</span>
+          <p>AI keeps moving from pilot to production in banking and logistics, while investors add billions and legal fights over training data and model access escalate.</p>
+        </div>
+        <div class="takeaway-why">
+          <span class="takeaway-label">Why this matters</span>
+          <p>The operational wins are real, but so are the legal and contractual risks piling up around how AI firms source their training data and grant partners access to their models.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="tab-briefing" class="tab-panel">
+      <div class="controls">
+        <input type="text" class="search-box" id="storySearch" placeholder="Search stories&hellip;" oninput="filterStories()">
+        <button class="filter-chip active" data-cat="all" onclick="setFilter('all')">All</button>
+        <button class="filter-chip cat-usecases" data-cat="Enterprise Use Cases" onclick="setFilter('Enterprise Use Cases')">Enterprise Use Cases</button>
+        <button class="filter-chip cat-tools" data-cat="Enterprise AI Tools" onclick="setFilter('Enterprise AI Tools')">Enterprise AI Tools</button>
+        <button class="filter-chip cat-tech" data-cat="AI Tech" onclick="setFilter('AI Tech')">AI Tech</button>
+        <button class="filter-chip cat-investment" data-cat="AI Investment" onclick="setFilter('AI Investment')">AI Investment</button>
+        <button class="filter-chip cat-others" data-cat="Others" onclick="setFilter('Others')">Others</button>
+      </div>
+      <div class="no-results" id="noResults">No stories match that search.</div>
+
+      <details class="category cat-usecases" data-cat="Enterprise Use Cases">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Enterprise Use Cases</span>
+            <span class="category-count">2 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-31">
+            <div class="story-headline">KT to rebuild Woori Bank's AI chatbot</div>
+            <div class="story-summary">Linking a bank's chatbot to an AI adviser means customers stop repeating themselves across channels, a fix many banks are still chasing. The phased rollout begins in December and runs through May.</div>
+            <div class="meta">
+              <span class="source">Seoul Economic Daily</span>
+              <span>&middot;</span>
+              <a href="https://en.sedaily.com/technology/2026/08/31/kt-to-rebuild-woori-banks-ai-chatbot-and-consultation-bot">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-08-27">
+            <div class="story-headline">Einride's new AI agent fixes fleet problems itself</div>
+            <div class="story-summary">Einride's Flip AI reads a fleet's systems, reboots stalled chargers and raises vendor tickets without a person stepping in, cutting the manual firefighting that slows electric fleet operators down.</div>
+            <div class="meta">
+              <span class="source">GlobeNewswire</span>
+              <span>&middot;</span>
+              <a href="https://www.globenewswire.com/news-release/2026/08/27/3351851/0/en/einride-launches-flip-ai-one-of-the-first-ai-agents-for-electric-fleet-operations.html">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-tools" data-cat="Enterprise AI Tools">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Enterprise AI Tools</span>
+            <span class="category-count">1 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-25">
+            <div class="story-headline">New platform governs AI agents inside company systems</div>
+            <div class="story-summary">Aziro's Aziron lets enterprises run AI agents that update records and complete tasks directly inside business software, with approval steps and audit trails built in, addressing the oversight concerns that hold back wider agent adoption.</div>
+            <div class="meta">
+              <span class="source">itBrief Australia</span>
+              <span>&middot;</span>
+              <a href="https://itbrief.com.au/story/aziro-launches-aziron-for-governed-enterprise-ai-tasks">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-tech" data-cat="AI Tech">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">AI Tech</span>
+            <span class="category-count">2 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-27">
+            <div class="story-headline">Microsoft backs 50MW AI compute build in North America</div>
+            <div class="story-summary">ChronoScale and Microsoft extended their partnership to build 50 megawatts of AI computing capacity using Nvidia's latest chips, another sign that demand for AI infrastructure still outpaces supply.</div>
+            <div class="meta">
+              <span class="source">GlobeNewswire</span>
+              <span>&middot;</span>
+              <a href="https://finance.yahoo.com/technology/ai/articles/chronoscale-announces-ai-infrastructure-partnership-120000689.html">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-08-26">
+            <div class="story-headline">Alibaba releases cheaper AI model to rival the West</div>
+            <div class="story-summary">Alibaba's new open model previews its next-generation architecture and matches rivals from Anthropic and DeepSeek at a fraction of the cost, sharpening competition from Chinese AI labs.</div>
+            <div class="meta">
+              <span class="source">MarkTechPost</span>
+              <span>&middot;</span>
+              <a href="https://www.marktechpost.com/2026/08/26/alibabas-qwen-team-releases-qwen3-8-flash-next-a-125b-multimodal-moe-with-6b-active-parameters-previewing-the-qwen4-architecture/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-investment" data-cat="AI Investment">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">AI Investment</span>
+            <span class="category-count">1 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-31">
+            <div class="story-headline">Top venture firm swells fund to $8.5bn</div>
+            <div class="story-summary">Andreessen Horowitz grew its growth fund by $1.75bn to $8.5bn just days after closing a separate $1.1bn fund for AI hardware, underlining how much capital keeps chasing the sector.</div>
+            <div class="meta">
+              <span class="source">TechCrunch</span>
+              <span>&middot;</span>
+              <a href="https://techcrunch.com/2026/08/31/a16z-brings-growth-fund-to-8-5b-days-after-launching-new-1-1b-fund/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-others" data-cat="Others">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Others</span>
+            <span class="category-count">2 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-08-29">
+            <div class="story-headline">Sony and Warner sue Anthropic over song scraping</div>
+            <div class="story-summary">Sony Music Publishing and Warner Chappell accuse Anthropic of downloading tens of thousands of songs without permission to train Claude, seeking up to $150,000 for each work allegedly infringed.</div>
+            <div class="meta">
+              <span class="source">TechCrunch</span>
+              <span>&middot;</span>
+              <a href="https://techcrunch.com/2026/08/29/sony-music-warner-sue-anthropic-alleging-a-brazen-campaign-of-intellectual-property-theft/">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-08-29">
+            <div class="story-headline">OpenAI cuts coding tool's access after SpaceX buyout</div>
+            <div class="story-summary">OpenAI will stop supplying models to the coding assistant Cursor from November, after its parent company was bought by Elon Musk's SpaceX, saying it cannot trust the deal will honour its contract terms.</div>
+            <div class="meta">
+              <span class="source">CNBC</span>
+              <span>&middot;</span>
+              <a href="https://www.cnbc.com/2026/08/29/openai-cursor-spacex-model-access.html">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+    </section>
+
+  </div>
+
+  <footer>
+    <span>Compiled automatically from web search using Claude</span>
+    <span>Created by Ed Sant&#8217;Anna</span>
+  </footer>
+
+<script src="../assets/brief.js" defer></script>
+<script src="../assets/site.js" defer></script>
+
+</body>
+</html>
