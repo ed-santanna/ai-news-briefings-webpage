@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily AI Brief &mdash; 3 September 2026</title>
+<link rel="stylesheet" href="../assets/brand.css">
+<link rel="stylesheet" href="../assets/brief.css">
+</head>
+<body data-brief="2026-09-03">
+
+  <!--
+    GLOBAL SITE HEADER — identical on every page, do not restyle per brief.
+    data-root is the path back to the site root: "../" on brief pages.
+    The dropdown below is baked in with today only; the live page replaces
+    it from manifest.json on load, so do not hand-fill earlier dates.
+  -->
+  <div class="site-header" data-root="../">
+    <div class="site-header-inner">
+      <a class="wordmark" href="../index.html"><span class="wordmark-brand">Chief T.E.C.H. Translator</span><span class="wordmark-sep"> - </span><span class="wordmark-title">AI Daily Briefs</span></a>
+      <nav class="site-nav">
+        <a class="site-nav-link" id="navLatest" href="../briefs/ai-brief-2026-09-03.html">Latest</a>
+        <div class="dropdown">
+          <button class="site-nav-link" id="archiveToggle" aria-expanded="false" aria-haspopup="true">Archive <span class="caret">&#9662;</span></button>
+          <div class="dropdown-menu" id="archiveMenu" role="menu">
+            <a class="dropdown-item current" href="../briefs/ai-brief-2026-09-03.html">3 September 2026</a>
+            <div class="dropdown-sep"></div>
+            <a class="dropdown-item dropdown-all" href="../index.html">View all briefs</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="hero-inner">
+      <span class="pill">Daily AI Brief</span>
+      <div class="hero-row">
+        <h1>Today in AI</h1>
+        <div class="hero-meta">
+          <div class="hero-date">3 September 2026</div>
+          <div class="hero-sub">10 stories &middot; 4 categories</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tabstrip">
+    <div class="tabstrip-inner">
+      <button class="tab-btn active" data-tab="summary" onclick="showTab('summary')">Visual Summary</button>
+      <button class="tab-btn" data-tab="briefing" onclick="showTab('briefing')">Full Briefing</button>
+    </div>
+  </div>
+
+  <div class="page">
+
+    <section id="tab-summary" class="tab-panel active">
+
+      <!--
+        CATEGORY CARDS — one per category with at least one story, in the
+        fixed order below, skipping any with none. Colour class per
+        category (never reassign):
+          Enterprise Use Cases -> cat-usecases
+          Enterprise AI Tools  -> cat-tools
+          Consulting News      -> cat-consulting
+          AI Tech              -> cat-tech
+          AI Investment        -> cat-investment
+          Others               -> cat-others
+        cat-stat must be a real sourced figure; if no clean number exists
+        use a truthful count. cat-stat-label gives it context in <=12 words.
+        cat-desc is one sentence, <=15 words. The name in goToCategory()
+        must match the chip and <details> data-cat exactly.
+        The card below is a worked example; repeat for each category.
+      -->
+      <div class="cat-grid">
+        <div class="cat-card cat-tools" role="button" tabindex="0"
+             onclick="goToCategory('Enterprise AI Tools')"
+             onkeypress="if(event.key==='Enter')goToCategory('Enterprise AI Tools')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Enterprise AI Tools</span>
+            <span class="cat-go">3 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">71ms</div>
+            <div class="cat-stat-label">Time a new tool takes to block a rogue AI agent</div>
+            <p class="cat-desc">New products now govern, gate and size AI agents before they can act.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-tech" role="button" tabindex="0"
+             onclick="goToCategory('AI Tech')"
+             onkeypress="if(event.key==='Enter')goToCategory('AI Tech')">
+          <div class="cat-card-bar">
+            <span class="cat-name">AI Tech</span>
+            <span class="cat-go">3 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">$95bn</div>
+            <div class="cat-stat-label">Dell's record AI server order backlog this quarter</div>
+            <p class="cat-desc">Model releases and AI infrastructure demand both hit new highs this week.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-investment" role="button" tabindex="0"
+             onclick="goToCategory('AI Investment')"
+             onkeypress="if(event.key==='Enter')goToCategory('AI Investment')">
+          <div class="cat-card-bar">
+            <span class="cat-name">AI Investment</span>
+            <span class="cat-go">3 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">$1.1bn</div>
+            <div class="cat-stat-label">Combined funding raised across three AI start-ups this week</div>
+            <p class="cat-desc">Investors backed AI security, enterprise platforms and 3D generative models.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-others" role="button" tabindex="0"
+             onclick="goToCategory('Others')"
+             onkeypress="if(event.key==='Enter')goToCategory('Others')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Others</span>
+            <span class="cat-go">1 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">4</div>
+            <div class="cat-stat-label">AI company chiefs who met US policymakers this week</div>
+            <p class="cat-desc">AI's biggest names pushed back on tighter regulation at a G20 summit.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Closing split panel. HEADLINE is the single sentence that sums up
+           the day; WHY_MATTERS is its business implication. -->
+      <div class="takeaway">
+        <div class="takeaway-lead">
+          <span class="takeaway-label">The story today</span>
+          <p>AI spending kept breaking records this week, from Dell's $95bn server backlog to over $1bn raised across three start-ups, even as tech chiefs and regulators clashed openly over how tightly to control the technology.</p>
+        </div>
+        <div class="takeaway-why">
+          <span class="takeaway-label">Why this matters</span>
+          <p>Infrastructure and funding are accelerating together with governance tooling, so budgets need to cover the controls that keep AI agents in check, not just the computing power behind them, especially while the regulatory picture stays unsettled.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="tab-briefing" class="tab-panel">
+      <div class="controls">
+        <input type="text" class="search-box" id="storySearch" placeholder="Search stories&hellip;" oninput="filterStories()">
+        <button class="filter-chip active" data-cat="all" onclick="setFilter('all')">All</button>
+        <!-- one chip per category present, same order and colour class -->
+        <button class="filter-chip cat-tools" data-cat="Enterprise AI Tools" onclick="setFilter('Enterprise AI Tools')">Enterprise AI Tools</button>
+        <button class="filter-chip cat-tech" data-cat="AI Tech" onclick="setFilter('AI Tech')">AI Tech</button>
+        <button class="filter-chip cat-investment" data-cat="AI Investment" onclick="setFilter('AI Investment')">AI Investment</button>
+        <button class="filter-chip cat-others" data-cat="Others" onclick="setFilter('Others')">Others</button>
+      </div>
+      <div class="no-results" id="noResults">No stories match that search.</div>
+
+      <!-- One <details> per category, same fixed order. Do NOT add the
+           "open" attribute: sections start collapsed and expand on click.
+           Every .story carries data-published="YYYY-MM-DD", the date the
+           SOURCE published the article, not today's date. The checker fails
+           the run if it is missing, unparseable, in the future, or older
+           than the freshness window. -->
+      <details class="category cat-tools" data-cat="Enterprise AI Tools">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Enterprise AI Tools</span>
+            <span class="category-count">3 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-09-02">
+            <div class="story-headline">New tool blocks rogue AI agents in real time</div>
+            <div class="story-summary">Capsule Security's system checks every action an AI agent is about to take against Nvidia hardware, deciding whether to allow it in as little as 71 milliseconds. It gives businesses running AI agents a way to stop harmful actions before they happen, rather than cleaning up afterwards.</div>
+            <div class="meta">
+              <span class="source">GlobeNewswire</span>
+              <span>&middot;</span>
+              <a href="https://www.globenewswire.com/news-release/2026/09/02/3355263/0/en/capsule-security-builds-ai-circuit-breaker-for-rogue-agents-with-nvidia-nemotron.html">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-02">
+            <div class="story-headline">New gatekeeper vets AI agents before they act</div>
+            <div class="story-summary">JetStream's Clearance tool checks every request an AI agent makes against what it is actually approved to do, and blocks unauthorised actions before they run. It gives regulated businesses a way to control large fleets of AI agents without waiting to catch mistakes after the fact.</div>
+            <div class="meta">
+              <span class="source">PR-Inside</span>
+              <span>&middot;</span>
+              <a href="https://www.pr-inside.com/jetstream-announces-clearance-an-ai-zero-trust-reasoning-engine-r5218694.htm">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-02">
+            <div class="story-headline">Broadcom and Cisco size AI builds to real use</div>
+            <div class="story-summary">Broadcom and Cisco are now sizing enterprise AI infrastructure to the workloads a business actually runs, rather than building to a fixed template. The approach is aimed at stopping firms overspending on AI computing capacity they do not need.</div>
+            <div class="meta">
+              <span class="source">SiliconANGLE</span>
+              <span>&middot;</span>
+              <a href="https://siliconangle.com/2026/09/02/broadcom-and-cisco-tie-ai-factory-deployment-to-workload-needs-vmwareexplore/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-tech" data-cat="AI Tech">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">AI Tech</span>
+            <span class="category-count">3 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-09-01">
+            <div class="story-headline">Dell's AI order backlog hits $95bn</div>
+            <div class="story-summary">Dell booked $60.9bn of AI server orders last quarter, pushing its backlog to a record $95bn and prompting the company to raise its full year revenue guidance by $25bn. The results are a strong signal that corporate spending on AI infrastructure is still accelerating, not slowing.</div>
+            <div class="meta">
+              <span class="source">SiliconANGLE</span>
+              <span>&middot;</span>
+              <a href="https://siliconangle.com/2026/09/01/dells-ai-servers-sell-like-hot-cakes-again-driving-a-stunning-earnings-beat/">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-02">
+            <div class="story-headline">Google ships a faster, sharper AI model</div>
+            <div class="story-summary">Google has released Gemini 3.8 Flash, its third update to the model in six weeks, with stronger reasoning and coding performance at the same price as before. A locked down "Cyber" version was released alongside it for security sensitive work.</div>
+            <div class="meta">
+              <span class="source">Google</span>
+              <span>&middot;</span>
+              <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-02">
+            <div class="story-headline">Meta claims its AI now matches the leaders</div>
+            <div class="story-summary">Meta says its new Muse Spark 1.3 model now matches Anthropic's latest and beats OpenAI's at coding tasks, while using a quarter less computing power per query. It is Meta's strongest attempt yet to close the gap with the two AI leaders most businesses currently rely on.</div>
+            <div class="meta">
+              <span class="source">SiliconANGLE</span>
+              <span>&middot;</span>
+              <a href="https://siliconangle.com/2026/09/02/meta-says-it-has-caught-up-with-anthropic-and-openai-after-releasing-muse-spark-1-3-its-most-powerful-llm-so-far/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-investment" data-cat="AI Investment">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">AI Investment</span>
+            <span class="category-count">3 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-09-02">
+            <div class="story-headline">Enterprise AI platform Wonderful raises $550m</div>
+            <div class="story-summary">Wonderful has closed a $550m round at a $5bn valuation to expand its AI operating system, which businesses use to run AI across an organisation rather than in isolated pockets. The firm has grown to 650 staff across 35 markets since its last round in March.</div>
+            <div class="meta">
+              <span class="source">AIwire</span>
+              <span>&middot;</span>
+              <a href="https://www.hpcwire.com/aiwire/2026/09/02/wonderful-raises-550m-series-c-to-scale-the-ai-operating-system-for-the-enterprise/">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-02">
+            <div class="story-headline">Chinese 3D AI start-up raises $445m</div>
+            <div class="story-summary">Tripo AI has raised roughly $445m to build foundation models that generate 3D content, backed by gaming and manufacturing investors. The round points to growing enterprise appetite for AI that can design physical products and environments, not just text and images.</div>
+            <div class="meta">
+              <span class="source">Wowtale</span>
+              <span>&middot;</span>
+              <a href="https://en.wowtale.net/2026/09/02/234975/">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-02">
+            <div class="story-headline">AI security start-up HiddenLayer raises $100m</div>
+            <div class="story-summary">HiddenLayer has raised $100m to help businesses check AI models and the software they depend on for tampering before they go live, and to watch for attacks once running. Its revenue has grown more than tenfold in a year as more companies rush to secure their AI deployments.</div>
+            <div class="meta">
+              <span class="source">TechCrunch</span>
+              <span>&middot;</span>
+              <a href="https://techcrunch.com/2026/09/02/hiddenlayer-nabs-100m-as-enterprises-rush-to-secure-their-ai-deployments/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-others" data-cat="Others">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Others</span>
+            <span class="category-count">1 story</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-09-02">
+            <div class="story-headline">Tech chiefs and regulators clash on AI rules</div>
+            <div class="story-summary">At a G20 gathering in North Carolina, the heads of Nvidia, OpenAI, Anthropic and Palantir pressed US officials for a lighter regulatory touch on AI, arguing tighter rules would only hold back the countries trying to lead in it. The debate underlines how unsettled AI regulation still is even as businesses plan long term investment around it.</div>
+            <div class="meta">
+              <span class="source">CNBC</span>
+              <span>&middot;</span>
+              <a href="https://www.cnbc.com/2026/09/02/g20-innovation-ministerial-live-updates.html">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+    </section>
+
+  </div>
+
+  <footer>
+    <span>Compiled automatically from web search using Claude</span>
+    <span>Created by Ed Sant&#8217;Anna</span>
+  </footer>
+
+<script src="../assets/brief.js" defer></script>
+<script src="../assets/site.js" defer></script>
+
+</body>
+</html>
