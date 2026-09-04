@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily AI Brief &mdash; 4 September 2026</title>
+<link rel="stylesheet" href="../assets/brand.css">
+<link rel="stylesheet" href="../assets/brief.css">
+</head>
+<body data-brief="2026-09-04">
+
+  <!--
+    GLOBAL SITE HEADER — identical on every page, do not restyle per brief.
+    data-root is the path back to the site root: "../" on brief pages.
+    The dropdown below is baked in with today only; the live page replaces
+    it from manifest.json on load, so do not hand-fill earlier dates.
+  -->
+  <div class="site-header" data-root="../">
+    <div class="site-header-inner">
+      <a class="wordmark" href="../index.html"><span class="wordmark-brand">Chief T.E.C.H. Translator</span><span class="wordmark-sep"> - </span><span class="wordmark-title">AI Daily Briefs</span></a>
+      <nav class="site-nav">
+        <a class="site-nav-link" id="navLatest" href="../briefs/ai-brief-2026-09-04.html">Latest</a>
+        <div class="dropdown">
+          <button class="site-nav-link" id="archiveToggle" aria-expanded="false" aria-haspopup="true">Archive <span class="caret">&#9662;</span></button>
+          <div class="dropdown-menu" id="archiveMenu" role="menu">
+            <a class="dropdown-item current" href="../briefs/ai-brief-2026-09-04.html">4 September 2026</a>
+            <div class="dropdown-sep"></div>
+            <a class="dropdown-item dropdown-all" href="../index.html">View all briefs</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="hero-inner">
+      <span class="pill">Daily AI Brief</span>
+      <div class="hero-row">
+        <h1>Today in AI</h1>
+        <div class="hero-meta">
+          <div class="hero-date">4 September 2026</div>
+          <div class="hero-sub">8 stories &middot; 4 categories</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tabstrip">
+    <div class="tabstrip-inner">
+      <button class="tab-btn active" data-tab="summary" onclick="showTab('summary')">Visual Summary</button>
+      <button class="tab-btn" data-tab="briefing" onclick="showTab('briefing')">Full Briefing</button>
+    </div>
+  </div>
+
+  <div class="page">
+
+    <section id="tab-summary" class="tab-panel active">
+
+      <!--
+        CATEGORY CARDS — one per category with at least one story, in the
+        fixed order below, skipping any with none. Colour class per
+        category (never reassign):
+          Enterprise Use Cases -> cat-usecases
+          Enterprise AI Tools  -> cat-tools
+          Consulting News      -> cat-consulting
+          AI Tech              -> cat-tech
+          AI Investment        -> cat-investment
+          Others               -> cat-others
+        cat-stat must be a real sourced figure; if no clean number exists
+        use a truthful count. cat-stat-label gives it context in <=12 words.
+        cat-desc is one sentence, <=15 words. The name in goToCategory()
+        must match the chip and <details> data-cat exactly.
+        The card below is a worked example; repeat for each category.
+      -->
+      <div class="cat-grid">
+        <div class="cat-card cat-tools" role="button" tabindex="0"
+             onclick="goToCategory('Enterprise AI Tools')"
+             onkeypress="if(event.key==='Enter')goToCategory('Enterprise AI Tools')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Enterprise AI Tools</span>
+            <span class="cat-go">1 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">325m</div>
+            <div class="cat-stat-label">patients now reachable through ChatGPT's records link</div>
+            <p class="cat-desc">OpenAI connected ChatGPT directly to Epic's hospital records system this week.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-tech" role="button" tabindex="0"
+             onclick="goToCategory('AI Tech')"
+             onkeypress="if(event.key==='Enter')goToCategory('AI Tech')">
+          <div class="cat-card-bar">
+            <span class="cat-name">AI Tech</span>
+            <span class="cat-go">3 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">3</div>
+            <div class="cat-stat-label">flagship AI models launched by rival labs this week</div>
+            <p class="cat-desc">Anthropic, OpenAI and Meta all shipped major new models within days of each other.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-investment" role="button" tabindex="0"
+             onclick="goToCategory('AI Investment')"
+             onkeypress="if(event.key==='Enter')goToCategory('AI Investment')">
+          <div class="cat-card-bar">
+            <span class="cat-name">AI Investment</span>
+            <span class="cat-go">2 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">$95m</div>
+            <div class="cat-stat-label">raised by two AI start-ups this week</div>
+            <p class="cat-desc">Investors backed AI start-ups in medical imaging and consumer cybersecurity.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-others" role="button" tabindex="0"
+             onclick="goToCategory('Others')"
+             onkeypress="if(event.key==='Enter')goToCategory('Others')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Others</span>
+            <span class="cat-go">2 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">2</div>
+            <div class="cat-stat-label">major AI policy and risk warnings this week</div>
+            <p class="cat-desc">Washington backed OpenAI's copyright defence while regulators flagged AI as a financial risk.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Closing split panel. HEADLINE is the single sentence that sums up
+           the day; WHY_MATTERS is its business implication. -->
+      <div class="takeaway">
+        <div class="takeaway-lead">
+          <span class="takeaway-label">The story today</span>
+          <p>Anthropic, OpenAI and Meta all launched major new AI models this week, while regulators and investors grappled with the risks and the money now flowing around them.</p>
+        </div>
+        <div class="takeaway-why">
+          <span class="takeaway-label">Why this matters</span>
+          <p>Capability is rising and costs are falling at the same time, strengthening the case for adopting frontier AI, but the legal, security and vendor-concentration risks around it are growing just as fast.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="tab-briefing" class="tab-panel">
+      <div class="controls">
+        <input type="text" class="search-box" id="storySearch" placeholder="Search stories&hellip;" oninput="filterStories()">
+        <button class="filter-chip active" data-cat="all" onclick="setFilter('all')">All</button>
+        <!-- one chip per category present, same order and colour class -->
+        <button class="filter-chip cat-tools" data-cat="Enterprise AI Tools" onclick="setFilter('Enterprise AI Tools')">Enterprise AI Tools</button>
+        <button class="filter-chip cat-tech" data-cat="AI Tech" onclick="setFilter('AI Tech')">AI Tech</button>
+        <button class="filter-chip cat-investment" data-cat="AI Investment" onclick="setFilter('AI Investment')">AI Investment</button>
+        <button class="filter-chip cat-others" data-cat="Others" onclick="setFilter('Others')">Others</button>
+      </div>
+      <div class="no-results" id="noResults">No stories match that search.</div>
+
+      <!-- One <details> per category, same fixed order. Do NOT add the
+           "open" attribute: sections start collapsed and expand on click.
+           Every .story carries data-published="YYYY-MM-DD", the date the
+           SOURCE published the article, not today's date. The checker fails
+           the run if it is missing, unparseable, in the future, or older
+           than the freshness window. -->
+      <details class="category cat-tools" data-cat="Enterprise AI Tools">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Enterprise AI Tools</span>
+            <span class="category-count">1 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-09-01">
+            <div class="story-headline">ChatGPT can now read hospital patient records</div>
+            <div class="story-summary">OpenAI has connected ChatGPT directly to Epic's electronic health records, covering more than 325 million patients, letting clinicians query a patient's history inside the chatbot. Access is read-only, addressing a key safety concern for healthcare AI adoption.</div>
+            <div class="meta">
+              <span class="source">TechCrunch</span>
+              <span>&middot;</span>
+              <a href="https://techcrunch.com/2026/09/01/chatgpt-health-adds-epic-integration-for-clinicians-to-import-patient-data/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-tech" data-cat="AI Tech">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">AI Tech</span>
+            <span class="category-count">3 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-09-01">
+            <div class="story-headline">Anthropic launches cheaper, faster flagship model</div>
+            <div class="story-summary">Claude Fable 5.1 beats Anthropic's previous flagship and OpenAI's latest model on multiple benchmarks, while cutting the cost of running persistent AI agents by up to three quarters. A gated sibling, Mythos 5.1, is reserved for vetted cybersecurity and life sciences work.</div>
+            <div class="meta">
+              <span class="source">9to5Mac</span>
+              <span>&middot;</span>
+              <a href="https://9to5mac.com/2026/09/01/anthropic-upgrades-claude-with-new-fable-5-1-model-details-here/">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-03">
+            <div class="story-headline">OpenAI launches its most capable model yet</div>
+            <div class="story-summary">GPT-6 Astra brings major gains in coding, research and computer use, with OpenAI phasing in access starting with cybersecurity-vetted customers. Businesses evaluating frontier AI tools now have a materially stronger option, at a higher price.</div>
+            <div class="meta">
+              <span class="source">CNBC</span>
+              <span>&middot;</span>
+              <a href="https://www.cnbc.com/2026/09/03/open-ai-astra-gpt-6-cyber.html">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-01">
+            <div class="story-headline">Meta's new AI transcribes 20 speakers live</div>
+            <div class="story-summary">Muse Voice Transcribe processes speech in real time across more than 70 languages and has already topped an independent benchmark. It shows how fast voice AI is commoditising, relevant for firms weighing meeting and call transcription tools.</div>
+            <div class="meta">
+              <span class="source">9to5Mac</span>
+              <span>&middot;</span>
+              <a href="https://9to5mac.com/2026/09/01/meta-launches-muse-voice-transcribe-for-real-time-voice-dictation-on-mac/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-investment" data-cat="AI Investment">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">AI Investment</span>
+            <span class="category-count">2 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-09-02">
+            <div class="story-headline">AI heart-scan start-up raises $55m</div>
+            <div class="story-summary">Elucid will use the funding to expand its AI cardiovascular imaging platform ahead of expected US regulatory clearance for a new diagnostic tool. It shows investors still see a strong case for AI in specialised clinical diagnostics.</div>
+            <div class="meta">
+              <span class="source">HIT Consultant</span>
+              <span>&middot;</span>
+              <a href="https://hitconsultant.net/2026/09/02/elucid-raises-55m-series-d-ai-plaque-iq-biointegrated-ffr-ct-cardiovascular-diagnostics/">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-03">
+            <div class="story-headline">AI security start-up Guardio raises $40m</div>
+            <div class="story-summary">The consumer cybersecurity firm reached a $1.1bn valuation as it uses AI to fight scams, phishing and identity theft. It underlines growing demand for AI-native defences against AI-powered fraud.</div>
+            <div class="meta">
+              <span class="source">SiliconANGLE</span>
+              <span>&middot;</span>
+              <a href="https://siliconangle.com/2026/09/03/guardio-raises-40m-at-1-1b-valuation-to-enhance-consumer-cybersecurity/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-others" data-cat="Others">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Others</span>
+            <span class="category-count">2 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-09-02">
+            <div class="story-headline">US government backs OpenAI in copyright fight</div>
+            <div class="story-summary">The Trump administration filed its first-ever brief on AI copyright law, arguing that training models on copyrighted text is generally fair use. A win for OpenAI would reduce legal risk for every company building on large language models.</div>
+            <div class="meta">
+              <span class="source">US News</span>
+              <span>&middot;</span>
+              <a href="https://www.usnews.com/news/top-news/articles/2026-09-02/us-government-backs-openai-in-new-york-times-copyright-case">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-08-31">
+            <div class="story-headline">Financial watchdog flags AI as top risk</div>
+            <div class="story-summary">The Financial Stability Board's chair told G20 finance ministers that AI-driven cyber attacks are now the most immediate threat to global financial stability, given how few technology providers underpin it. Financial firms should review how dependent they are on a small number of AI vendors.</div>
+            <div class="meta">
+              <span class="source">Insurance Journal</span>
+              <span>&middot;</span>
+              <a href="https://www.insurancejournal.com/news/international/2026/08/31/883386.htm">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+    </section>
+
+  </div>
+
+  <footer>
+    <span>Compiled automatically from web search using Claude</span>
+    <span>Created by Ed Sant&#8217;Anna</span>
+  </footer>
+
+<script src="../assets/brief.js" defer></script>
+<script src="../assets/site.js" defer></script>
+
+</body>
+</html>
