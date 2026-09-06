@@ -1,6 +1,11 @@
 {
   "briefs": [
     {
+      "date": "2026-09-06",
+      "url": "briefs/ai-brief-2026-09-06.html",
+      "teaser": "AI tools got cheaper and safer this week, big deals kept flowing, and a joint outage across OpenAI, Anthropic and Google exposed how few providers now hold up the industry."
+    },
+    {
       "date": "2026-09-05",
       "url": "briefs/ai-brief-2026-09-05.html",
       "teaser": "The world's biggest economies chose light-touch AI rules this week, just as a safety probe and a hacking test showed the risks."

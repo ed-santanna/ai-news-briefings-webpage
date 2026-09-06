@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily AI Brief &mdash; 6 September 2026</title>
+<link rel="stylesheet" href="../assets/brand.css">
+<link rel="stylesheet" href="../assets/brief.css">
+</head>
+<body data-brief="2026-09-06">
+
+  <!--
+    GLOBAL SITE HEADER — identical on every page, do not restyle per brief.
+    data-root is the path back to the site root: "../" on brief pages.
+    The dropdown below is baked in with today only; the live page replaces
+    it from manifest.json on load, so do not hand-fill earlier dates.
+  -->
+  <div class="site-header" data-root="../">
+    <div class="site-header-inner">
+      <a class="wordmark" href="../index.html"><span class="wordmark-brand">Chief T.E.C.H. Translator</span><span class="wordmark-sep"> - </span><span class="wordmark-title">AI Daily Briefs</span></a>
+      <nav class="site-nav">
+        <a class="site-nav-link" id="navLatest" href="../briefs/ai-brief-2026-09-06.html">Latest</a>
+        <div class="dropdown">
+          <button class="site-nav-link" id="archiveToggle" aria-expanded="false" aria-haspopup="true">Archive <span class="caret">&#9662;</span></button>
+          <div class="dropdown-menu" id="archiveMenu" role="menu">
+            <a class="dropdown-item current" href="../briefs/ai-brief-2026-09-06.html">6 September 2026</a>
+            <div class="dropdown-sep"></div>
+            <a class="dropdown-item dropdown-all" href="../index.html">View all briefs</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="hero-inner">
+      <span class="pill">Daily AI Brief</span>
+      <div class="hero-row">
+        <h1>Today in AI</h1>
+        <div class="hero-meta">
+          <div class="hero-date">6 September 2026</div>
+          <div class="hero-sub">10 stories &middot; 4 categories</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tabstrip">
+    <div class="tabstrip-inner">
+      <button class="tab-btn active" data-tab="summary" onclick="showTab('summary')">Visual Summary</button>
+      <button class="tab-btn" data-tab="briefing" onclick="showTab('briefing')">Full Briefing</button>
+    </div>
+  </div>
+
+  <div class="page">
+
+    <section id="tab-summary" class="tab-panel active">
+
+      <!--
+        CATEGORY CARDS — one per category with at least one story, in the
+        fixed order below, skipping any with none. Colour class per
+        category (never reassign):
+          Enterprise Use Cases -> cat-usecases
+          Enterprise AI Tools  -> cat-tools
+          Consulting News      -> cat-consulting
+          AI Tech              -> cat-tech
+          AI Investment        -> cat-investment
+          Others               -> cat-others
+        cat-stat must be a real sourced figure; if no clean number exists
+        use a truthful count. cat-stat-label gives it context in <=12 words.
+        cat-desc is one sentence, <=15 words. The name in goToCategory()
+        must match the chip and <details> data-cat exactly.
+        The card below is a worked example; repeat for each category.
+      -->
+      <div class="cat-grid">
+        <div class="cat-card cat-tools" role="button" tabindex="0"
+             onclick="goToCategory('Enterprise AI Tools')"
+             onkeypress="if(event.key==='Enter')goToCategory('Enterprise AI Tools')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Enterprise AI Tools</span>
+            <span class="cat-go">3 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">$0.10/hr</div>
+            <div class="cat-stat-label">Microsoft's new price for AI call transcription</div>
+            <p class="cat-desc">Vendors made AI safer, cheaper and more capable for business use this week.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-tech" role="button" tabindex="0"
+             onclick="goToCategory('AI Tech')"
+             onkeypress="if(event.key==='Enter')goToCategory('AI Tech')">
+          <div class="cat-card-bar">
+            <span class="cat-name">AI Tech</span>
+            <span class="cat-go">2 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">11 days</div>
+            <div class="cat-stat-label">Claude worked alone to crack a 20-year maths challenge</div>
+            <p class="cat-desc">AI hardware and autonomous reasoning both took visible steps forward.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-investment" role="button" tabindex="0"
+             onclick="goToCategory('AI Investment')"
+             onkeypress="if(event.key==='Enter')goToCategory('AI Investment')">
+          <div class="cat-card-bar">
+            <span class="cat-name">AI Investment</span>
+            <span class="cat-go">3 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">$500m</div>
+            <div class="cat-stat-label">Palo Alto Networks' price for AI start-up Console</div>
+            <p class="cat-desc">Cybersecurity and consumer AI both attracted big-ticket deals this week.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-others" role="button" tabindex="0"
+             onclick="goToCategory('Others')"
+             onkeypress="if(event.key==='Enter')goToCategory('Others')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Others</span>
+            <span class="cat-go">2 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">3</div>
+            <div class="cat-stat-label">Major AI providers hit by outages on the same day</div>
+            <p class="cat-desc">A shared outage and a high-profile hire show AI's growing reach.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Closing split panel. HEADLINE is the single sentence that sums up
+           the day; WHY_MATTERS is its business implication. -->
+      <div class="takeaway">
+        <div class="takeaway-lead">
+          <span class="takeaway-label">The story today</span>
+          <p>AI tools got cheaper and safer this week, big deals kept flowing, and a joint outage across OpenAI, Anthropic and Google exposed how few providers now hold up the industry.</p>
+        </div>
+        <div class="takeaway-why">
+          <span class="takeaway-label">Why this matters</span>
+          <p>Falling infrastructure costs and stronger data controls make wider AI adoption easier to justify, but this week's simultaneous outage across three leading providers is a reminder that most businesses now depend on a small handful of AI vendors. Treat that concentration as a risk to manage, not a given, by testing fallback plans and knowing which processes would stall if a single provider went down.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="tab-briefing" class="tab-panel">
+      <div class="controls">
+        <input type="text" class="search-box" id="storySearch" placeholder="Search stories&hellip;" oninput="filterStories()">
+        <button class="filter-chip active" data-cat="all" onclick="setFilter('all')">All</button>
+        <!-- one chip per category present, same order and colour class -->
+        <button class="filter-chip cat-tools" data-cat="Enterprise AI Tools" onclick="setFilter('Enterprise AI Tools')">Enterprise AI Tools</button>
+        <button class="filter-chip cat-tech" data-cat="AI Tech" onclick="setFilter('AI Tech')">AI Tech</button>
+        <button class="filter-chip cat-investment" data-cat="AI Investment" onclick="setFilter('AI Investment')">AI Investment</button>
+        <button class="filter-chip cat-others" data-cat="Others" onclick="setFilter('Others')">Others</button>
+      </div>
+      <div class="no-results" id="noResults">No stories match that search.</div>
+
+      <!-- One <details> per category, same fixed order. Do NOT add the
+           "open" attribute: sections start collapsed and expand on click.
+           Every .story carries data-published="YYYY-MM-DD", the date the
+           SOURCE published the article, not today's date. The checker fails
+           the run if it is missing, unparseable, in the future, or older
+           than the freshness window. -->
+      <details class="category cat-tools" data-cat="Enterprise AI Tools">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Enterprise AI Tools</span>
+            <span class="category-count">3 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-09-01">
+            <div class="story-headline">Anthropic lets firms keep AI data in-house</div>
+            <div class="story-summary">Anthropic has replaced its data retention policy with a system that lets enterprise customers hold their own encryption keys and audit logs while it scans traffic for misuse signals, addressing a common objection from regulated industries. The change follows pushback from customers uneasy about handing over sensitive data.</div>
+            <div class="meta">
+              <span class="source">CNBC</span>
+              <span>&middot;</span>
+              <a href="https://www.cnbc.com/2026/09/01/anthropic-data-retention.html">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-03">
+            <div class="story-headline">New AI agent speeds up security investigations</div>
+            <div class="story-summary">Security teams drowning in alerts can now hand routine investigation work to an AI agent that turns plain-language questions into structured findings, potentially freeing analysts to focus on real threats. Proofpoint says the tool, built on OpenAI's cyber-tuned models, will be widely available by the end of the quarter.</div>
+            <div class="meta">
+              <span class="source">Proofpoint</span>
+              <span>&middot;</span>
+              <a href="https://www.globenewswire.com/news-release/2026/09/03/3356309/35374/en/proofpoint-brings-openai-gpt-cyber-models-into-security-operations-to-help-defenders-investigate-threats-faster.html">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-03">
+            <div class="story-headline">Microsoft undercuts rivals on AI transcription price</div>
+            <div class="story-summary">Microsoft's newest speech-to-text model transcribes calls in 60 languages for a tenth of a dollar per hour, cheaper and faster than comparable tools from OpenAI, Google and ElevenLabs. For call centres and compliance teams, that could make large-scale voice transcription viable at a fraction of today's cost.</div>
+            <div class="meta">
+              <span class="source">VentureBeat</span>
+              <span>&middot;</span>
+              <a href="https://venturebeat.com/infrastructure/microsoft-ais-mai-transcribe-2-undercuts-openai-google-and-elevenlabs-on-price-and-speed">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-tech" data-cat="AI Tech">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">AI Tech</span>
+            <span class="category-count">2 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-09-04">
+            <div class="story-headline">Claude spends 11 days solving a maths classic alone</div>
+            <div class="story-summary">Anthropic says its Claude model worked largely unsupervised for 11 days to produce the first fully computer-verified proof of Fermat's Last Theorem, generating millions of lines of code in the process. It is an early sign of how far AI can now be trusted to run long, complex projects without human checking at every step.</div>
+            <div class="meta">
+              <span class="source">Anthropic</span>
+              <span>&middot;</span>
+              <a href="https://www.anthropic.com/research/formalizing-fermats-last-theorem">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-04">
+            <div class="story-headline">Chinese chipmaker powers a wave of home robots</div>
+            <div class="story-summary">D-Robotics used the IFA trade show in Berlin to showcase a chip family already inside three new consumer robots, from a companion device to a floor-washer, and says it now has partnerships spanning Bosch, TCL and Midea. It is a sign that AI hardware supply chains outside the usual US players are scaling fast.</div>
+            <div class="meta">
+              <span class="source">PR Newswire</span>
+              <span>&middot;</span>
+              <a href="https://www.prnewswire.com/news-releases/d-robotics-at-ifa-2026-the-computing-platform-powering-the-next-generation-of-home-robots-302869818.html">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-investment" data-cat="AI Investment">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">AI Investment</span>
+            <span class="category-count">3 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-09-04">
+            <div class="story-headline">SoundHound completes takeover of LivePerson</div>
+            <div class="story-summary">SoundHound AI has closed its acquisition of customer messaging firm LivePerson, combining voice AI with a network that reaches a quarter of the Fortune 100. The deal is a sign that conversational AI vendors are consolidating to offer a single platform spanning voice and chat.</div>
+            <div class="meta">
+              <span class="source">GlobeNewswire</span>
+              <span>&middot;</span>
+              <a href="https://www.globenewswire.com/news-release/2026/09/04/3356596/0/en/soundhound-ai-completes-acquisition-of-liveperson-creating-a-world-leading-omnichannel-conversational-ai-powerhouse.html">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-02">
+            <div class="story-headline">Palo Alto Networks buys AI help desk start-up</div>
+            <div class="story-summary">Palo Alto Networks paid $500 million for Console, a two-year-old start-up whose AI agents automate routine IT help desk work, and plans to fold it into its Cortex security platform. It is the cybersecurity giant's seventh acquisition this year, underlining how fast the sector is buying rather than building AI agent capability.</div>
+            <div class="meta">
+              <span class="source">TechCrunch</span>
+              <span>&middot;</span>
+              <a href="https://techcrunch.com/2026/09/02/palo-alto-networks-paid-500m-for-thrive-backed-console-sources-say/">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-03">
+            <div class="story-headline">Turkish AI app maker raises $75m from Point72</div>
+            <div class="story-summary">HubX has become Turkey's first AI-native consumer apps unicorn after Point72's private investment arm backed its profitable app portfolio at a valuation above $1.2 billion. The deal shows investors are still writing large cheques for AI-driven consumer businesses outside the usual hubs.</div>
+            <div class="meta">
+              <span class="source">Finsmes</span>
+              <span>&middot;</span>
+              <a href="https://www.finsmes.com/2026/09/hubx-raises-50m-at-1-2-billion-pre-money-valuation.html">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-others" data-cat="Others">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Others</span>
+            <span class="category-count">2 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-09-03">
+            <div class="story-headline">OpenAI, Anthropic and Google all went down together</div>
+            <div class="story-summary">ChatGPT, Claude and Gemini all suffered service disruptions within minutes of each other, a reminder that most businesses now depend on a small handful of AI providers for critical work. Each outage was resolved within roughly half an hour, but the timing raised fresh questions about concentration risk in AI infrastructure.</div>
+            <div class="meta">
+              <span class="source">Bloomberg</span>
+              <span>&middot;</span>
+              <a href="https://www.bloomberg.com/news/articles/2026-09-03/openai-anthropic-spacexai-hit-by-service-outages-for-ai-models">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-02">
+            <div class="story-headline">AIG's outgoing boss takes top job at Palantir</div>
+            <div class="story-summary">Peter Zaffino is stepping down as AIG's executive chair to become Palantir's global head of financial services, leading its push to sell AI software to banks and insurers. The move shows AI vendors are now recruiting seasoned industry chief executives, not just technologists, to win over financial services clients.</div>
+            <div class="meta">
+              <span class="source">Insurance Journal</span>
+              <span>&middot;</span>
+              <a href="https://www.insurancejournal.com/news/national/2026/09/02/883669.htm">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+    </section>
+
+  </div>
+
+  <footer>
+    <span>Compiled automatically from web search using Claude</span>
+    <span>Created by Ed Sant&#8217;Anna</span>
+  </footer>
+
+<script src="../assets/brief.js" defer></script>
+<script src="../assets/site.js" defer></script>
+
+</body>
+</html>
