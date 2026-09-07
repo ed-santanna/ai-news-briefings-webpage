@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily AI Brief &mdash; 7 September 2026</title>
+<link rel="stylesheet" href="../assets/brand.css">
+<link rel="stylesheet" href="../assets/brief.css">
+</head>
+<body data-brief="2026-09-07">
+
+  <!--
+    GLOBAL SITE HEADER — identical on every page, do not restyle per brief.
+    data-root is the path back to the site root: "../" on brief pages.
+    The dropdown below is baked in with today only; the live page replaces
+    it from manifest.json on load, so do not hand-fill earlier dates.
+  -->
+  <div class="site-header" data-root="../">
+    <div class="site-header-inner">
+      <a class="wordmark" href="../index.html"><span class="wordmark-brand">Chief T.E.C.H. Translator</span><span class="wordmark-sep"> - </span><span class="wordmark-title">AI Daily Briefs</span></a>
+      <nav class="site-nav">
+        <a class="site-nav-link" id="navLatest" href="../briefs/ai-brief-2026-09-07.html">Latest</a>
+        <div class="dropdown">
+          <button class="site-nav-link" id="archiveToggle" aria-expanded="false" aria-haspopup="true">Archive <span class="caret">&#9662;</span></button>
+          <div class="dropdown-menu" id="archiveMenu" role="menu">
+            <a class="dropdown-item current" href="../briefs/ai-brief-2026-09-07.html">7 September 2026</a>
+            <div class="dropdown-sep"></div>
+            <a class="dropdown-item dropdown-all" href="../index.html">View all briefs</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="hero-inner">
+      <span class="pill">Daily AI Brief</span>
+      <div class="hero-row">
+        <h1>Today in AI</h1>
+        <div class="hero-meta">
+          <div class="hero-date">7 September 2026</div>
+          <div class="hero-sub">9 stories &middot; 4 categories</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tabstrip">
+    <div class="tabstrip-inner">
+      <button class="tab-btn active" data-tab="summary" onclick="showTab('summary')">Visual Summary</button>
+      <button class="tab-btn" data-tab="briefing" onclick="showTab('briefing')">Full Briefing</button>
+    </div>
+  </div>
+
+  <div class="page">
+
+    <section id="tab-summary" class="tab-panel active">
+
+      <!--
+        CATEGORY CARDS — one per category with at least one story, in the
+        fixed order below, skipping any with none. Colour class per
+        category (never reassign):
+          Enterprise Use Cases -> cat-usecases
+          Enterprise AI Tools  -> cat-tools
+          Consulting News      -> cat-consulting
+          AI Tech              -> cat-tech
+          AI Investment        -> cat-investment
+          Others               -> cat-others
+        cat-stat must be a real sourced figure; if no clean number exists
+        use a truthful count. cat-stat-label gives it context in <=12 words.
+        cat-desc is one sentence, <=15 words. The name in goToCategory()
+        must match the chip and <details> data-cat exactly.
+        The card below is a worked example; repeat for each category.
+      -->
+      <div class="cat-grid">
+        <div class="cat-card cat-tools" role="button" tabindex="0"
+             onclick="goToCategory('Enterprise AI Tools')"
+             onkeypress="if(event.key==='Enter')goToCategory('Enterprise AI Tools')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Enterprise AI Tools</span>
+            <span class="cat-go">2 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">$1bn</div>
+            <div class="cat-stat-label">OpenAI's subsidy for under-resourced cyber defenders</div>
+            <p class="cat-desc">Two labs widened access to their AI agents for businesses this week.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-consulting" role="button" tabindex="0"
+             onclick="goToCategory('Consulting News')"
+             onkeypress="if(event.key==='Enter')goToCategory('Consulting News')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Consulting News</span>
+            <span class="cat-go">1 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">$7.4bn</div>
+            <div class="cat-stat-label">TCS unit's planned AI data centre investment</div>
+            <p class="cat-desc">TCS is betting billions of its own money on AI infrastructure.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-tech" role="button" tabindex="0"
+             onclick="goToCategory('AI Tech')"
+             onkeypress="if(event.key==='Enter')goToCategory('AI Tech')">
+          <div class="cat-card-bar">
+            <span class="cat-name">AI Tech</span>
+            <span class="cat-go">2 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">4 labs</div>
+            <div class="cat-stat-label">shipped new flagship models within the same week</div>
+            <p class="cat-desc">Rapid-fire model releases are raising doubts about real gains and inflated claims.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-investment" role="button" tabindex="0"
+             onclick="goToCategory('AI Investment')"
+             onkeypress="if(event.key==='Enter')goToCategory('AI Investment')">
+          <div class="cat-card-bar">
+            <span class="cat-name">AI Investment</span>
+            <span class="cat-go">4 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">$2 trillion</div>
+            <div class="cat-stat-label">Anthropic's target valuation for its delayed October listing</div>
+            <p class="cat-desc">Investors poured billions more into AI labs, clouds and robotics this week.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Closing split panel. HEADLINE is the single sentence that sums up
+           the day; WHY_MATTERS is its business implication. -->
+      <div class="takeaway">
+        <div class="takeaway-lead">
+          <span class="takeaway-label">The story today</span>
+          <p>Record sums are chasing AI computing power and talent this week, even as the pace of model releases starts to look unsustainable.</p>
+        </div>
+        <div class="takeaway-why">
+          <span class="takeaway-label">Why this matters</span>
+          <p>Budgets for AI infrastructure and talent should assume further cost inflation, and vendor claims about model capability deserve more scrutiny given how quickly they are being made and disputed.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="tab-briefing" class="tab-panel">
+      <div class="controls">
+        <input type="text" class="search-box" id="storySearch" placeholder="Search stories&hellip;" oninput="filterStories()">
+        <button class="filter-chip active" data-cat="all" onclick="setFilter('all')">All</button>
+        <!-- one chip per category present, same order and colour class -->
+        <button class="filter-chip cat-tools" data-cat="Enterprise AI Tools" onclick="setFilter('Enterprise AI Tools')">Enterprise AI Tools</button>
+        <button class="filter-chip cat-consulting" data-cat="Consulting News" onclick="setFilter('Consulting News')">Consulting News</button>
+        <button class="filter-chip cat-tech" data-cat="AI Tech" onclick="setFilter('AI Tech')">AI Tech</button>
+        <button class="filter-chip cat-investment" data-cat="AI Investment" onclick="setFilter('AI Investment')">AI Investment</button>
+      </div>
+      <div class="no-results" id="noResults">No stories match that search.</div>
+
+      <!-- One <details> per category, same fixed order. Do NOT add the
+           "open" attribute: sections start collapsed and expand on click.
+           Every .story carries data-published="YYYY-MM-DD", the date the
+           SOURCE published the article, not today's date. The checker fails
+           the run if it is missing, unparseable, in the future, or older
+           than the freshness window. -->
+      <details class="category cat-tools" data-cat="Enterprise AI Tools">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Enterprise AI Tools</span>
+            <span class="category-count">2 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-09-03">
+            <div class="story-headline">OpenAI pledges $1bn to arm cyber defenders</div>
+            <div class="story-summary">OpenAI is subsidising access to its most advanced cyber-security AI models for community banks, utilities and local governments that cannot afford enterprise pricing. The move follows warnings that AI-powered attacks are outpacing many under-resourced defenders.</div>
+            <div class="meta">
+              <span class="source">OpenAI</span>
+              <span>&middot;</span>
+              <a href="https://openai.com/index/daybreak-for-frontline-defenders/">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-03">
+            <div class="story-headline">xAI opens its AI agent to every business</div>
+            <div class="story-summary">Grok Bot, xAI's autonomous AI worker, is free for two weeks to Grok and Cursor Enterprise customers, who can invite their whole workforce to try it. The launch adds access controls so IT teams can govern what the agent can see and do.</div>
+            <div class="meta">
+              <span class="source">x.ai</span>
+              <span>&middot;</span>
+              <a href="https://x.ai/news/grok-bot-for-enterprise">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-consulting" data-cat="Consulting News">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Consulting News</span>
+            <span class="category-count">1 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-09-05">
+            <div class="story-headline">TCS unit plans $7.4bn AI data centre in India</div>
+            <div class="story-summary">Tata Consultancy Services' infrastructure arm HyperVault is investing up to $7.4bn in a one-gigawatt AI data centre campus in Hyderabad, aimed at hyperscale and AI customers. It is one of India's largest AI infrastructure bets and reinforces TCS's push beyond consulting into AI capacity itself.</div>
+            <div class="meta">
+              <span class="source">TCS</span>
+              <span>&middot;</span>
+              <a href="https://www.tcs.com/who-we-are/newsroom/press-release/tcs-hypervault-establish-large-scale-ai-data-center-campus-telangana">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-tech" data-cat="AI Tech">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">AI Tech</span>
+            <span class="category-count">2 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-09-06">
+            <div class="story-headline">'Model fatigue' hits as AI labs ship weekly</div>
+            <div class="story-summary">Anthropic, Meta, Google and OpenAI all released new flagship models within days of each other this week, prompting analysts to question whether the pace of releases still translates into meaningful gains for business users. The rapid churn also makes it harder for companies to plan which models to build on.</div>
+            <div class="meta">
+              <span class="source">CNBC</span>
+              <span>&middot;</span>
+              <a href="https://www.cnbc.com/2026/09/06/meta-google-openai-anthropic-ai-model-fatigue.html">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-03">
+            <div class="story-headline">OpenAI's AGI claim meets independent pushback</div>
+            <div class="story-summary">OpenAI president Greg Brockman said the company's new GPT-6 Astra model marks the start of the "AGI era", but an independent benchmark run by ARC Prize scored it far below OpenAI's own headline figures. The gap is a reminder for buyers to treat vendor capability claims with caution.</div>
+            <div class="meta">
+              <span class="source">Axios</span>
+              <span>&middot;</span>
+              <a href="https://www.axios.com/2026/09/03/openai-astra-gpt-6-agi-brockman">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-investment" data-cat="AI Investment">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">AI Investment</span>
+            <span class="category-count">4 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-09-05">
+            <div class="story-headline">Anthropic delays IPO, eyes $2 trillion valuation</div>
+            <div class="story-summary">Anthropic has pushed its stock market listing to mid-October at the earliest while it finalises a $15bn credit facility, according to Reuters. The float, one of the largest ever attempted, would be a major test of investor appetite for AI companies.</div>
+            <div class="meta">
+              <span class="source">CNBC</span>
+              <span>&middot;</span>
+              <a href="https://www.cnbc.com/2026/09/05/anthropic-ipo-launch-shifts-toward-mid-october-reuters.html">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-04">
+            <div class="story-headline">AI cloud firm Nscale seeks $3.5bn before listing</div>
+            <div class="story-summary">Nscale is lining up $3.5bn in financing from Nvidia and hedge fund Third Point ahead of a planned New York listing, after its contracted revenue backlog nearly doubled to $103bn in a month. The jump was driven largely by a $45bn compute agreement with Anthropic.</div>
+            <div class="meta">
+              <span class="source">TechCrunch</span>
+              <span>&middot;</span>
+              <a href="https://techcrunch.com/2026/09/04/ai-compute-provider-nscale-is-looking-for-3-5b-in-pre-ipo-financing/">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-03">
+            <div class="story-headline">Robotics firm Figure locks up $3.5bn in AI compute</div>
+            <div class="story-summary">Humanoid robot maker Figure has signed a deal with Nscale for up to 100,000 Nvidia chips, an initial $3.5bn commitment that could grow past $6bn. It signals investors are now backing the computing power behind physical AI, not just chatbots.</div>
+            <div class="meta">
+              <span class="source">PR Newswire</span>
+              <span>&middot;</span>
+              <a href="https://www.prnewswire.com/news-releases/nscale-and-figure-sign-strategic-partnership-to-power-the-next-generation-of-physical-ai-302868918.html">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-03">
+            <div class="story-headline">Mira Murati's AI lab in talks to raise $1bn</div>
+            <div class="story-summary">Thinking Machines Lab, founded by former OpenAI chief technology officer Mira Murati, is negotiating a $1bn round led by Accel that would value the year-old start-up at $40bn. That would be a fourfold jump from its valuation just over a year ago.</div>
+            <div class="meta">
+              <span class="source">TechCrunch</span>
+              <span>&middot;</span>
+              <a href="https://techcrunch.com/2026/09/03/accel-reportedly-in-talks-to-lead-1b-round-for-thinking-machines-at-40b-valuation/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+    </section>
+
+  </div>
+
+  <footer>
+    <span>Compiled automatically from web search using Claude</span>
+    <span>Created by Ed Sant&#8217;Anna</span>
+  </footer>
+
+<script src="../assets/brief.js" defer></script>
+<script src="../assets/site.js" defer></script>
+
+</body>
+</html>

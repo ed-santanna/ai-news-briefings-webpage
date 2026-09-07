@@ -1,6 +1,11 @@
 {
   "briefs": [
     {
+      "date": "2026-09-07",
+      "url": "briefs/ai-brief-2026-09-07.html",
+      "teaser": "Record sums are chasing AI computing power and talent this week, even as the pace of model releases starts to look unsustainable."
+    },
+    {
       "date": "2026-09-06",
       "url": "briefs/ai-brief-2026-09-06.html",
       "teaser": "AI tools got cheaper and safer this week, big deals kept flowing, and a joint outage across OpenAI, Anthropic and Google exposed how few providers now hold up the industry."
