@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily AI Brief &mdash; 8 September 2026</title>
+<link rel="stylesheet" href="../assets/brand.css">
+<link rel="stylesheet" href="../assets/brief.css">
+</head>
+<body data-brief="2026-09-08">
+
+  <!--
+    GLOBAL SITE HEADER — identical on every page, do not restyle per brief.
+    data-root is the path back to the site root: "../" on brief pages.
+    The dropdown below is baked in with today only; the live page replaces
+    it from manifest.json on load, so do not hand-fill earlier dates.
+  -->
+  <div class="site-header" data-root="../">
+    <div class="site-header-inner">
+      <a class="wordmark" href="../index.html"><span class="wordmark-brand">Chief T.E.C.H. Translator</span><span class="wordmark-sep"> - </span><span class="wordmark-title">AI Daily Briefs</span></a>
+      <nav class="site-nav">
+        <a class="site-nav-link" id="navLatest" href="../briefs/ai-brief-2026-09-08.html">Latest</a>
+        <div class="dropdown">
+          <button class="site-nav-link" id="archiveToggle" aria-expanded="false" aria-haspopup="true">Archive <span class="caret">&#9662;</span></button>
+          <div class="dropdown-menu" id="archiveMenu" role="menu">
+            <a class="dropdown-item current" href="../briefs/ai-brief-2026-09-08.html">8 September 2026</a>
+            <div class="dropdown-sep"></div>
+            <a class="dropdown-item dropdown-all" href="../index.html">View all briefs</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="hero-inner">
+      <span class="pill">Daily AI Brief</span>
+      <div class="hero-row">
+        <h1>Today in AI</h1>
+        <div class="hero-meta">
+          <div class="hero-date">8 September 2026</div>
+          <div class="hero-sub">7 stories &middot; 4 categories</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tabstrip">
+    <div class="tabstrip-inner">
+      <button class="tab-btn active" data-tab="summary" onclick="showTab('summary')">Visual Summary</button>
+      <button class="tab-btn" data-tab="briefing" onclick="showTab('briefing')">Full Briefing</button>
+    </div>
+  </div>
+
+  <div class="page">
+
+    <section id="tab-summary" class="tab-panel active">
+
+      <div class="cat-grid">
+        <div class="cat-card cat-tools" role="button" tabindex="0"
+             onclick="goToCategory('Enterprise AI Tools')"
+             onkeypress="if(event.key==='Enter')goToCategory('Enterprise AI Tools')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Enterprise AI Tools</span>
+            <span class="cat-go">2 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">9,100+</div>
+            <div class="cat-stat-label">Accounts now using Snowflake's AI coding agent</div>
+            <p class="cat-desc">Security vendors and data platforms both leaned harder into AI agents this week.</p>
+          </div>
+        </div>
+
+        <div class="cat-card cat-tech" role="button" tabindex="0"
+             onclick="goToCategory('AI Tech')"
+             onkeypress="if(event.key==='Enter')goToCategory('AI Tech')">
+          <div class="cat-card-bar">
+            <span class="cat-name">AI Tech</span>
+            <span class="cat-go">1 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">3.1</div>
+            <div class="cat-stat-label">Agent workdays per human workday at OpenAI</div>
+            <p class="cat-desc">OpenAI revealed how deeply AI agents now drive its own research work.</p>
+          </div>
+        </div>
+
+        <div class="cat-card cat-investment" role="button" tabindex="0"
+             onclick="goToCategory('AI Investment')"
+             onkeypress="if(event.key==='Enter')goToCategory('AI Investment')">
+          <div class="cat-card-bar">
+            <span class="cat-name">AI Investment</span>
+            <span class="cat-go">2 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">$13bn</div>
+            <div class="cat-stat-label">Nvidia's agreed price for Hugging Face</div>
+            <p class="cat-desc">Big money kept flowing to AI infrastructure and model makers alike.</p>
+          </div>
+        </div>
+
+        <div class="cat-card cat-others" role="button" tabindex="0"
+             onclick="goToCategory('Others')"
+             onkeypress="if(event.key==='Enter')goToCategory('Others')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Others</span>
+            <span class="cat-go">2 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">600,000</div>
+            <div class="cat-stat-label">NYC pupils barred from classroom AI</div>
+            <p class="cat-desc">Regulators drew new lines around AI in schools and healthcare.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Closing split panel. HEADLINE is the single sentence that sums up
+           the day; WHY_MATTERS is its business implication. -->
+      <div class="takeaway">
+        <div class="takeaway-lead">
+          <span class="takeaway-label">The story today</span>
+          <p>Investors poured billions more into AI this week, even as regulators began drawing firmer lines around where it can be used.</p>
+        </div>
+        <div class="takeaway-why">
+          <span class="takeaway-label">Why this matters</span>
+          <p>Nvidia's 13 billion dollar deal for Hugging Face and Mistral's jump to a 21 billion dollar valuation show capital is still chasing AI infrastructure and model makers, while New York's classroom ban and the FDA's new fast track for health tools show governments are now willing to reshape how AI reaches people, which matters most if you sell into schools, healthcare or other regulated sectors.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="tab-briefing" class="tab-panel">
+      <div class="controls">
+        <input type="text" class="search-box" id="storySearch" placeholder="Search stories&hellip;" oninput="filterStories()">
+        <button class="filter-chip active" data-cat="all" onclick="setFilter('all')">All</button>
+        <button class="filter-chip cat-tools" data-cat="Enterprise AI Tools" onclick="setFilter('Enterprise AI Tools')">Enterprise AI Tools</button>
+        <button class="filter-chip cat-tech" data-cat="AI Tech" onclick="setFilter('AI Tech')">AI Tech</button>
+        <button class="filter-chip cat-investment" data-cat="AI Investment" onclick="setFilter('AI Investment')">AI Investment</button>
+        <button class="filter-chip cat-others" data-cat="Others" onclick="setFilter('Others')">Others</button>
+      </div>
+      <div class="no-results" id="noResults">No stories match that search.</div>
+
+      <details class="category cat-tools" data-cat="Enterprise AI Tools">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Enterprise AI Tools</span>
+            <span class="category-count">2 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-09-01">
+            <div class="story-headline">CrowdStrike unveils watchdog for rogue AI agents</div>
+            <div class="story-summary">CrowdStrike has launched Falcon Guardian, software that finds AI agents running on company laptops and desktops, including ones nobody approved, and can shut them down while they work. It gives security teams a way to enforce policy on AI agents rather than just spot problems after the damage is done.</div>
+            <div class="meta">
+              <span class="source">SiliconANGLE</span>
+              <span>&middot;</span>
+              <a href="https://siliconangle.com/2026/09/01/crowdstrike-launches-falcon-guardian-to-police-ai-agents-at-the-endpoint/">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-02">
+            <div class="story-headline">Snowflake's AI coding agent fuels a stock surge</div>
+            <div class="story-summary">Snowflake's quarterly results beat expectations and sent its shares up 22 percent, with the company crediting roughly half its growth acceleration to CoCo, its AI coding agent, now adopted by more than 9,100 customer accounts. It is a concrete sign that enterprises are paying for AI tools that show up in usage, not just pilots.</div>
+            <div class="meta">
+              <span class="source">CNBC</span>
+              <span>&middot;</span>
+              <a href="https://www.cnbc.com/2026/09/02/snowflake-snow-q2-earnings-report-2027.html">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-tech" data-cat="AI Tech">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">AI Tech</span>
+            <span class="category-count">1 story</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-09-06">
+            <div class="story-headline">OpenAI's researchers now work mostly through AI agents</div>
+            <div class="story-summary">OpenAI has disclosed that its research staff now generate more work through AI coding agents than they do directly, at a ratio of roughly three agent workdays for every human workday as of mid-August. The median researcher now spends over 600 dollars a day running these agents, a sign of how fast the cost and shape of research work is changing even inside the companies building the technology.</div>
+            <div class="meta">
+              <span class="source">OpenAI</span>
+              <span>&middot;</span>
+              <a href="https://openai.com/index/research-acceleration-view-inside-openai/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-investment" data-cat="AI Investment">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">AI Investment</span>
+            <span class="category-count">2 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-09-03">
+            <div class="story-headline">Nvidia agrees $13bn deal for Hugging Face</div>
+            <div class="story-summary">Nvidia has confirmed it will buy AI platform Hugging Face for close to 13 billion dollars, turning a company used by millions of developers into part of its own software stack. The deal, expected to close in the first half of 2027, extends Nvidia's push beyond chips into the tools businesses use to build and share AI models.</div>
+            <div class="meta">
+              <span class="source">CNBC</span>
+              <span>&middot;</span>
+              <a href="https://www.cnbc.com/2026/09/03/nvidia-agrees-to-buy-hugging-face-for-almost-13-billion-ai-expansion.html">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-08">
+            <div class="story-headline">Mistral AI nearly doubles its valuation to $21bn</div>
+            <div class="story-summary">French AI lab Mistral has raised 3.5 billion dollars in a round led by Samsung, almost doubling its valuation from a year ago to more than 21 billion dollars. The cash will fund further model development and computing capacity, and underlines how much investor appetite remains for AI labs positioned as European or open alternatives to the big American players.</div>
+            <div class="meta">
+              <span class="source">Bloomberg</span>
+              <span>&middot;</span>
+              <a href="https://www.bloomberg.com/news/articles/2026-09-08/mistral-ai-raises-at-21-billion-valuation-in-samsung-led-round">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-others" data-cat="Others">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Others</span>
+            <span class="category-count">2 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-09-02">
+            <div class="story-headline">New York bars young pupils from classroom AI</div>
+            <div class="story-summary">New York City is barring close to 600,000 public school students from Pre-K through eighth grade from using generative AI in class for the coming school year, and switching off AI features in dozens of existing school programmes while it studies the risks. It is the broadest such restriction in the United States, a sign that regulators are willing to slow AI adoption in sensitive settings even as businesses race to deploy it.</div>
+            <div class="meta">
+              <span class="source">CNN</span>
+              <span>&middot;</span>
+              <a href="https://www.cnn.com/2026/09/02/tech/new-york-city-classroom-ai-ban">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-03">
+            <div class="story-headline">FDA lets AI health tools reach patients sooner</div>
+            <div class="story-summary">The US Food and Drug Administration has accepted the first four generative AI products, including tools from Cadence and Limbic, into a new pilot that lets companies get them in front of patients before full marketing authorisation. It offers a faster route to market for AI diagnostics and mental health tools, though it also shifts more of the safety burden onto real world use.</div>
+            <div class="meta">
+              <span class="source">STAT News</span>
+              <span>&middot;</span>
+              <a href="https://www.statnews.com/2026/09/03/tempo-fda-pilor-generative-ai-medical-device-regulation/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+    </section>
+
+  </div>
+
+  <footer>
+    <span>Compiled automatically from web search using Claude</span>
+    <span>Created by Ed Sant&#8217;Anna</span>
+  </footer>
+
+<script src="../assets/brief.js" defer></script>
+<script src="../assets/site.js" defer></script>
+
+</body>
+</html>
