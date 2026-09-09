@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily AI Brief &mdash; 9 September 2026</title>
+<link rel="stylesheet" href="../assets/brand.css">
+<link rel="stylesheet" href="../assets/brief.css">
+</head>
+<body data-brief="2026-09-09">
+
+  <!--
+    GLOBAL SITE HEADER — identical on every page, do not restyle per brief.
+    data-root is the path back to the site root: "../" on brief pages.
+    The dropdown below is baked in with today only; the live page replaces
+    it from manifest.json on load, so do not hand-fill earlier dates.
+  -->
+  <div class="site-header" data-root="../">
+    <div class="site-header-inner">
+      <a class="wordmark" href="../index.html"><span class="wordmark-brand">Chief T.E.C.H. Translator</span><span class="wordmark-sep"> - </span><span class="wordmark-title">AI Daily Briefs</span></a>
+      <nav class="site-nav">
+        <a class="site-nav-link" id="navLatest" href="../briefs/ai-brief-2026-09-09.html">Latest</a>
+        <div class="dropdown">
+          <button class="site-nav-link" id="archiveToggle" aria-expanded="false" aria-haspopup="true">Archive <span class="caret">&#9662;</span></button>
+          <div class="dropdown-menu" id="archiveMenu" role="menu">
+            <a class="dropdown-item current" href="../briefs/ai-brief-2026-09-09.html">9 September 2026</a>
+            <div class="dropdown-sep"></div>
+            <a class="dropdown-item dropdown-all" href="../index.html">View all briefs</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="hero-inner">
+      <span class="pill">Daily AI Brief</span>
+      <div class="hero-row">
+        <h1>Today in AI</h1>
+        <div class="hero-meta">
+          <div class="hero-date">9 September 2026</div>
+          <div class="hero-sub">9 stories &middot; 5 categories</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tabstrip">
+    <div class="tabstrip-inner">
+      <button class="tab-btn active" data-tab="summary" onclick="showTab('summary')">Visual Summary</button>
+      <button class="tab-btn" data-tab="briefing" onclick="showTab('briefing')">Full Briefing</button>
+    </div>
+  </div>
+
+  <div class="page">
+
+    <section id="tab-summary" class="tab-panel active">
+
+      <!--
+        CATEGORY CARDS — one per category with at least one story, in the
+        fixed order below, skipping any with none. Colour class per
+        category (never reassign):
+          Enterprise Use Cases -> cat-usecases
+          Enterprise AI Tools  -> cat-tools
+          Consulting News      -> cat-consulting
+          AI Tech              -> cat-tech
+          AI Investment        -> cat-investment
+          Others               -> cat-others
+        cat-stat must be a real sourced figure; if no clean number exists
+        use a truthful count. cat-stat-label gives it context in <=12 words.
+        cat-desc is one sentence, <=15 words. The name in goToCategory()
+        must match the chip and <details> data-cat exactly.
+        The card below is a worked example; repeat for each category.
+      -->
+      <div class="cat-grid">
+        <div class="cat-card cat-usecases" role="button" tabindex="0"
+             onclick="goToCategory('Enterprise Use Cases')"
+             onkeypress="if(event.key==='Enter')goToCategory('Enterprise Use Cases')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Enterprise Use Cases</span>
+            <span class="cat-go">1 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">15,000+</div>
+            <div class="cat-stat-label">M&amp;T Bank staff now using AI copilots</div>
+            <p class="cat-desc">A US bank has AI copilots live in customer service, coding and risk teams.</p>
+          </div>
+        </div>
+
+        <div class="cat-card cat-tools" role="button" tabindex="0"
+             onclick="goToCategory('Enterprise AI Tools')"
+             onkeypress="if(event.key==='Enter')goToCategory('Enterprise AI Tools')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Enterprise AI Tools</span>
+            <span class="cat-go">2 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">100+</div>
+            <div class="cat-stat-label">AI agents listed on Tenable's new safety exchange</div>
+            <p class="cat-desc">New services now vet AI agents and let firms build their own automated workflows.</p>
+          </div>
+        </div>
+
+        <div class="cat-card cat-tech" role="button" tabindex="0"
+             onclick="goToCategory('AI Tech')"
+             onkeypress="if(event.key==='Enter')goToCategory('AI Tech')">
+          <div class="cat-card-bar">
+            <span class="cat-name">AI Tech</span>
+            <span class="cat-go">1 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">10,000</div>
+            <div class="cat-stat-label">AI agents OpenAI used on its maths attempt</div>
+            <p class="cat-desc">OpenAI claims a landmark maths win, though the result awaits independent verification.</p>
+          </div>
+        </div>
+
+        <div class="cat-card cat-investment" role="button" tabindex="0"
+             onclick="goToCategory('AI Investment')"
+             onkeypress="if(event.key==='Enter')goToCategory('AI Investment')">
+          <div class="cat-card-bar">
+            <span class="cat-name">AI Investment</span>
+            <span class="cat-go">3 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">$2.15bn</div>
+            <div class="cat-stat-label">raised across two AI funding rounds today</div>
+            <p class="cat-desc">Investors keep writing huge cheques for AI, even as one big deal collapsed.</p>
+          </div>
+        </div>
+
+        <div class="cat-card cat-others" role="button" tabindex="0"
+             onclick="goToCategory('Others')"
+             onkeypress="if(event.key==='Enter')goToCategory('Others')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Others</span>
+            <span class="cat-go">2 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">$532bn</div>
+            <div class="cat-stat-label">China's planned AI infrastructure spending to 2030</div>
+            <p class="cat-desc">Policy and courtroom fights over AI are both intensifying this week.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Closing split panel. HEADLINE is the single sentence that sums up
+           the day; WHY_MATTERS is its business implication. -->
+      <div class="takeaway">
+        <div class="takeaway-lead">
+          <span class="takeaway-label">The story today</span>
+          <p>Investors keep betting big on AI while its research claims and legal risks both face harder scrutiny.</p>
+        </div>
+        <div class="takeaway-why">
+          <span class="takeaway-label">Why this matters</span>
+          <p>Funding size is a weak signal on its own. This week's unverified research claim and the first courtroom test of AI training data are reminders to weigh verification and legal exposure alongside capability before committing budget.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="tab-briefing" class="tab-panel">
+      <div class="controls">
+        <input type="text" class="search-box" id="storySearch" placeholder="Search stories&hellip;" oninput="filterStories()">
+        <button class="filter-chip active" data-cat="all" onclick="setFilter('all')">All</button>
+        <!-- one chip per category present, same order and colour class -->
+        <button class="filter-chip cat-usecases" data-cat="Enterprise Use Cases" onclick="setFilter('Enterprise Use Cases')">Enterprise Use Cases</button>
+        <button class="filter-chip cat-tools" data-cat="Enterprise AI Tools" onclick="setFilter('Enterprise AI Tools')">Enterprise AI Tools</button>
+        <button class="filter-chip cat-tech" data-cat="AI Tech" onclick="setFilter('AI Tech')">AI Tech</button>
+        <button class="filter-chip cat-investment" data-cat="AI Investment" onclick="setFilter('AI Investment')">AI Investment</button>
+        <button class="filter-chip cat-others" data-cat="Others" onclick="setFilter('Others')">Others</button>
+      </div>
+      <div class="no-results" id="noResults">No stories match that search.</div>
+
+      <!-- One <details> per category, same fixed order. Do NOT add the
+           "open" attribute: sections start collapsed and expand on click.
+           Every .story carries data-published="YYYY-MM-DD", the date the
+           SOURCE published the article, not today's date. The checker fails
+           the run if it is missing, unparseable, in the future, or older
+           than the freshness window. -->
+      <details class="category cat-usecases" data-cat="Enterprise Use Cases">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Enterprise Use Cases</span>
+            <span class="category-count">1 story</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-09-04">
+            <div class="story-headline">Bank puts AI copilots in front of 15,000 staff</div>
+            <div class="story-summary">M&amp;T Bank has rolled out Microsoft's AI copilot to more than 15,000 employees across customer service, coding and risk teams, following years of technology investment. The bank says the tool is already saving call-centre staff several minutes per call, though employees must still review everything it produces.</div>
+            <div class="meta">
+              <span class="source">AI News</span>
+              <span>&middot;</span>
+              <a href="https://www.artificialintelligence-news.com/news/mt-bank-enterprise-ai-15000-employees/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-tools" data-cat="Enterprise AI Tools">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Enterprise AI Tools</span>
+            <span class="category-count">2 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-09-03">
+            <div class="story-headline">New service vets AI agents before firms use them</div>
+            <div class="story-summary">Tenable and OpenAI have launched a review service that checks community-built AI agents, skills and connectors for security flaws before businesses install them. It combines OpenAI's cyber models with expert review, for firms racing to adopt AI agents without fully vetting what they let loose inside their systems.</div>
+            <div class="meta">
+              <span class="source">GlobeNewswire</span>
+              <span>&middot;</span>
+              <a href="https://www.globenewswire.com/news-release/2026/09/03/3356323/0/en/tenable-uses-openai-gpt-cyber-models-to-help-defenders-inspect-community-built-ai-components.html">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-04">
+            <div class="story-headline">No-code tool lets firms build AI agents</div>
+            <div class="story-summary">Security software firm Zorronet has launched a no-code builder that lets operations teams wire cameras, sensors and access points into automated AI response workflows themselves, rather than waiting on the vendor for every change. It is aimed at defence, infrastructure and public sector sites that need to adapt quickly.</div>
+            <div class="meta">
+              <span class="source">GlobeNewswire</span>
+              <span>&middot;</span>
+              <a href="https://www.globenewswire.com/news-release/2026/09/04/3356598/0/en/biomx-zorronet-launches-no-code-control-over-ai-powered-autonomous-response-workflows.html">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-tech" data-cat="AI Tech">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">AI Tech</span>
+            <span class="category-count">1 story</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-09-09">
+            <div class="story-headline">OpenAI says its AI cracked a $1m maths puzzle</div>
+            <div class="story-summary">OpenAI says an unreleased model, running about 10,000 AI agents in parallel, found a breakdown point in the Navier-Stokes equations, one of mathematics' seven unsolved Millennium Prize problems. Independent mathematicians have not yet verified the claim, and some have questioned how thoroughly it has been checked.</div>
+            <div class="meta">
+              <span class="source">The Washington Post</span>
+              <span>&middot;</span>
+              <a href="https://www.washingtonpost.com/technology/2026/09/09/openai-claims-it-solved-elusive-math-problem-with-1-million-prize/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-investment" data-cat="AI Investment">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">AI Investment</span>
+            <span class="category-count">3 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-09-08">
+            <div class="story-headline">Anthropic drops $6bn Decart takeover talks</div>
+            <div class="story-summary">Anthropic has walked away from acquiring Israeli AI-efficiency start-up Decart, in what would have been its largest ever acquisition at roughly $6bn. Reports say due diligence turned up concerns serious enough to end the talks, leaving Anthropic's compute-cost pressures unresolved as it heads towards an expected autumn stock listing.</div>
+            <div class="meta">
+              <span class="source">Tech Times</span>
+              <span>&middot;</span>
+              <a href="https://www.techtimes.com/articles/327016/20260908/anthropic-abandons-decart-acquisition-leaving-claude-compute-cost-gap-unsolved.htm">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-08">
+            <div class="story-headline">Prescription AI start-up Forus triples in value</div>
+            <div class="story-summary">Forus has raised $150m at a $3bn valuation, led by Bain Capital Ventures, to expand a platform that chases down prescriptions on patients' behalf. The company says a third of patients prescribed costly medicines never receive their first dose because of paperwork delays, the gap it is paid to close.</div>
+            <div class="meta">
+              <span class="source">Bloomberg</span>
+              <span>&middot;</span>
+              <a href="https://www.bloomberg.com/news/articles/2026-09-08/ai-health-company-forus-raises-150-million-at-a-3-billion-value">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-08">
+            <div class="story-headline">AI coding start-up Cognition now worth $48bn</div>
+            <div class="story-summary">Cognition, maker of the Devin AI coding assistant, has raised $2bn at a $48bn valuation, roughly doubling its worth from earlier this year. The round, led by Andreessen Horowitz, shows investors still paying steeply for a foothold in AI-assisted software development.</div>
+            <div class="meta">
+              <span class="source">Bloomberg</span>
+              <span>&middot;</span>
+              <a href="https://www.bloomberg.com/news/articles/2026-09-08/ai-startup-cognition-raises-2-billion-at-a-48-billion-value">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-others" data-cat="Others">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Others</span>
+            <span class="category-count">2 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-09-08">
+            <div class="story-headline">China plans to quadruple its AI computing power</div>
+            <div class="story-summary">China's industry ministry has set out a five year plan to nearly quadruple national AI computing capacity by 2030, backed by more than $500bn in planned infrastructure spending. The plan leans heavily on home grown chips, underlining how seriously Beijing is racing to cut its reliance on foreign hardware.</div>
+            <div class="meta">
+              <span class="source">China Daily</span>
+              <span>&middot;</span>
+              <a href="http://global.chinadaily.com.cn/a/202609/08/WS6a9f5faee4b06d4aa055cd85.html">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-06">
+            <div class="story-headline">First jury trial over AI image training opens</div>
+            <div class="story-summary">The first US jury trial testing whether training an AI image generator on copyrighted artwork counts as copying was due to open this week, brought by artists against Stability AI, Midjourney and DeviantArt. Whichever way the jury rules, it becomes the reference point for image-model liability cases still working through the courts.</div>
+            <div class="meta">
+              <span class="source">Sigma Law Group</span>
+              <span>&middot;</span>
+              <a href="https://sigmalawgroup.com/blog/2026-09-06-andersen-stability-ai-jury-trial/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+    </section>
+
+  </div>
+
+  <footer>
+    <span>Compiled automatically from web search using Claude</span>
+    <span>Created by Ed Sant&#8217;Anna</span>
+  </footer>
+
+<script src="../assets/brief.js" defer></script>
+<script src="../assets/site.js" defer></script>
+
+</body>
+</html>
