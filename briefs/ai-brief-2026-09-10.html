@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily AI Brief &mdash; 10 September 2026</title>
+<link rel="stylesheet" href="../assets/brand.css">
+<link rel="stylesheet" href="../assets/brief.css">
+</head>
+<body data-brief="2026-09-10">
+
+  <!--
+    GLOBAL SITE HEADER — identical on every page, do not restyle per brief.
+    data-root is the path back to the site root: "../" on brief pages.
+    The dropdown below is baked in with today only; the live page replaces
+    it from manifest.json on load, so do not hand-fill earlier dates.
+  -->
+  <div class="site-header" data-root="../">
+    <div class="site-header-inner">
+      <a class="wordmark" href="../index.html"><span class="wordmark-brand">Chief T.E.C.H. Translator</span><span class="wordmark-sep"> - </span><span class="wordmark-title">AI Daily Briefs</span></a>
+      <nav class="site-nav">
+        <a class="site-nav-link" id="navLatest" href="../briefs/ai-brief-2026-09-10.html">Latest</a>
+        <div class="dropdown">
+          <button class="site-nav-link" id="archiveToggle" aria-expanded="false" aria-haspopup="true">Archive <span class="caret">&#9662;</span></button>
+          <div class="dropdown-menu" id="archiveMenu" role="menu">
+            <a class="dropdown-item current" href="../briefs/ai-brief-2026-09-10.html">10 September 2026</a>
+            <div class="dropdown-sep"></div>
+            <a class="dropdown-item dropdown-all" href="../index.html">View all briefs</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="hero-inner">
+      <span class="pill">Daily AI Brief</span>
+      <div class="hero-row">
+        <h1>Today in AI</h1>
+        <div class="hero-meta">
+          <div class="hero-date">10 September 2026</div>
+          <div class="hero-sub">11 stories &middot; 6 categories</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tabstrip">
+    <div class="tabstrip-inner">
+      <button class="tab-btn active" data-tab="summary" onclick="showTab('summary')">Visual Summary</button>
+      <button class="tab-btn" data-tab="briefing" onclick="showTab('briefing')">Full Briefing</button>
+    </div>
+  </div>
+
+  <div class="page">
+
+    <section id="tab-summary" class="tab-panel active">
+
+      <!--
+        CATEGORY CARDS — one per category with at least one story, in the
+        fixed order below, skipping any with none. Colour class per
+        category (never reassign):
+          Enterprise Use Cases -> cat-usecases
+          Enterprise AI Tools  -> cat-tools
+          Consulting News      -> cat-consulting
+          AI Tech              -> cat-tech
+          AI Investment        -> cat-investment
+          Others               -> cat-others
+        cat-stat must be a real sourced figure; if no clean number exists
+        use a truthful count. cat-stat-label gives it context in <=12 words.
+        cat-desc is one sentence, <=15 words. The name in goToCategory()
+        must match the chip and <details> data-cat exactly.
+        The card below is a worked example; repeat for each category.
+      -->
+      <div class="cat-grid">
+        <div class="cat-card cat-usecases" role="button" tabindex="0"
+             onclick="goToCategory('Enterprise Use Cases')"
+             onkeypress="if(event.key==='Enter')goToCategory('Enterprise Use Cases')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Enterprise Use Cases</span>
+            <span class="cat-go">1 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">5.5m sq ft</div>
+            <div class="cat-stat-label">Size of the resort now running AI robots full time</div>
+            <p class="cat-desc">A major casino resort turned an AI robot trial into a permanent, paid contract.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-tools" role="button" tabindex="0"
+             onclick="goToCategory('Enterprise AI Tools')"
+             onkeypress="if(event.key==='Enter')goToCategory('Enterprise AI Tools')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Enterprise AI Tools</span>
+            <span class="cat-go">2 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">90%</div>
+            <div class="cat-stat-label">Cut in screening time from Pipefy's new HR agents</div>
+            <p class="cat-desc">Vendors are shipping AI agents built for single business tasks, not general chat.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-consulting" role="button" tabindex="0"
+             onclick="goToCategory('Consulting News')"
+             onkeypress="if(event.key==='Enter')goToCategory('Consulting News')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Consulting News</span>
+            <span class="cat-go">1 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">1,000</div>
+            <div class="cat-stat-label">Engineers Accenture is dedicating to Google Cloud AI rollouts</div>
+            <p class="cat-desc">Accenture is betting clients need people, not just software, to get value from AI.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-tech" role="button" tabindex="0"
+             onclick="goToCategory('AI Tech')"
+             onkeypress="if(event.key==='Enter')goToCategory('AI Tech')">
+          <div class="cat-card-bar">
+            <span class="cat-name">AI Tech</span>
+            <span class="cat-go">4 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">9bn</div>
+            <div class="cat-stat-label">Genetic variants mapped in Google DeepMind's new dataset</div>
+            <p class="cat-desc">From personal AI agents to gene maps, AI research is broadening well beyond chatbots.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-investment" role="button" tabindex="0"
+             onclick="goToCategory('AI Investment')"
+             onkeypress="if(event.key==='Enter')goToCategory('AI Investment')">
+          <div class="cat-card-bar">
+            <span class="cat-name">AI Investment</span>
+            <span class="cat-go">2 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">$60bn</div>
+            <div class="cat-stat-label">Value of Qualcomm's new AI chip supply deal with Amazon</div>
+            <p class="cat-desc">Money keeps flowing into AI chips and physical robots, not just AI software.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-others" role="button" tabindex="0"
+             onclick="goToCategory('Others')"
+             onkeypress="if(event.key==='Enter')goToCategory('Others')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Others</span>
+            <span class="cat-go">1 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">6</div>
+            <div class="cat-stat-label">Chinese AI firms named in a US model theft advisory</div>
+            <p class="cat-desc">Washington is treating AI model theft as a security problem, not just a business one.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Closing split panel. HEADLINE is the single sentence that sums up
+           the day; WHY_MATTERS is its business implication. -->
+      <div class="takeaway">
+        <div class="takeaway-lead">
+          <span class="takeaway-label">The story today</span>
+          <p>AI kept moving from chatbots into real jobs this week, even as the US accused Chinese firms of mass copying Western AI models.</p>
+        </div>
+        <div class="takeaway-why">
+          <span class="takeaway-label">Why this matters</span>
+          <p>Expect AI vendors to keep selling agents built for single tasks rather than general assistants, and weigh the growing security risk around Chinese AI models when choosing suppliers.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="tab-briefing" class="tab-panel">
+      <div class="controls">
+        <input type="text" class="search-box" id="storySearch" placeholder="Search stories&hellip;" oninput="filterStories()">
+        <button class="filter-chip active" data-cat="all" onclick="setFilter('all')">All</button>
+        <!-- one chip per category present, same order and colour class -->
+        <button class="filter-chip cat-usecases" data-cat="Enterprise Use Cases" onclick="setFilter('Enterprise Use Cases')">Enterprise Use Cases</button>
+        <button class="filter-chip cat-tools" data-cat="Enterprise AI Tools" onclick="setFilter('Enterprise AI Tools')">Enterprise AI Tools</button>
+        <button class="filter-chip cat-consulting" data-cat="Consulting News" onclick="setFilter('Consulting News')">Consulting News</button>
+        <button class="filter-chip cat-tech" data-cat="AI Tech" onclick="setFilter('AI Tech')">AI Tech</button>
+        <button class="filter-chip cat-investment" data-cat="AI Investment" onclick="setFilter('AI Investment')">AI Investment</button>
+        <button class="filter-chip cat-others" data-cat="Others" onclick="setFilter('Others')">Others</button>
+      </div>
+      <div class="no-results" id="noResults">No stories match that search.</div>
+
+      <!-- One <details> per category, same fixed order. Do NOT add the
+           "open" attribute: sections start collapsed and expand on click.
+           Every .story carries data-published="YYYY-MM-DD", the date the
+           SOURCE published the article, not today's date. The checker fails
+           the run if it is missing, unparseable, in the future, or older
+           than the freshness window. -->
+      <details class="category cat-usecases" data-cat="Enterprise Use Cases">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Enterprise Use Cases</span>
+            <span class="category-count">1 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-09-09">
+            <div class="story-headline">Casino resort's AI robots earn a permanent job</div>
+            <div class="story-summary">Mohegan Sun has turned a trial of MBody AI's autonomous robots into a paid, ongoing contract after testing them on its gaming floor and in its conference centre. A demanding, round the clock resort saying yes is a strong signal that service robots are ready for real deployment, not just a pilot.</div>
+            <div class="meta">
+              <span class="source">GlobeNewswire</span>
+              <span>&middot;</span>
+              <a href="https://www.globenewswire.com/news-release/2026/09/09/3358673/0/en/mbody-ai-advances-ai-robotics-rollout-at-mohegan-sun.html">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-tools" data-cat="Enterprise AI Tools">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Enterprise AI Tools</span>
+            <span class="category-count">2 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-09-09">
+            <div class="story-headline">New AI agents take over routine HR tasks</div>
+            <div class="story-summary">Workflow software firm Pipefy has launched ready made AI agents that screen candidates, draft development plans and price salaries, cutting some tasks by up to 90 percent. It shows vendors moving from general AI assistants to agents built for one specific job.</div>
+            <div class="meta">
+              <span class="source">GlobeNewswire</span>
+              <span>&middot;</span>
+              <a href="https://www.globenewswire.com/news-release/2026/09/09/3358853/0/en/pipefy-launches-ai-agent-gallery-with-ready-to-deploy-agents-for-hr.html">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-09">
+            <div class="story-headline">Finance software adds an AI agent layer</div>
+            <div class="story-summary">Esker has added a new agentic layer to its finance software, letting AI handle routine invoicing and collections work while staff keep control of policy decisions. It reflects a wider push by back office vendors to sell agents rather than plain automation.</div>
+            <div class="meta">
+              <span class="source">GlobeNewswire</span>
+              <span>&middot;</span>
+              <a href="https://www.globenewswire.com/news-release/2026/09/09/3358834/0/en/esker-introduces-the-synergy-agentic-framework-for-the-office-of-the-cfo.html">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-consulting" data-cat="Consulting News">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Consulting News</span>
+            <span class="category-count">1 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-09-08">
+            <div class="story-headline">Accenture puts 1,000 staff behind Google's AI</div>
+            <div class="story-summary">Accenture and Google Cloud have formed a joint unit with 1,000 dedicated engineers to help large clients roll out Google's Gemini Enterprise AI platform. It is a bet that clients want fewer AI pilots and more people turning them into working systems.</div>
+            <div class="meta">
+              <span class="source">AIwire</span>
+              <span>&middot;</span>
+              <a href="https://www.hpcwire.com/aiwire/2026/09/08/accenture-and-google-cloud-launch-gemini-enterprise-business-group/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-tech" data-cat="AI Tech">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">AI Tech</span>
+            <span class="category-count">4 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-09-08">
+            <div class="story-headline">Meta launches a personal AI agent for everyone</div>
+            <div class="story-summary">Meta has released Muse, an AI agent that can shop, book tickets and manage tasks on a person's behalf through an app, WhatsApp or the web. It marks one of the clearest moves yet from AI chatbots to AI that actually completes real tasks.</div>
+            <div class="meta">
+              <span class="source">Axios</span>
+              <span>&middot;</span>
+              <a href="https://www.axios.com/2026/09/08/meta-debuts-muse-personal-ai-agent">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-08">
+            <div class="story-headline">Google maps every possible human gene change</div>
+            <div class="story-summary">Google DeepMind has published a huge dataset predicting the effect of every possible single letter change across the human genome, meant to speed up medical research. It is the kind of foundational science that could shorten the path to new diagnoses and treatments.</div>
+            <div class="meta">
+              <span class="source">Fortune</span>
+              <span>&middot;</span>
+              <a href="https://fortune.com/2026/09/08/google-deepmind-ai-predictions-9-billion-mutation-human-genome/">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-08">
+            <div class="story-headline">Chinese carmaker starts building humanoid robots</div>
+            <div class="story-summary">XPeng has begun production of its IRON humanoid robot at a new automated factory in Guangzhou, aiming for large scale output by the end of the year. It signals humanoid robots moving from one off demonstrations towards genuine manufacturing volume.</div>
+            <div class="meta">
+              <span class="source">CleanTechnica</span>
+              <span>&middot;</span>
+              <a href="https://cleantechnica.com/2026/09/08/xpeng-iron-autonomously-walks-off-production-line/">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-08">
+            <div class="story-headline">Top mathematician sets up an AI safety institute</div>
+            <div class="story-summary">Fields Medal winner Jacob Tsimerman has founded a new research institute dedicated to applying rigorous mathematics to AI safety problems. It shows concerns about AI risk are now drawing serious academic talent, not just policy debate.</div>
+            <div class="meta">
+              <span class="source">The Hill</span>
+              <span>&middot;</span>
+              <a href="https://thehill.com/policy/technology/6076244-jacob-tsimerman-launches-maisi/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-investment" data-cat="AI Investment">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">AI Investment</span>
+            <span class="category-count">2 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-09-09">
+            <div class="story-headline">Qualcomm signs up to $60bn AI chip deal with Amazon</div>
+            <div class="story-summary">Qualcomm has agreed a multi year deal to supply Amazon with custom AI chips for its data centres worth up to $60bn, and gave Amazon the right to buy $4bn of its shares. It positions Qualcomm as a serious new competitor to Nvidia in AI infrastructure.</div>
+            <div class="meta">
+              <span class="source">TechAeris</span>
+              <span>&middot;</span>
+              <a href="https://techaeris.com/2026/09/09/qualcomm-amazon-ai-chip-deal/">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-09">
+            <div class="story-headline">Japanese robotics AI start-up raises &yen;5bn</div>
+            <div class="story-summary">Algomatic Dynamics has raised &yen;5bn, around $34m, from DMM.com to develop AI controlled robotic hands and movement systems for wider use in Japanese manufacturing. It adds to a wave of money moving from software focused AI into physical robots.</div>
+            <div class="meta">
+              <span class="source">Pomegra</span>
+              <span>&middot;</span>
+              <a href="https://pomegra.io/startups/algomatic-dynamics-raises-5b-for-physical-ai-2026-09-09">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-others" data-cat="Others">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Others</span>
+            <span class="category-count">1 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-09-09">
+            <div class="story-headline">US accuses six Chinese AI firms of mass model copying</div>
+            <div class="story-summary">US security agencies say six Chinese AI companies, including DeepSeek and Alibaba, systematically copied capabilities from Western AI models by extracting billions of data tokens since 2024. The advisory raises the stakes in the debate over whether China's AI progress rests on original work or on copying US models.</div>
+            <div class="meta">
+              <span class="source">The Hacker News</span>
+              <span>&middot;</span>
+              <a href="https://thehackernews.com/2026/09/us-agencies-accuse-china-ai-firms-of.html">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+    </section>
+
+  </div>
+
+  <footer>
+    <span>Compiled automatically from web search using Claude</span>
+    <span>Created by Ed Sant&#8217;Anna</span>
+  </footer>
+
+<script src="../assets/brief.js" defer></script>
+<script src="../assets/site.js" defer></script>
+
+</body>
+</html>
