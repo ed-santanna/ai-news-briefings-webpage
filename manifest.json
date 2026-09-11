@@ -1,6 +1,11 @@
 {
   "briefs": [
     {
+      "date": "2026-09-11",
+      "url": "briefs/ai-brief-2026-09-11.html",
+      "teaser": "AI competition this week shifted from smarter chatbots to controlling the power, chips and capital behind them, even as Anthropic disclosed real safety lapses in its own models."
+    },
+    {
       "date": "2026-09-10",
       "url": "briefs/ai-brief-2026-09-10.html",
       "teaser": "AI kept moving from chatbots into real jobs this week, even as the US accused Chinese firms of mass copying Western AI models."
