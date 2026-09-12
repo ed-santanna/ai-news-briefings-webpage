@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily AI Brief &mdash; 12 September 2026</title>
+<link rel="stylesheet" href="../assets/brand.css">
+<link rel="stylesheet" href="../assets/brief.css">
+</head>
+<body data-brief="2026-09-12">
+
+  <!--
+    GLOBAL SITE HEADER — identical on every page, do not restyle per brief.
+    data-root is the path back to the site root: "../" on brief pages.
+    The dropdown below is baked in with today only; the live page replaces
+    it from manifest.json on load, so do not hand-fill earlier dates.
+  -->
+  <div class="site-header" data-root="../">
+    <div class="site-header-inner">
+      <a class="wordmark" href="../index.html"><span class="wordmark-brand">Chief T.E.C.H. Translator</span><span class="wordmark-sep"> - </span><span class="wordmark-title">AI Daily Briefs</span></a>
+      <nav class="site-nav">
+        <a class="site-nav-link" id="navLatest" href="../briefs/ai-brief-2026-09-12.html">Latest</a>
+        <div class="dropdown">
+          <button class="site-nav-link" id="archiveToggle" aria-expanded="false" aria-haspopup="true">Archive <span class="caret">&#9662;</span></button>
+          <div class="dropdown-menu" id="archiveMenu" role="menu">
+            <a class="dropdown-item current" href="../briefs/ai-brief-2026-09-12.html">12 September 2026</a>
+            <div class="dropdown-sep"></div>
+            <a class="dropdown-item dropdown-all" href="../index.html">View all briefs</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="hero-inner">
+      <span class="pill">Daily AI Brief</span>
+      <div class="hero-row">
+        <h1>Today in AI</h1>
+        <div class="hero-meta">
+          <div class="hero-date">12 September 2026</div>
+          <div class="hero-sub">16 stories &middot; 6 categories</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tabstrip">
+    <div class="tabstrip-inner">
+      <button class="tab-btn active" data-tab="summary" onclick="showTab('summary')">Visual Summary</button>
+      <button class="tab-btn" data-tab="briefing" onclick="showTab('briefing')">Full Briefing</button>
+    </div>
+  </div>
+
+  <div class="page">
+
+    <section id="tab-summary" class="tab-panel active">
+
+      <!--
+        CATEGORY CARDS — one per category with at least one story, in the
+        fixed order below, skipping any with none. Colour class per
+        category (never reassign):
+          Enterprise Use Cases -> cat-usecases
+          Enterprise AI Tools  -> cat-tools
+          Consulting News      -> cat-consulting
+          AI Tech              -> cat-tech
+          AI Investment        -> cat-investment
+          Others               -> cat-others
+        cat-stat must be a real sourced figure; if no clean number exists
+        use a truthful count. cat-stat-label gives it context in <=12 words.
+        cat-desc is one sentence, <=15 words. The name in goToCategory()
+        must match the chip and <details> data-cat exactly.
+        The card below is a worked example; repeat for each category.
+      -->
+      <div class="cat-grid">
+        <div class="cat-card cat-usecases" role="button" tabindex="0"
+             onclick="goToCategory('Enterprise Use Cases')"
+             onkeypress="if(event.key==='Enter')goToCategory('Enterprise Use Cases')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Enterprise Use Cases</span>
+            <span class="cat-go">3 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">90%</div>
+            <div class="cat-stat-label">Share of shopper interactions Hibbett Sports now handles with AI</div>
+            <p class="cat-desc">Named companies and universities are now running AI as core operational infrastructure, not pilots.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-tools" role="button" tabindex="0"
+             onclick="goToCategory('Enterprise AI Tools')"
+             onkeypress="if(event.key==='Enter')goToCategory('Enterprise AI Tools')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Enterprise AI Tools</span>
+            <span class="cat-go">2 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">$100m</div>
+            <div class="cat-stat-label">Value of Five9's new five-year Fortune 100 contact centre contract</div>
+            <p class="cat-desc">Vendors are locking in sovereign, regulated AI deals with named enterprise customers this week.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-consulting" role="button" tabindex="0"
+             onclick="goToCategory('Consulting News')"
+             onkeypress="if(event.key==='Enter')goToCategory('Consulting News')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Consulting News</span>
+            <span class="cat-go">3 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">15,000</div>
+            <div class="cat-stat-label">Staff Cognizant is retraining into new AI-era job families</div>
+            <p class="cat-desc">Consultancies are retooling their workforce for AI even as client fee spend comes under pressure.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-tech" role="button" tabindex="0"
+             onclick="goToCategory('AI Tech')"
+             onkeypress="if(event.key==='Enter')goToCategory('AI Tech')">
+          <div class="cat-card-bar">
+            <span class="cat-name">AI Tech</span>
+            <span class="cat-go">2 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">32%</div>
+            <div class="cat-stat-label">Price cut DeepSeek made to its newest AI model</div>
+            <p class="cat-desc">Model makers are competing hard on price as much as raw capability this week.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-investment" role="button" tabindex="0"
+             onclick="goToCategory('AI Investment')"
+             onkeypress="if(event.key==='Enter')goToCategory('AI Investment')">
+          <div class="cat-card-bar">
+            <span class="cat-name">AI Investment</span>
+            <span class="cat-go">3 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">&euro;3bn</div>
+            <div class="cat-stat-label">Funding raised by Mistral in Europe's largest ever tech round</div>
+            <p class="cat-desc">Capital keeps flooding into AI labs and infrastructure, with valuations rising within months.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-others" role="button" tabindex="0"
+             onclick="goToCategory('Others')"
+             onkeypress="if(event.key==='Enter')goToCategory('Others')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Others</span>
+            <span class="cat-go">3 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">24</div>
+            <div class="cat-stat-label">Verbatim outputs OpenAI cites from 20m sampled chats in NYT case</div>
+            <p class="cat-desc">Regulators, courts and AI labs themselves are all moving to tighten oversight of AI risk.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Closing split panel. HEADLINE is the single sentence that sums up
+           the day; WHY_MATTERS is its business implication. -->
+      <div class="takeaway">
+        <div class="takeaway-lead">
+          <span class="takeaway-label">The story today</span>
+          <p>Businesses are moving past AI pilots into real, named deployments, even as record funding rounds and new legal and regulatory pressure show how fast, and how contested, the field remains.</p>
+        </div>
+        <div class="takeaway-why">
+          <span class="takeaway-label">Why this matters</span>
+          <p>Expect AI decisions to increasingly turn on data control, procurement and governance rather than technology choice alone, and treat rising legal and regulatory scrutiny as a standing cost of doing business.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="tab-briefing" class="tab-panel">
+      <div class="controls">
+        <input type="text" class="search-box" id="storySearch" placeholder="Search stories&hellip;" oninput="filterStories()">
+        <button class="filter-chip active" data-cat="all" onclick="setFilter('all')">All</button>
+        <!-- one chip per category present, same order and colour class -->
+        <button class="filter-chip cat-usecases" data-cat="Enterprise Use Cases" onclick="setFilter('Enterprise Use Cases')">Enterprise Use Cases</button>
+        <button class="filter-chip cat-tools" data-cat="Enterprise AI Tools" onclick="setFilter('Enterprise AI Tools')">Enterprise AI Tools</button>
+        <button class="filter-chip cat-consulting" data-cat="Consulting News" onclick="setFilter('Consulting News')">Consulting News</button>
+        <button class="filter-chip cat-tech" data-cat="AI Tech" onclick="setFilter('AI Tech')">AI Tech</button>
+        <button class="filter-chip cat-investment" data-cat="AI Investment" onclick="setFilter('AI Investment')">AI Investment</button>
+        <button class="filter-chip cat-others" data-cat="Others" onclick="setFilter('Others')">Others</button>
+      </div>
+      <div class="no-results" id="noResults">No stories match that search.</div>
+
+      <!-- One <details> per category, same fixed order. Do NOT add the
+           "open" attribute: sections start collapsed and expand on click.
+           Every .story carries data-published="YYYY-MM-DD", the date the
+           SOURCE published the article, not today's date. The checker fails
+           the run if it is missing, unparseable, in the future, or older
+           than the freshness window. -->
+      <details class="category cat-usecases" data-cat="Enterprise Use Cases">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Enterprise Use Cases</span>
+            <span class="category-count">3 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-09-11">
+            <div class="story-headline">Salesforce launches seven ready-to-work AI agents</div>
+            <div class="story-summary">Salesforce has released seven named Agentforce agents built to handle specific jobs such as customer service, IT support and outbound sales, with most now generally available. Early customers include Hibbett Sports, where an agent now handles nine in ten core shopper interactions, and Asana, whose agent has quadrupled website conversations within weeks of going live.</div>
+            <div class="meta">
+              <span class="source">Salesforce</span>
+              <span>&middot;</span>
+              <a href="https://www.salesforce.com/news/stories/agentforce-job-ready-ai-agents/">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-11">
+            <div class="story-headline">Top law firm builds its own AI rather than renting</div>
+            <div class="story-summary">Latham &amp; Watkins, one of the world's largest law firms, has bought its own Nvidia servers to fine-tune AI models in-house instead of sending client data to outside cloud providers. Its technology chief said some client work is too sensitive to hand to any external AI vendor.</div>
+            <div class="meta">
+              <span class="source">Legal IT Insider</span>
+              <span>&middot;</span>
+              <a href="https://legaltechnology.com/latham-builds-its-own-ai-models-with-nvidia-gpu-server-investment/">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-10">
+            <div class="story-headline">US university builds an AI research hub with Google</div>
+            <div class="story-summary">Morgan State University, a historically Black institution, has partnered with Google Public Sector to gain access to advanced computing power for AI, cybersecurity and health research. The deal is designed to help the university reach top-tier research status and offers a model other universities could follow.</div>
+            <div class="meta">
+              <span class="source">Google Cloud</span>
+              <span>&middot;</span>
+              <a href="https://www.googlecloudpresscorner.com/2026-09-10-Morgan-State-University-and-Google-Public-Sector-Collaborate-to-Build-Next-Generation-AI-Campus">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-tools" data-cat="Enterprise AI Tools">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Enterprise AI Tools</span>
+            <span class="category-count">2 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-09-09">
+            <div class="story-headline">Cloudera lets firms run AI without sharing their data</div>
+            <div class="story-summary">Cloudera is building Mistral AI's models directly into its data platform, letting businesses run and fine-tune AI on their own sensitive information without sending it to an outside provider. The tie-up, reported to be worth nine figures, targets regulated industries that cannot use standard cloud AI tools.</div>
+            <div class="meta">
+              <span class="source">SiliconANGLE</span>
+              <span>&middot;</span>
+              <a href="https://siliconangle.com/2026/09/09/cloudera-brings-mistral-ais-frontier-models-into-its-secure-hybrid-data-environments/">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-11">
+            <div class="story-headline">Five9 wins $100m AI contact centre contract</div>
+            <div class="story-summary">Contact centre AI vendor Five9 has signed a roughly $100m, five year deal to become the main customer service platform for an unnamed Fortune 100 financial services firm. Its chief executive called it one of the company's largest wins to date.</div>
+            <div class="meta">
+              <span class="source">Investing.com</span>
+              <span>&middot;</span>
+              <a href="https://www.investing.com/news/transcripts/five9-at-goldman-sachs-communacopia--technology-conference-2026-ai-gains-pace-93CH-4898246">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-consulting" data-cat="Consulting News">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Consulting News</span>
+            <span class="category-count">3 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-09-07">
+            <div class="story-headline">Cognizant retrains 15,000 staff for the AI era</div>
+            <div class="story-summary">Cognizant is scaling up two new AI-focused job categories to a combined 15,000 people, built through partnerships with several US universities. In one pilot it says a team turned a client's account management work into 17 AI agents, saving each manager around 11 hours a week.</div>
+            <div class="meta">
+              <span class="source">Cognizant</span>
+              <span>&middot;</span>
+              <a href="https://news.cognizant.com/2026-09-07-Cognizant-Invests-in-Americas-AI-Era-Workforce">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-08">
+            <div class="story-headline">Accenture and Google team up on AI rollouts</div>
+            <div class="story-summary">Accenture and Google Cloud have formed a joint unit to help large clients deploy Gemini and AI agents at scale, combining thousands of Accenture staff with dedicated Google engineers. It is widely read as Google Cloud's push to catch up with Microsoft and Amazon in enterprise AI deployment work.</div>
+            <div class="meta">
+              <span class="source">TechCrunch</span>
+              <span>&middot;</span>
+              <a href="https://techcrunch.com/2026/09/08/google-cloud-races-to-catch-up-in-the-ai-deployment-wars-with-accenture-deal/">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-08">
+            <div class="story-headline">UK firms cut consulting spend as AI use doubles</div>
+            <div class="story-summary">New transaction data shows UK businesses' spending on consulting fees fell nearly 2 percent this August even as overall corporate spending rose, while the share of firms paying AI vendors almost doubled year on year. Professional services firms saw the steepest drop in customer numbers of any sector tracked.</div>
+            <div class="meta">
+              <span class="source">City AM</span>
+              <span>&middot;</span>
+              <a href="https://www.cityam.com/business-spend-pulse-uk-firms-slash-consulting-spend-amid-rising-ai-adoption/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-tech" data-cat="AI Tech">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">AI Tech</span>
+            <span class="category-count">2 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-09-10">
+            <div class="story-headline">DeepSeek cuts prices ahead of Shanghai listing</div>
+            <div class="story-summary">Chinese AI lab DeepSeek has released a new model, V4.1-Flash, priced up to a third cheaper than its predecessor, as it prepares for a stock market listing in Shanghai. The release is widely seen as part of a push to boost its commercial numbers ahead of going public.</div>
+            <div class="meta">
+              <span class="source">VentureBeat</span>
+              <span>&middot;</span>
+              <a href="https://venturebeat.com/technology/deepseek-v4-1-flash-debuts-with-0-003-1m-off-peak-cached-input-rate-and-benchmarks-eclipsing-gpt-5-6-sol-claude-opus-5">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-10">
+            <div class="story-headline">Sakana AI splits its models into cheap and premium tiers</div>
+            <div class="story-summary">Japanese AI lab Sakana AI has released two versions of its flagship model, one built to be as cheap as possible and one built for maximum capability, both aimed at powering multi-agent systems. It claims the cheaper option costs up to 60 percent less than models from larger rivals.</div>
+            <div class="meta">
+              <span class="source">MarkTechPost</span>
+              <span>&middot;</span>
+              <a href="https://www.marktechpost.com/2026/09/10/sakana-ai-launches-fugu-max-and-fugu-ultra-v2-for-cheaper-stronger-multi-agent-orchestration/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-investment" data-cat="AI Investment">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">AI Investment</span>
+            <span class="category-count">3 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-09-08">
+            <div class="story-headline">Mistral raises Europe's biggest ever tech round</div>
+            <div class="story-summary">French AI lab Mistral has raised 3 billion euros, valuing it at more than 21 billion euros in what is reported to be the largest equity fundraising ever completed by a European technology company. The firm says it now serves more than 125 enterprise clients across 20 countries.</div>
+            <div class="meta">
+              <span class="source">HPCwire</span>
+              <span>&middot;</span>
+              <a href="https://www.hpcwire.com/aiwire/2026/09/08/mistral-raises-e3b-to-expand-ai-research-and-infrastructure/">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-10">
+            <div class="story-headline">Salesforce in talks to buy AI research start-up</div>
+            <div class="story-summary">Salesforce is reportedly in talks to acquire Listen Labs, an AI-powered customer research platform, for around $2bn, in what would be its third major acquisition this year. The start-up had recently walked away from a smaller funding offer that valued it at $1.5bn.</div>
+            <div class="meta">
+              <span class="source">PYMNTS</span>
+              <span>&middot;</span>
+              <a href="https://www.pymnts.com/news/artificial-intelligence/2026/salesforce-eyes-2-billion-acquisition-of-ai-powered-platform-listen-labs/">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-09">
+            <div class="story-headline">DeepSeek lines up bankers for a Shanghai listing</div>
+            <div class="story-summary">DeepSeek has hired CITIC Securities among four underwriters to prepare a listing on Shanghai's STAR Market, with a possible pre-listing funding round reportedly valuing it at about $74.5bn. It underlines how quickly Chinese AI labs are moving to tap public markets for growth capital.</div>
+            <div class="meta">
+              <span class="source">Seoul Economic Daily</span>
+              <span>&middot;</span>
+              <a href="https://en.sedaily.com/international/2026/09/09/deepseek-taps-citic-for-star-market-listing-this-year">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="category cat-others" data-cat="Others">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Others</span>
+            <span class="category-count">3 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-09-09">
+            <div class="story-headline">California creates first US register of AI auditors</div>
+            <div class="story-summary">California's governor has signed a law creating the first state-run registry of approved AI auditors in the United States, with independence and transparency standards auditors must meet. From 2029, unregistered auditors will generally be barred from carrying out AI audits required under state law.</div>
+            <div class="meta">
+              <span class="source">PYMNTS</span>
+              <span>&middot;</span>
+              <a href="https://www.pymnts.com/legal/2026/california-starts-regulating-the-people-who-audit-ai/">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-09">
+            <div class="story-headline">OpenAI adds a prominent AI safety critic to its board</div>
+            <div class="story-summary">OpenAI has appointed Paul Christiano, a former OpenAI researcher turned government AI safety adviser, to its Foundation Board and safety committee. He will recuse himself from OpenAI's government dealings and from evaluating its own models, underlining growing outside scrutiny of how AI labs govern themselves.</div>
+            <div class="meta">
+              <span class="source">TechCrunch</span>
+              <span>&middot;</span>
+              <a href="https://techcrunch.com/2026/09/09/openai-adds-a-prominent-ai-doomer-to-its-board-of-directors/">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-08">
+            <div class="story-headline">New York Times copyright case against OpenAI escalates</div>
+            <div class="story-summary">The New York Times, OpenAI and Microsoft have filed final arguments in their long-running copyright case, with the newspaper arguing its work was copied at scale to build a commercial substitute. OpenAI and Microsoft counter that only 24 verbatim outputs were found across 20 million sampled conversations.</div>
+            <div class="meta">
+              <span class="source">Axios</span>
+              <span>&middot;</span>
+              <a href="https://www.axios.com/2026/09/08/nyt-openai-microsoft-copyright-lawsuit">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+    </section>
+
+  </div>
+
+  <footer>
+    <span>Compiled automatically from web search using Claude</span>
+    <span>Created by Ed Sant&#8217;Anna</span>
+  </footer>
+
+<script src="../assets/brief.js" defer></script>
+<script src="../assets/site.js" defer></script>
+
+</body>
+</html>

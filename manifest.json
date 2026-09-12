@@ -1,6 +1,11 @@
 {
   "briefs": [
     {
+      "date": "2026-09-12",
+      "url": "briefs/ai-brief-2026-09-12.html",
+      "teaser": "Businesses are moving past AI pilots into real, named deployments, even as record funding rounds and new legal and regulatory pressure show how fast, and how contested, the field remains."
+    },
+    {
       "date": "2026-09-11",
       "url": "briefs/ai-brief-2026-09-11.html",
       "teaser": "AI competition this week shifted from smarter chatbots to controlling the power, chips and capital behind them, even as Anthropic disclosed real safety lapses in its own models."
