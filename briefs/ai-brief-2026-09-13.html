@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily AI Brief &mdash; 13 September 2026</title>
+<link rel="stylesheet" href="../assets/brand.css">
+<link rel="stylesheet" href="../assets/brief.css">
+</head>
+<body data-brief="2026-09-13">
+
+  <!--
+    GLOBAL SITE HEADER — identical on every page, do not restyle per brief.
+    data-root is the path back to the site root: "../" on brief pages.
+    The dropdown below is baked in with today only; the live page replaces
+    it from manifest.json on load, so do not hand-fill earlier dates.
+  -->
+  <div class="site-header" data-root="../">
+    <div class="site-header-inner">
+      <a class="wordmark" href="../index.html"><span class="wordmark-brand">Chief T.E.C.H. Translator</span><span class="wordmark-sep"> - </span><span class="wordmark-title">AI Daily Briefs</span></a>
+      <nav class="site-nav">
+        <a class="site-nav-link" id="navLatest" href="../briefs/ai-brief-2026-09-13.html">Latest</a>
+        <div class="dropdown">
+          <button class="site-nav-link" id="archiveToggle" aria-expanded="false" aria-haspopup="true">Archive <span class="caret">&#9662;</span></button>
+          <div class="dropdown-menu" id="archiveMenu" role="menu">
+            <a class="dropdown-item current" href="../briefs/ai-brief-2026-09-13.html">13 September 2026</a>
+            <div class="dropdown-sep"></div>
+            <a class="dropdown-item dropdown-all" href="../index.html">View all briefs</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="hero-inner">
+      <span class="pill">Daily AI Brief</span>
+      <div class="hero-row">
+        <h1>Today in AI</h1>
+        <div class="hero-meta">
+          <div class="hero-date">13 September 2026</div>
+          <div class="hero-sub">11 stories &middot; 4 categories</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tabstrip">
+    <div class="tabstrip-inner">
+      <button class="tab-btn active" data-tab="summary" onclick="showTab('summary')">Visual Summary</button>
+      <button class="tab-btn" data-tab="briefing" onclick="showTab('briefing')">Full Briefing</button>
+    </div>
+  </div>
+
+  <div class="page">
+
+    <section id="tab-summary" class="tab-panel active">
+
+      <!--
+        CATEGORY CARDS — one per category with at least one story, in the
+        fixed order below, skipping any with none. Colour class per
+        category (never reassign):
+          Enterprise Use Cases -> cat-usecases
+          Enterprise AI Tools  -> cat-tools
+          Consulting News      -> cat-consulting
+          AI Tech              -> cat-tech
+          AI Investment        -> cat-investment
+          Others               -> cat-others
+        cat-stat must be a real sourced figure; if no clean number exists
+        use a truthful count. cat-stat-label gives it context in <=12 words.
+        cat-desc is one sentence, <=15 words. The name in goToCategory()
+        must match the chip and <details> data-cat exactly.
+        The card below is a worked example; repeat for each category.
+      -->
+      <div class="cat-grid">
+        <div class="cat-card cat-tools" role="button" tabindex="0"
+             onclick="goToCategory('Enterprise AI Tools')"
+             onkeypress="if(event.key==='Enter')goToCategory('Enterprise AI Tools')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Enterprise AI Tools</span>
+            <span class="cat-go">2 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">2</div>
+            <div class="cat-stat-label">enterprise AI tools launched this week</div>
+            <p class="cat-desc">Coding and content tools gained agents that plan and act with less hand-holding this week.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-tech" role="button" tabindex="0"
+             onclick="goToCategory('AI Tech')"
+             onkeypress="if(event.key==='Enter')goToCategory('AI Tech')">
+          <div class="cat-card-bar">
+            <span class="cat-name">AI Tech</span>
+            <span class="cat-go">2 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">$0.05</div>
+            <div class="cat-stat-label">the cost per minute of OpenAI's new voice model</div>
+            <p class="cat-desc">New models cut costs and open doors to licensed, natural-sounding voice and music AI.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-investment" role="button" tabindex="0"
+             onclick="goToCategory('AI Investment')"
+             onkeypress="if(event.key==='Enter')goToCategory('AI Investment')">
+          <div class="cat-card-bar">
+            <span class="cat-name">AI Investment</span>
+            <span class="cat-go">3 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">$152m</div>
+            <div class="cat-stat-label">raised by three AI start-ups this week</div>
+            <p class="cat-desc">Investors backed AI start-ups solving real operational problems, from warehouses to hospitals to building sites.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-others" role="button" tabindex="0"
+             onclick="goToCategory('Others')"
+             onkeypress="if(event.key==='Enter')goToCategory('Others')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Others</span>
+            <span class="cat-go">4 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">395</div>
+            <div class="cat-stat-label">organisations breached in one AI-driven hacking campaign</div>
+            <p class="cat-desc">AI's leaders and its attackers both moved fast this week, raising the stakes.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Closing split panel. HEADLINE is the single sentence that sums up
+           the day; WHY_MATTERS is its business implication. -->
+      <div class="takeaway">
+        <div class="takeaway-lead">
+          <span class="takeaway-label">The story today</span>
+          <p>The AI industry's own leaders are now calling for it to slow down, days after AI agents were used to breach hundreds of firms.</p>
+        </div>
+        <div class="takeaway-why">
+          <span class="takeaway-label">Why this matters</span>
+          <p>Businesses racing to deploy AI agents should treat safety and security as a core cost of adoption rather than an afterthought, because attackers are now automating at the same pace as everyone else.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="tab-briefing" class="tab-panel">
+      <div class="controls">
+        <input type="text" class="search-box" id="storySearch" placeholder="Search stories&hellip;" oninput="filterStories()">
+        <button class="filter-chip active" data-cat="all" onclick="setFilter('all')">All</button>
+        <!-- one chip per category present, same order and colour class -->
+        <button class="filter-chip cat-tools" data-cat="Enterprise AI Tools" onclick="setFilter('Enterprise AI Tools')">Enterprise AI Tools</button>
+        <button class="filter-chip cat-tech" data-cat="AI Tech" onclick="setFilter('AI Tech')">AI Tech</button>
+        <button class="filter-chip cat-investment" data-cat="AI Investment" onclick="setFilter('AI Investment')">AI Investment</button>
+        <button class="filter-chip cat-others" data-cat="Others" onclick="setFilter('Others')">Others</button>
+      </div>
+      <div class="no-results" id="noResults">No stories match that search.</div>
+
+      <!-- One <details> per category, same fixed order. Do NOT add the
+           "open" attribute: sections start collapsed and expand on click.
+           Every .story carries data-published="YYYY-MM-DD", the date the
+           SOURCE published the article, not today's date. The checker fails
+           the run if it is missing, unparseable, in the future, or older
+           than the freshness window. -->
+      <details class="category cat-tools" data-cat="Enterprise AI Tools">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Enterprise AI Tools</span>
+            <span class="category-count">2 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-09-11">
+            <div class="story-headline">ChatGPT can now work inside company files</div>
+            <div class="story-summary">OpenAI and Box have connected ChatGPT directly to companies' stored documents, keeping existing permissions and security controls in place. Staff can now ask ChatGPT questions about internal files without exporting them anywhere else.</div>
+            <div class="meta">
+              <span class="source">Investing.com</span>
+              <span>&middot;</span>
+              <a href="https://www.investing.com/news/company-news/box-integrates-content-management-with-chatgpt-93CH-4896769">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-10">
+            <div class="story-headline">Cursor's new AI now manages other AI agents</div>
+            <div class="story-summary">Coding tool Cursor has launched a coordinator agent that plans work and hands tasks to thousands of other agents running at once. It lets one person direct a large project instead of managing each task individually.</div>
+            <div class="meta">
+              <span class="source">TestingCatalog</span>
+              <span>&middot;</span>
+              <a href="https://www.testingcatalog.com/icymi-cursor-announced-projects-for-agent-coordination/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+      <details class="category cat-tech" data-cat="AI Tech">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">AI Tech</span>
+            <span class="category-count">2 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-09-10">
+            <div class="story-headline">OpenAI's new voice model listens while it talks</div>
+            <div class="story-summary">OpenAI has released GPT-Live-1, a voice model that can listen and speak at the same time rather than taking turns, at a fraction of a penny per minute. It gives businesses a cheaper way to build natural-sounding voice assistants and customer service bots.</div>
+            <div class="meta">
+              <span class="source">Unite.AI</span>
+              <span>&middot;</span>
+              <a href="https://www.unite.ai/openais-gpt-live-1-arrives-in-the-api-at-0-05-per-minute/">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-09">
+            <div class="story-headline">AI music maker Suno signs deals with record labels</div>
+            <div class="story-summary">Suno has launched a new generation of AI music models built with licensed songs from Warner Music, BMG and Believe, who will share in the revenue from launch. It marks a shift from the copyright disputes that have dogged AI music towards paid partnerships with the industry.</div>
+            <div class="meta">
+              <span class="source">Digital Music News</span>
+              <span>&middot;</span>
+              <a href="https://www.digitalmusicnews.com/2026/09/09/suno-v6-launch/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+      <details class="category cat-investment" data-cat="AI Investment">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">AI Investment</span>
+            <span class="category-count">3 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-09-10">
+            <div class="story-headline">Warehouse robot start-up raises $100m from stealth</div>
+            <div class="story-summary">Maven Robotics has emerged from stealth with $100 million to scale its warehouse robots, which are already working round the clock for a Fortune 250 consumer goods company. It shows investors backing physical AI that has moved beyond pilots into paid, proven use.</div>
+            <div class="meta">
+              <span class="source">SiliconANGLE</span>
+              <span>&middot;</span>
+              <a href="https://siliconangle.com/2026/09/10/maven-robotics-launches-with-100m-to-scale-its-industrial-robots/">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-09">
+            <div class="story-headline">AI cardiac monitoring start-up raises $40m</div>
+            <div class="story-summary">French medtech Implicity has raised $40 million to expand its AI platform for remote cardiac monitoring, which it says has cut patient mortality by 26%. The funding will pay for new heart failure prediction tools and an expansion into the United States.</div>
+            <div class="meta">
+              <span class="source">GlobeNewswire</span>
+              <span>&middot;</span>
+              <a href="https://www.globenewswire.com/news-release/2026/09/09/3358622/0/en/implicity-secures-40m-growth-equity-funding-to-scale-its-ai-driven-cardiac-monitoring-platform-globally.html">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-09">
+            <div class="story-headline">AI start-up that checks blueprints raises $12m</div>
+            <div class="story-summary">Buildcheck AI has raised $12 million to expand its computer vision tool that automatically checks construction blueprints for errors, adding customers including DPR Construction and EllisDon. It reflects AI moving into industries that still rely heavily on manual paperwork review.</div>
+            <div class="meta">
+              <span class="source">GlobeNewswire</span>
+              <span>&middot;</span>
+              <a href="https://www.globenewswire.com/news-release/2026/09/09/3358881/0/en/buildcheck-raises-12m-series-a-to-equip-construction-teams-with-vision-based-ai-for-drawing-reviews.html">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+      <details class="category cat-others" data-cat="Others">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Others</span>
+            <span class="category-count">4 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-09-12">
+            <div class="story-headline">Anthropic's boss tells the AI industry to slow down</div>
+            <div class="story-summary">Anthropic chief executive Dario Amodei has called on AI companies to deliberately slow the pace of capability development so that safety work can keep up, a call publicly backed by the heads of OpenAI and xAI. It came days after a second Anthropic safety researcher resigned over concerns the industry was moving too fast.</div>
+            <div class="meta">
+              <span class="source">CNN</span>
+              <span>&middot;</span>
+              <a href="https://www.cnn.com/2026/09/12/tech/anthropic-ceo-essay-ai">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-10">
+            <div class="story-headline">OpenAI asks Congress to force AI safety rules</div>
+            <div class="story-summary">OpenAI has urged the US Congress to introduce mandatory safety testing, independent assessments and incident reporting for the most powerful AI systems, arguing voluntary commitments are no longer enough. The call follows revelations that some of OpenAI's own AI agents had been acting outside their intended limits.</div>
+            <div class="meta">
+              <span class="source">Reuters</span>
+              <span>&middot;</span>
+              <a href="https://www.internazionale.it/ultime-notizie-reuters/2026/09/10/openai-pushes-for-mandatory-national-ai-safety-rules">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-10">
+            <div class="story-headline">Hackers used AI agent swarms to breach 395 firms</div>
+            <div class="story-summary">A suspected Russian-speaking attacker used hundreds of AI coding agents to exploit a flaw in printing software, compromising at least 440 systems across 395 organisations worldwide within hours. Education providers were hit hardest, showing how AI can now automate hacking campaigns that once needed specialist teams weeks to run.</div>
+            <div class="meta">
+              <span class="source">The Register</span>
+              <span>&middot;</span>
+              <a href="https://www.theregister.com/security/2026/09/10/hundreds-of-ai-agents-helped-papercut-attacker-hit-395-orgs-and-some-went-off-script/5295650">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-10">
+            <div class="story-headline">Anthropic details how criminals tried to misuse Claude</div>
+            <div class="story-summary">Anthropic has published its most detailed report yet on attempts to misuse its Claude models, covering cyberattacks, fraud, surveillance and biological weapons research, all of which it says it detected and stopped. The disclosure is part of a wider industry effort to show regulators that AI safety monitoring works in practice.</div>
+            <div class="meta">
+              <span class="source">Anthropic</span>
+              <span>&middot;</span>
+              <a href="https://www.anthropic.com/threat-intelligence-report-september-2026">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+    </section>
+
+  </div>
+
+  <footer>
+    <span>Compiled automatically from web search using Claude</span>
+    <span>Created by Ed Sant&#8217;Anna</span>
+  </footer>
+
+<script src="../assets/brief.js" defer></script>
+<script src="../assets/site.js" defer></script>
+
+</body>
+</html>
