@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily AI Brief &mdash; 14 September 2026</title>
+<link rel="stylesheet" href="../assets/brand.css">
+<link rel="stylesheet" href="../assets/brief.css">
+</head>
+<body data-brief="2026-09-14">
+
+  <!--
+    GLOBAL SITE HEADER — identical on every page, do not restyle per brief.
+    data-root is the path back to the site root: "../" on brief pages.
+    The dropdown below is baked in with today only; the live page replaces
+    it from manifest.json on load, so do not hand-fill earlier dates.
+  -->
+  <div class="site-header" data-root="../">
+    <div class="site-header-inner">
+      <a class="wordmark" href="../index.html"><span class="wordmark-brand">Chief T.E.C.H. Translator</span><span class="wordmark-sep"> - </span><span class="wordmark-title">AI Daily Briefs</span></a>
+      <nav class="site-nav">
+        <a class="site-nav-link" id="navLatest" href="../briefs/ai-brief-2026-09-14.html">Latest</a>
+        <div class="dropdown">
+          <button class="site-nav-link" id="archiveToggle" aria-expanded="false" aria-haspopup="true">Archive <span class="caret">&#9662;</span></button>
+          <div class="dropdown-menu" id="archiveMenu" role="menu">
+            <a class="dropdown-item current" href="../briefs/ai-brief-2026-09-14.html">14 September 2026</a>
+            <div class="dropdown-sep"></div>
+            <a class="dropdown-item dropdown-all" href="../index.html">View all briefs</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="hero-inner">
+      <span class="pill">Daily AI Brief</span>
+      <div class="hero-row">
+        <h1>Today in AI</h1>
+        <div class="hero-meta">
+          <div class="hero-date">14 September 2026</div>
+          <div class="hero-sub">7 stories &middot; 4 categories</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tabstrip">
+    <div class="tabstrip-inner">
+      <button class="tab-btn active" data-tab="summary" onclick="showTab('summary')">Visual Summary</button>
+      <button class="tab-btn" data-tab="briefing" onclick="showTab('briefing')">Full Briefing</button>
+    </div>
+  </div>
+
+  <div class="page">
+
+    <section id="tab-summary" class="tab-panel active">
+
+      <div class="cat-grid">
+        <div class="cat-card cat-tools" role="button" tabindex="0"
+             onclick="goToCategory('Enterprise AI Tools')"
+             onkeypress="if(event.key==='Enter')goToCategory('Enterprise AI Tools')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Enterprise AI Tools</span>
+            <span class="cat-go">2 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">2</div>
+            <div class="cat-stat-label">AI enterprise tools launched by major vendors this week</div>
+            <p class="cat-desc">Salesforce and OpenAI raced out new tools to govern and build enterprise AI agents.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-tech" role="button" tabindex="0"
+             onclick="goToCategory('AI Tech')"
+             onkeypress="if(event.key==='Enter')goToCategory('AI Tech')">
+          <div class="cat-card-bar">
+            <span class="cat-name">AI Tech</span>
+            <span class="cat-go">1 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">64%</div>
+            <div class="cat-stat-label">lower cost claimed for Cognition's new coding AI model</div>
+            <p class="cat-desc">A new coding AI model nearly matches rivals while costing much less to run.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-investment" role="button" tabindex="0"
+             onclick="goToCategory('AI Investment')"
+             onkeypress="if(event.key==='Enter')goToCategory('AI Investment')">
+          <div class="cat-card-bar">
+            <span class="cat-name">AI Investment</span>
+            <span class="cat-go">1 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">$20m</div>
+            <div class="cat-stat-label">raised by a start-up that checks AI-written marketing content</div>
+            <p class="cat-desc">A new start-up raised funding to help businesses check AI-written marketing content for compliance.</p>
+          </div>
+        </div>
+        <div class="cat-card cat-others" role="button" tabindex="0"
+             onclick="goToCategory('Others')"
+             onkeypress="if(event.key==='Enter')goToCategory('Others')">
+          <div class="cat-card-bar">
+            <span class="cat-name">Others</span>
+            <span class="cat-go">3 &rarr;</span>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-stat">$1m</div>
+            <div class="cat-stat-label">maximum fine per child under California's new AI chatbot law</div>
+            <p class="cat-desc">Politics, regulation and safety all collided this week as AI's pace became a public fight.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="takeaway">
+        <div class="takeaway-lead">
+          <span class="takeaway-label">The story today</span>
+          <p>President Trump dismissed the AI industry's own calls to slow down, even as vendors kept shipping new AI tools and regulators moved to rein in chatbots.</p>
+        </div>
+        <div class="takeaway-why">
+          <span class="takeaway-label">Why this matters</span>
+          <p>Businesses adopting AI now face two pulls at once: vendors pushing ever more capable tools into daily work, and mounting political, legal and safety pressure on how fast and safely that happens.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="tab-briefing" class="tab-panel">
+      <div class="controls">
+        <input type="text" class="search-box" id="storySearch" placeholder="Search stories&hellip;" oninput="filterStories()">
+        <button class="filter-chip active" data-cat="all" onclick="setFilter('all')">All</button>
+        <button class="filter-chip cat-tools" data-cat="Enterprise AI Tools" onclick="setFilter('Enterprise AI Tools')">Enterprise AI Tools</button>
+        <button class="filter-chip cat-tech" data-cat="AI Tech" onclick="setFilter('AI Tech')">AI Tech</button>
+        <button class="filter-chip cat-investment" data-cat="AI Investment" onclick="setFilter('AI Investment')">AI Investment</button>
+        <button class="filter-chip cat-others" data-cat="Others" onclick="setFilter('Others')">Others</button>
+      </div>
+      <div class="no-results" id="noResults">No stories match that search.</div>
+
+      <details class="category cat-tools" data-cat="Enterprise AI Tools">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Enterprise AI Tools</span>
+            <span class="category-count">2 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-09-10">
+            <div class="story-headline">Salesforce bundles rules to govern AI agents</div>
+            <div class="story-summary">Salesforce unveiled a framework and control panel that combines security, governance and data access into one system, so AI agents from different vendors behave consistently across a business. It reflects growing customer demand to manage a fast-multiplying number of AI agents safely rather than case by case.</div>
+            <div class="meta">
+              <span class="source">SiliconANGLE</span>
+              <span>&middot;</span>
+              <a href="https://siliconangle.com/2026/09/10/salesforce-introduces-enterprise-ai-harness-ai-control-plane/">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-10">
+            <div class="story-headline">OpenAI turns its agent toolkit into a product</div>
+            <div class="story-summary">OpenAI opened a managed Agents API that gives developers a ready-made way to run long, autonomous AI agents without building the underlying infrastructure themselves. It lowers the cost of building custom AI agents, making the technology more accessible to businesses beyond those buying off-the-shelf tools.</div>
+            <div class="meta">
+              <span class="source">MarkTechPost</span>
+              <span>&middot;</span>
+              <a href="https://www.marktechpost.com/2026/09/10/openai-launches-the-agents-api-in-public-beta-putting-the-codex-harness-behind-one-api-call/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+      <details class="category cat-tech" data-cat="AI Tech">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">AI Tech</span>
+            <span class="category-count">1 story</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-09-11">
+            <div class="story-headline">New coding AI nearly matches rivals for less</div>
+            <div class="story-summary">Cognition released a coding model, SWE-2, that performs close to Anthropic's leading model on real coding tasks while costing up to 64% less to run. Falling prices for high-performing AI models make automated software development cheaper to scale across a business.</div>
+            <div class="meta">
+              <span class="source">Tech Times</span>
+              <span>&middot;</span>
+              <a href="https://www.techtimes.com/articles/327315/20260911/cognition-swe-2-beats-frontier-coding-ai-64-lower-cost-using-single-run-rl-training.htm">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+      <details class="category cat-investment" data-cat="AI Investment">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">AI Investment</span>
+            <span class="category-count">1 story</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-09-08">
+            <div class="story-headline">AI compliance start-up Blee raises $20m</div>
+            <div class="story-summary">Blee raised $20 million to help legal and compliance teams check AI-generated marketing content before it goes out, as regulators pay closer attention to AI-produced advertising claims. It points to a growing market for tools that let businesses use generative AI for content while limiting legal exposure.</div>
+            <div class="meta">
+              <span class="source">Tech Startups</span>
+              <span>&middot;</span>
+              <a href="https://techstartups.com/2026/09/08/blee-raises-20m-series-a-to-tackle-the-new-ai-generated-content-compliance-problem/">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+      <details class="category cat-others" data-cat="Others">
+        <summary>
+          <div class="category-heading">
+            <span class="category-title">Others</span>
+            <span class="category-count">3 stories</span>
+          </div>
+          <span class="chevron">&rsaquo;</span>
+        </summary>
+        <div class="category-stories">
+          <div class="story" data-published="2026-09-14">
+            <div class="story-headline">Trump dismisses AI industry's call to slow down</div>
+            <div class="story-summary">Days after Anthropic's chief executive urged AI developers to deliberately slow down for safety reasons, President Trump dismissed the idea and AI-linked stocks in Asia fell sharply. The episode shows that safety warnings from AI leaders now carry real market and political consequences, not just technical debate.</div>
+            <div class="meta">
+              <span class="source">Bloomberg</span>
+              <span>&middot;</span>
+              <a href="https://www.bloomberg.com/news/articles/2026-09-14/ai-bosses-risk-clash-with-wall-street-and-trump-over-safety-call">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-10">
+            <div class="story-headline">California passes toughest AI chatbot child laws</div>
+            <div class="story-summary">California's governor signed laws requiring AI chatbot operators to run risk assessments before launch, verify users' ages and notify parents of signs of emotional distress, with fines of up to $1 million per child. Businesses offering AI chatbots to consumers should expect similar compliance duties to spread to other states.</div>
+            <div class="meta">
+              <span class="source">Office of Governor Gavin Newsom</span>
+              <span>&middot;</span>
+              <a href="https://www.gov.ca.gov/2026/09/10/governor-newsom-signs-the-strongest-child-safety-chatbot-and-social-media-laws-in-the-nation/">Read more &rarr;</a>
+            </div>
+          </div>
+          <div class="story" data-published="2026-09-11">
+            <div class="story-headline">Safety researchers quit Anthropic and Google</div>
+            <div class="story-summary">A former Anthropic safety lead and a Google DeepMind researcher resigned to join independent watchdog METR, saying AI companies currently disclose safety incidents only voluntarily. Their move adds to pressure for outside oversight of AI systems rather than firms policing themselves.</div>
+            <div class="meta">
+              <span class="source">NBC News</span>
+              <span>&middot;</span>
+              <a href="https://www.nbcnews.com/tech/security/two-ai-researchers-leave-anthropic-google-safety-concerns-rcna597086">Read more &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </details>
+    </section>
+
+  </div>
+
+  <footer>
+    <span>Compiled automatically from web search using Claude</span>
+    <span>Created by Ed Sant&#8217;Anna</span>
+  </footer>
+
+<script src="../assets/brief.js" defer></script>
+<script src="../assets/site.js" defer></script>
+
+</body>
+</html>
